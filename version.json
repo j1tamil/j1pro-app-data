@@ -1,0 +1,19 @@
+{
+ "latest_code": 53,
+ "latest_name": "2.4",
+ "short": "Update notice, online updates for exam dates and syllabus, simpler Engineering Syllabus.",
+ "important_below": 0,
+ "important_msg": "",
+ "notes": [
+  {
+   "v": "2.4",
+   "d": "November 2026",
+   "i": [
+    "\"New version\" notice on Home and \"Check for updates\" in About",
+    "Exam dates and Engineering Syllabus content now update online",
+    "Engineering Syllabus: simpler subject page with 5 sections",
+    "Practice scores and saved tests are now kept in the app"
+   ]
+  }
+ ]
+}
