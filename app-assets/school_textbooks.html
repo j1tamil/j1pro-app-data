@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0d2f52">
+<title>J1 Pro – School Textbooks</title>
+<style>
+:root{--navy:#0d2f52;--navy2:#123b66;--teal:#0f8f7e;--ink:#1d2939;--mut:#5b6b82;--line:#e3e9f2;--bg:#f2f5fa;--card:#fff;--warn:#7a5200;--warnbg:#fff7e0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px;line-height:1.5;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:12px 14px 30px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:16px}
+.hero h1{margin:0;font-size:20px}.hero p{margin:6px 0 0;color:#c9d6e6;font-size:13.5px}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:#e7edf5;border-radius:14px;padding:4px;margin-top:12px}
+.seg button{border:0;border-radius:11px;background:none;font:700 13.5px inherit;color:var(--mut);padding:9px 6px}
+.seg button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(16,24,40,.08)}
+.flab{font-size:12px;font-weight:700;color:var(--mut);margin:12px 0 6px;text-transform:uppercase;letter-spacing:.03em}
+.cls{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.cls button{border:1px solid var(--line);background:#fff;border-radius:10px;height:40px;font:700 15px inherit;color:var(--navy)}
+.cls button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chips{display:flex;gap:6px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font:600 13px inherit;color:var(--mut)}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+h2{font-size:17px;color:var(--navy);margin:16px 0 2px}h2 small{color:var(--mut);font-size:13px;font-weight:600;margin-left:6px}
+h3{font-size:12.5px;color:var(--teal);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 6px}
+.bk{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:8px}
+.bt{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.bt b{color:var(--navy);font-size:15px;overflow-wrap:anywhere}
+.tag{flex:none;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 8px;background:#e6f6f2;color:var(--teal)}
+.bm{font-size:12.5px;color:var(--mut);margin-top:2px}
+.ba{display:flex;gap:8px;margin-top:10px}
+.ba button{flex:1;height:40px;border-radius:10px;font:700 13.5px inherit;border:1px solid var(--line);background:#eef3f9;color:var(--navy)}
+.ba button.p{background:var(--navy);border-color:var(--navy);color:#fff}
+.cl{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.cl button{height:38px;border:1px solid var(--line);border-radius:9px;background:#f8fafc;font:600 13px inherit;color:var(--navy)}
+.note{background:#eef6ff;border:1px solid #cfe0f5;color:#29405c;border-radius:12px;padding:10px 12px;font-size:12.5px;margin-top:12px}
+.warn{background:var(--warnbg);border:1px solid #f1dca0;color:var(--warn);border-radius:12px;padding:12px;font-size:13.5px;margin-top:12px}
+.empty{text-align:center;color:var(--mut);padding:30px 10px}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:9px 14px;border-radius:10px;font-size:13px;z-index:9;max-width:90vw}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="empty">Loading…</div></div>
+<script src="j1_ls.js"></script>
+<script src="j1_content.js"></script>
+<script>
+/* J1 Pro 2.3 – School Textbooks. Official links only (NCERT; Tamil Nadu from DIKSHA, Govt of India; Kerala from KITE Samagra, Govt of Kerala).
+   The book list comes online from GitHub (textbooks.json) and is kept on the phone for next time. No books are stored in the app.
+   Links open outside the app: "GOVURL§§<url>" (same handling as Government Exams). Back: window.J1GovSystemBack. */
+(function(){
+'use strict';
+var APP=!!window.AppInventor,D=null,S={b:'ncert',c:10,l:'all'},open={};
+function send(m){try{AppInventor.setWebViewString(m)}catch(e){}}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove()},2400)}
+function ls(k,v){try{if(v===undefined){var s=localStorage.getItem(k);return s?JSON.parse(s):null}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+var sv=ls('j1_tb_ui');if(sv){if(sv.c>=1&&sv.c<=12)S.c=sv.c;if(sv.l==='e'||sv.l==='h'||sv.l==='t'||sv.l==='m'||sv.l==='all')S.l=sv.l;if(sv.b==='tn'||sv.b==='kl'||sv.b==='ncert')S.b=sv.b}
+function save(){ls('j1_tb_ui',S)}
+function openUrl(u){if(!/^https:\/\/[^\s]+$/i.test(u)){toast('Link not available');return}if(APP){send('GOVURL§§'+u);toast('Opening the official website…')}else window.open(u,'_blank','noopener')}
+function board(id){if(!D)return null;for(var i=0;i<D.boards.length;i++)if(D.boards[i].id===id)return D.boards[i];return null}
+function fill(t,b,nn){return t.replace('{code}',b.code).replace('{n}',b.n).replace('{nn}',nn||'')}
+var LANG={e:'English',h:'Hindi'};
+function render(){
+  var h='<div class="hero"><h1>📗 School Textbooks</h1><p>Free official textbooks for Class 1–12. Books open from the official government website – internet needed.</p></div>';
+  h+='<div class="seg"><button data-b="ncert" class="'+(S.b==='ncert'?'on':'')+'">CBSE / NCERT</button><button data-b="tn" class="'+(S.b==='tn'?'on':'')+'">Tamil Nadu</button><button data-b="kl" class="'+(S.b==='kl'?'on':'')+'">Kerala</button></div>';
+  if(!D){h+='<div class="warn">The book list needs internet the first time. Please connect and open this page again.</div>';document.getElementById('app').innerHTML=h;return}
+  var bd=board(S.b);
+  if((S.b==='tn'||S.b==='kl')&&bd&&bd.books&&bd.books.length){renderTN(h,bd);return}
+  if(S.b==='kl'){h+='<div class="warn"><b>Kerala State Board – coming soon.</b><br>Please check again later.</div>';document.getElementById('app').innerHTML=h;return}
+  if(S.b==='tn'||!bd||!bd.books||!bd.books.length){var tn=board('tn');h+='<div class="warn"><b>Tamil Nadu State Board (Samacheer Kalvi) – coming soon.</b><br>'+esc(tn&&tn.note||'The official Tamil Nadu textbook website is not reachable at the moment.')+'</div>';document.getElementById('app').innerHTML=h;return}
+  h+='<div class="flab">Class</div><div class="cls">';for(var c=1;c<=12;c++)h+='<button data-c="'+c+'" class="'+(S.c===c?'on':'')+'">'+c+'</button>';h+='</div>';
+  h+='<div class="flab">Medium</div><div class="chips">'+[['all','All'],['e','English'],['h','Hindi']].map(function(x){return '<button class="chip'+(((S.l==='t'||S.l==='m')?'all':S.l)===x[0]?' on':'')+'" data-l="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>';
+  var nl=(S.l==='t'||S.l==='m')?'all':S.l;
+  var list=bd.books.filter(function(b){return b.c===S.c&&(nl==='all'||b.l===nl)}),subs=[],by={};
+  list.forEach(function(b){if(!by[b.s]){by[b.s]=[];subs.push(b.s)}by[b.s].push(b)});
+  h+='<h2>Class '+S.c+'<small>'+list.length+' books</small></h2>';
+  if(!list.length)h+='<div class="empty">No books for this choice.</div>';
+  subs.forEach(function(s){h+='<h3>'+esc(s)+'</h3>';by[s].forEach(function(b){
+    var x=b.x||[],nch=b.n-x.length;
+    h+='<div class="bk"><div class="bt"><b>'+esc(b.t)+'</b><span class="tag">'+(LANG[b.l]||'')+'</span></div><div class="bm">'+nch+' chapters · full book '+b.mb+' MB</div>';
+    h+='<div class="ba"><button class="p" data-ch="'+b.code+'">'+(open[b.code]?'Hide chapters':'Chapters')+'</button><button data-zip="'+b.code+'">Full book (ZIP)</button></div>';
+    if(open[b.code]){h+='<div class="cl"><button data-u="'+esc(fill(bd.links.contents,b))+'">Contents</button>';for(var i=1;i<=b.n;i++){if(x.indexOf(i)>=0)continue;var nn=(i<10?'0':'')+i;h+='<button data-u="'+esc(fill(bd.links.chapter,b,nn))+'">Chapter '+i+'</button>'}h+='</div>'}
+    h+='</div>'})});
+  h+='<div class="note">Source: '+esc(bd.name)+' official website. J1 Pro does not host or change these books. Links checked on '+esc(D.checked||'')+'.</div>';
+  document.getElementById('app').innerHTML=h;
+}
+var TLANG={e:'English medium',t:'Tamil medium',m:'Malayalam medium',b:'Both mediums'};
+function renderTN(h,bd){
+  var cls=[];bd.books.forEach(function(b){if(cls.indexOf(b.c)<0)cls.push(b.c)});cls.sort(function(a,b){return a-b});
+  if(cls.indexOf(S.c)<0)S.c=cls.indexOf(10)>=0?10:cls[0];
+  var LG=bd.langs||{e:'English',t:'Tamil'},tl=LG[S.l]?S.l:'all';
+  h+='<div class="flab">Class</div><div class="cls">';cls.forEach(function(c){h+='<button data-c="'+c+'" class="'+(S.c===c?'on':'')+'">'+c+'</button>'});h+='</div>';
+  h+='<div class="flab">Medium</div><div class="chips">'+[['all','All']].concat(Object.keys(LG).map(function(k){return [k,LG[k]]})).map(function(x){return '<button class="chip'+(tl===x[0]?' on':'')+'" data-l="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>';
+  var list=bd.books.filter(function(b){return b.c===S.c&&(tl==='all'||b.l===tl||b.l==='b')}),subs=[],by={};
+  list.forEach(function(b){if(!by[b.s]){by[b.s]=[];subs.push(b.s)}by[b.s].push(b)});
+  h+='<h2>Class '+S.c+'<small>'+list.length+' books</small></h2>';
+  if(!list.length)h+='<div class="empty">No books for this choice.</div>';
+  subs.forEach(function(s){h+='<h3>'+esc(s)+'</h3>';by[s].forEach(function(b){
+    h+='<div class="bk"><div class="bt"><b>'+esc(b.t)+'</b><span class="tag">'+(TLANG[b.l]||'')+'</span></div><div class="bm">Full book PDF · '+b.mb+' MB</div>';
+    h+='<div class="ba"><button class="p" data-u="'+esc(bd.base+b.u)+'">Open book (PDF)</button></div></div>'})});
+  if(bd.id==='kl')h+='<div class="note">Source: KITE Samagra (Government of Kerala) – Kerala State Board books by SCERT Kerala. J1 Pro does not host or change these books. Language books are the same for both mediums. Links checked on '+esc(bd.checked||D.checked||'')+'.</div>';
+  else h+='<div class="note">Source: DIKSHA (Government of India) – Tamil Nadu State Board books uploaded by TN SCERT ('+esc(bd.edition||'')+'). J1 Pro does not host or change these books. '+esc(bd.note||'')+' Links checked on '+esc(bd.checked||D.checked||'')+'.</div>';
+  document.getElementById('app').innerHTML=h;
+}
+function byCode(code){var bd=board(S.b);for(var i=0;bd&&i<bd.books.length;i++)if(bd.books[i].code===code)return bd.books[i];return null}
+document.addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;
+  if(t.dataset.b){S.b=t.dataset.b;save();render();window.scrollTo(0,0)}
+  else if(t.dataset.c){S.c=+t.dataset.c;open={};save();render()}
+  else if(t.dataset.l){S.l=t.dataset.l;save();render()}
+  else if(t.dataset.ch){open[t.dataset.ch]=!open[t.dataset.ch];var y=window.scrollY;render();window.scrollTo(0,y)}
+  else if(t.dataset.zip){var b=byCode(t.dataset.zip),bd=board(S.b);if(b)openUrl(fill(bd.links.zip,b))}
+  else if(t.dataset.u){openUrl(t.dataset.u)}
+});
+window.J1GovSystemBack=function(){var k=Object.keys(open).filter(function(c){return open[c]});if(k.length){open={};render();return}if(APP)send('GOVNAV§§close')};
+function apply(p){if(p&&Array.isArray(p.boards))D=p}
+render();
+if(window.J1Content)J1Content.load('textbooks',0,apply,function(){render()});
+setTimeout(render,50);
+})();
+</script>
+</body>
+</html>
