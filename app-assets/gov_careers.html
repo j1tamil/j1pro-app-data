@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head><script src="j1_kb.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0d2f52">
+<title>J1 Pro – Government Exams & Careers</title>
+<style>
+:root{--navy:#0d2f52;--navy2:#123b66;--teal:#0f8f7e;--mint:#7ee0c8;--ink:#1d2939;--mut:#5b6b82;--line:#e3e9f2;--bg:#f2f5fa;--card:#fff;--warn:#9a6700;--warnbg:#fff7e0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px;line-height:1.5;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:12px 14px 30px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:16px}
+.hero h1{margin:0;font-size:20px}.hero p{margin:6px 0 0;color:#c9d6e6;font-size:13.5px}
+.tools{display:grid;gap:10px;margin-top:12px}
+.tool{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:left;width:100%;font:inherit;color:inherit;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.tool .ic{width:44px;height:44px;border-radius:12px;background:#e6f6f2;display:grid;place-items:center;font-size:22px;flex:none}
+.tool b{display:block;font-size:15.5px;color:var(--navy)}.tool small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+.tool .go{margin-left:auto;color:var(--teal);font-size:22px;font-weight:700}
+.note{background:var(--warnbg);color:var(--warn);border-radius:12px;padding:10px 12px;font-size:12.5px;margin-top:12px}
+.bar{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.back{border:1px solid var(--line);background:#fff;border-radius:10px;height:38px;padding:0 12px;font:600 14px inherit;color:var(--navy)}
+.bar h2{margin:0;font-size:17px;color:var(--navy);flex:1;min-width:0;overflow-wrap:anywhere}
+.search{position:relative}.search input{width:100%;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 42px 0 14px;font-size:15px;background:#fff}
+.search button{position:absolute;right:6px;top:6px;width:34px;height:34px;border:0;border-radius:9px;background:#eef2f7;color:var(--mut);font-size:18px}
+.flab{font-size:12px;font-weight:700;color:var(--mut);margin:10px 0 5px;text-transform:uppercase;letter-spacing:.03em}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font:600 13px inherit;color:var(--mut)}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+select{width:100%;height:42px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:14px;padding:0 8px;color:var(--ink)}
+.meta{display:flex;justify-content:space-between;align-items:center;margin:12px 0 6px;color:var(--mut);font-size:13px}
+.link{border:0;background:none;color:var(--teal);font:700 13px inherit;padding:4px 0}
+.ex{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:8px}
+.ex h3{margin:0;font-size:15px;color:var(--navy);overflow-wrap:anywhere}.ex .org{color:var(--mut);font-size:13px;margin-top:2px;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.tag{font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 8px;background:#eef2f7;color:#40506a}
+.tag.t{background:#e6f6f2;color:var(--teal)}.tag.e{background:#fff1e6;color:#b05a00}
+.ex .q{font-size:13px;margin-top:7px;color:var(--ink)}.ex .q span{color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:42px;border:0;border-radius:11px;padding:0 14px;font:700 14px inherit;background:var(--navy);color:#fff;margin-top:10px}
+.btn.sec{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn.teal{background:var(--teal)}
+.btn[disabled]{opacity:.45}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btns .btn{width:100%;margin-top:8px}
+.empty{background:#fff;border:1px dashed #c9d3e1;border-radius:14px;padding:18px;text-align:center;color:var(--mut);margin-top:10px}
+.dh{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:16px;padding:14px}
+.dh h2{margin:0;font-size:18px;overflow-wrap:anywhere}.dh .org{color:#c9d6e6;font-size:13px;margin-top:3px}
+.dh .tags .tag{background:rgba(255,255,255,.14);color:#fff}
+.sec{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:10px}
+.sec h3{margin:0 0 6px;font-size:13px;color:var(--teal);text-transform:uppercase;letter-spacing:.04em}
+.sec p{margin:4px 0}.sec ul,.sec ol{margin:4px 0;padding-left:20px}.sec li{margin:3px 0;white-space:normal;overflow-wrap:break-word}
+.kv{display:grid;grid-template-columns:42% 58%;gap:4px 10px;font-size:14px}.kv div:nth-child(odd){color:var(--mut)}
+.subj{margin-top:8px}.subj b{color:var(--navy);display:block}
+.status{display:inline-block;font-size:12px;font-weight:700;border-radius:8px;padding:3px 8px;background:var(--warnbg);color:var(--warn)}
+.lk{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:9px 0;font-size:14px}.lk:last-child{border:0}
+.lk span{color:var(--mut);font-size:12.5px;text-align:right}
+.lk button{height:36px;border-radius:9px;border:0;background:var(--teal);color:#fff;font:700 13px inherit;padding:0 12px;flex:none}
+.prog{height:6px;background:#e3e9f2;border-radius:6px;overflow:hidden;margin:8px 0 12px}.prog i{display:block;height:100%;background:var(--teal)}
+.qcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.qcard .qt{font-size:16px;font-weight:600;color:var(--ink)}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:11px 12px;margin-top:8px;font:inherit;color:inherit}
+.opt i{flex:none;width:26px;height:26px;border-radius:50%;background:#eef2f7;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:13px;color:var(--mut)}
+.opt.on{border-color:var(--teal);background:#effaf7}.opt.on i{background:var(--teal);color:#fff}
+.opt.ok{border-color:#1a7f4b;background:#ecfdf3}.opt.ok i{background:#1a7f4b;color:#fff}.opt.bad{border-color:#b42318;background:#fef3f2}.opt.bad i{background:#b42318;color:#fff}
+.score{text-align:center}.score .big{font-size:40px;font-weight:800;color:var(--navy)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.sgrid div{background:#f4f7fb;border-radius:10px;padding:8px;text-align:center;font-size:12px;color:var(--mut)}.sgrid b{display:block;font-size:20px;color:var(--ink)}
+.rv{border-top:1px solid var(--line);padding-top:10px;margin-top:10px;font-size:14px}.rv .ex2{color:var(--mut);font-size:13px;margin-top:4px}
+.warnline{color:#b42318;font-size:13px;font-weight:600;margin-top:8px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:9;max-width:90%}
+.tag.d{background:#e8f0fe;color:#1a56b0}
+.badge{display:inline-block;font-size:11px;font-weight:800;border-radius:7px;padding:2px 7px;margin-left:6px;background:#fff1e6;color:#b05a00;letter-spacing:.03em;vertical-align:middle;text-transform:none}
+.badge.g{background:#eef2f7;color:#40506a}.badge.ok{background:#e6f6f2;color:#0b6b5c}.badge.cal{background:#eaf2ff;color:#1f4f99}.badge.no{background:#f2f4f7;color:#475467}.umb{background:#fff7e0;border:1px solid #f1dca0;color:#7a5200;border-radius:12px;padding:10px 12px;font-size:13px;margin-top:10px}
+.small{font-size:12.5px;color:var(--mut);margin:6px 0}
+.tmr{flex:none;font:700 13px inherit;color:var(--navy);background:#eef2f7;border-radius:9px;padding:6px 9px}.tmr.low{background:#fef3f2;color:#b42318}
+.qmeta{font-size:11.5px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+.fb{margin-top:10px;border-radius:10px;padding:10px 12px;font-size:14px}.fb.good{background:#ecfdf3;color:#1a7f4b}.fb.badf{background:#fef3f2;color:#b42318}
+.opt[disabled]{opacity:1}
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px;margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px}
+.pq{height:36px;border:1px solid var(--line);background:#fff;border-radius:8px;font:600 13px inherit;color:var(--mut)}.pq.done{background:var(--teal);color:#fff;border-color:var(--teal)}.pq.cur{outline:2px solid var(--navy)}
+.mask{position:fixed;inset:0;background:rgba(13,47,82,.45);display:flex;align-items:center;justify-content:center;z-index:20;padding:16px}
+.mbox{background:#fff;border-radius:16px;padding:16px;max-width:420px;width:100%;max-height:85vh;overflow:auto}.mbox h3{margin:0 0 8px;color:var(--navy)}
+.tool.hl{border-color:var(--teal);background:#effaf7}.tool.sm{padding:11px 14px;margin-top:6px}
+.sgrid{grid-template-columns:repeat(3,1fr)}
+</style>
+</head>
+
+<body>
+<div class="wrap" id="app"></div>
+<script src="gov_exams_data.js"></script>
+<script src="j1_ls.js"></script>
+<script src="j1_content.js"></script>
+<script>
+/* J1 Pro 2.3 – Government Exams & Careers v2: Exam Explorer, Exam Dates & Fees, Syllabus & Papers, Practice Tests.
+   Offline bundled data (gov_exams_data.js). Each date block has a status label (OFFICIAL / OFFICIAL CALENDAR / REPORTED / EXPECTED – NOT OFFICIAL / NOT ANNOUNCED). */
+(function(){
+'use strict';
+var D=window.J1_GOV||{exams:[],practice:{},cats:[],quals:[]}, APP=!!window.AppInventor, app=document.getElementById('app');
+var EX=Array.isArray(D.exams)?D.exams.filter(function(e){return e&&e.id&&e.name}):[];
+var P=D.practice||{}, QI={};
+Object.keys(P).forEach(function(k){(P[k].q||[]).forEach(function(q){if(q&&q.id&&Array.isArray(q.o)&&q.o.length>1&&q.a>=0&&q.a<q.o.length){q.s=k;QI[q.id]=q}})});
+function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function arr(v){if(v==null)return[];if(Array.isArray(v))return v.filter(function(x){return x!=null&&String(x).trim()!==''});var s=String(v).trim();return s?[s]:[]}
+function ul(v){var a=arr(v);return a.length?'<ul>'+a.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>':''}
+function ol(v){var a=arr(v);return a.length?'<ol>'+a.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ol>':''}
+function send(m){try{AppInventor.setWebViewString(m)}catch(e){}}
+function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove()},2400)}
+function okUrl(u){return typeof u==='string'&&/^https:\/\/[^\s]+$/i.test(u)}
+function openUrl(u){if(!okUrl(u)){toast('Link not available');return}if(APP){send('GOVURL§§'+u);toast('Opening the official website…')}else window.open(u,'_blank','noopener')}
+function byId(id){for(var i=0;i<EX.length;i++)if(EX[i].id===id)return EX[i];return null}
+function ls(k,v){try{if(v===undefined){var s=localStorage.getItem(k);return s?JSON.parse(s):null}if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+var KEY='j1_gov_ui',F={q:'',qual:'',cat:'',state:''},sv=ls(KEY);if(sv)for(var k in F)if(typeof sv[k]==='string')F[k]=sv[k];
+function saveF(){ls(KEY,F)}
+var PROG=ls('j1_gov_prog')||{};if(!PROG.seen||typeof PROG.seen!=='object')PROG.seen={};if(!Array.isArray(PROG.hist))PROG.hist=[];
+function saveProg(){var ks=Object.keys(PROG.seen);if(ks.length>4000){ks.slice(0,ks.length-4000).forEach(function(x){delete PROG.seen[x]})}ls('j1_gov_prog',PROG)}
+
+/* ---------- navigation ---------- */
+var stack=[{v:'home'}];
+function go(v,o){var s={v:v};for(var k in o||{})s[k]=o[k];stack.push(s);render();window.scrollTo(0,0)}
+function back(){if(top().v==='test'&&T&&!T.done){stopTimer();saveCur();toast('Test saved – continue it from Practice Tests')}
+  if(stack.length>1){stack.pop();render();window.scrollTo(0,0)}else if(APP)send('GOVNAV§§close')}
+window.J1GovSystemBack=back;
+function top(){return stack[stack.length-1]}
+function bar(t){return '<div class="bar"><button class="back" data-a="back">‹ Back</button><h2>'+esc(t)+'</h2></div>'}
+
+/* ---------- search + filters ---------- */
+function norm(s){return String(s||'').toLowerCase().replace(/\s+/g,' ').trim()}
+function hay(e){return norm([e.name,e.short,e.org,e.cat,e.state,e.type,e.career,e.minQual].concat(arr(e.posts),arr(e.quals)).join(' | '))}
+function filtered(mode){var q=norm(F.q),words=q?q.split(' '):[];return EX.filter(function(e){
+  if(mode==='dates'&&!e.dates)return false;
+  if(F.qual&&arr(e.quals).indexOf(F.qual)<0)return false;
+  if(F.cat&&e.cat!==F.cat)return false;
+  if(F.state){if(F.state==='All India'&&e.state!=='All India')return false;if(F.state!=='All India'&&e.state!==F.state)return false}
+  if(!words.length)return true;var h=' '+hay(e).replace(/[^a-z0-9]+/g,' ');return words.every(function(w){w=w.replace(/[^a-z0-9]+/g,' ').trim();return !w||h.indexOf(' '+w)>=0})})}
+function cats(mode){return (D.cats||[]).filter(function(c){return EX.some(function(e){return e.cat===c&&(mode!=='dates'||e.dates)})})}
+function quals(){return (D.quals||[]).filter(function(q){return EX.some(function(e){return arr(e.quals).indexOf(q)>=0})})}
+function states(){var s=[];EX.forEach(function(e){if(e.state&&s.indexOf(e.state)<0)s.push(e.state)});s.sort(function(a,b){return a==='All India'?-1:b==='All India'?1:a==='Tamil Nadu'?-1:b==='Tamil Nadu'?1:a<b?-1:1});return s}
+var ACT={det:'View details',dates:'Dates & fees',syl:'Syllabus & papers',prac:'Practice'};
+function examCard(e,mode){
+  var line=mode==='dates'&&e.dates?'<div class="q"><span>'+esc(e.dates.basis)+'</span></div>':'<div class="q"><span>Minimum qualification:</span> '+esc(e.minQual)+'</div>';
+  return '<div class="ex"><h3>'+esc(e.name)+'</h3><div class="org">'+esc(e.org)+'</div><div class="tags"><span class="tag">'+esc(e.short||'')+'</span><span class="tag t">'+esc(e.cat)+'</span>'+(e.type!=='Recruitment exam'?'<span class="tag e">'+esc(e.type)+'</span>':'')+(e.state&&e.state!=='All India'?'<span class="tag">'+esc(e.state)+'</span>':'')+(e.dates&&mode!=='dates'?'<span class="tag d">Dates & fees</span>':'')+'</div>'+
+  line+'<button class="btn" data-open="'+esc(e.id)+'" data-mode="'+esc(mode||'det')+'">'+ACT[mode||'det']+' ›</button></div>'}
+function explore(mode,title){
+  var list=filtered(mode),any=F.q||F.qual||F.cat||F.state,all=mode==='dates'?EX.filter(function(e){return e.dates}).length:EX.length;
+  var h=bar(title)+'<div class="search"><input id="q" type="text" enterkeyhint="search" placeholder="Search exam, organisation, post or qualification" value="'+esc(F.q)+'" autocomplete="off"><button data-a="clearq" aria-label="Clear search">×</button></div>';
+  if(mode!=='dates')h+='<div class="flab">Qualification</div><div class="chips">'+['All'].concat(quals()).map(function(q){var on=(q==='All'&&!F.qual)||q===F.qual;return '<button class="chip'+(on?' on':'')+'" data-qual="'+esc(q==='All'?'':q)+'">'+esc(q)+'</button>'}).join('')+'</div>';
+  h+='<div class="row2"><div><div class="flab">Category</div><select id="fcat"><option value="">All categories</option>'+cats(mode).map(function(c){return '<option'+(c===F.cat?' selected':'')+'>'+esc(c)+'</option>'}).join('')+'</select></div>'+
+     '<div><div class="flab">State</div><select id="fstate"><option value="">All states</option>'+states().map(function(s){return '<option'+(s===F.state?' selected':'')+'>'+esc(s)+'</option>'}).join('')+'</select></div></div>';
+  h+='<div class="meta"><span id="cnt">'+list.length+' of '+all+' examinations</span>'+(any?'<button class="link" data-a="reset">Reset filters</button>':'')+'</div><div id="res">'+results(list,mode)+'</div>';
+  if(mode==='dates')h+='<p class="small">Only examinations with a tentative calendar or a regular yearly pattern are listed here. For other exams, use the official website.</p>';
+  return h}
+function results(list,mode){return list.length?list.map(function(e){return examCard(e,mode)}).join(''):'<div class="empty">No examinations match your search. Try another keyword or clear the filters.</div>'}
+
+/* ---------- exam details ---------- */
+function bcls(l){l=String(l||'');return l==='OFFICIAL'?'badge ok':l==='OFFICIAL CALENDAR'?'badge cal':l==='NOT ANNOUNCED'||l==='VARIES BY NOTIFICATION'?'badge no':'badge'}
+function umb(e){return e.umb?'<div class="umb">⚠ '+esc(e.umb)+'</div>':''}
+function kv(rows){return '<div class="kv">'+rows.map(function(r){return '<div>'+esc(r[0])+'</div><div>'+esc(r[1])+'</div>'}).join('')+'</div>'}
+function detail(e){
+  var h=bar('Exam details')+'<div class="dh"><h2>'+esc(e.name)+'</h2><div class="org">'+esc(e.org)+'</div><div class="tags"><span class="tag">'+esc(e.short)+'</span><span class="tag">'+esc(e.cat)+'</span><span class="tag">'+esc(e.state)+'</span></div></div>'+umb(e);
+  h+='<div class="btns"><button class="btn teal" data-open="'+esc(e.id)+'" data-mode="syl">📘 Syllabus</button><button class="btn sec" data-open="'+esc(e.id)+'" data-mode="prac">📝 Practice</button></div>';
+  h+='<div class="sec"><h3>Overview</h3><p>'+esc(e.about)+'</p>'+(e.type!=='Recruitment exam'&&e.type!=='Recruitment (post-wise)'?'<p class="small">'+(e.type==='Apprenticeship'?'Apprenticeship is paid training – it does not guarantee a permanent job.':e.type==='Eligibility test'?'This is an eligibility test, not a job by itself.':'This is an entrance / qualifying examination, not a direct job recruitment.')+'</p>':'')+'</div>';
+  h+='<div class="sec"><h3>Eligibility</h3>'+kv([['Qualification',e.minQual],['Age',e.age||'As per the notification']].concat(e.fy?[['Final-year students',e.fy]]:[]))+ul(e.elig)+'</div>';
+  if(arr(e.posts).length)h+='<div class="sec"><h3>Posts and career</h3>'+ul(e.posts)+(e.duties?'<p><b>Nature of work:</b> '+esc(e.duties)+'</p>':'')+'</div>';
+  if(arr(e.stages).length)h+='<div class="sec"><h3>Selection process</h3>'+ol(e.stages)+'</div>';
+  if(e.dates||e.fee)h+='<div class="sec"><h3>Dates & fees</h3>'+(e.dates&&e.dates.rows.length?kv(e.dates.rows.slice(0,2)):'')+(e.fee?'<p class="small">Dates: '+esc(e.dates?e.dates.label:'')+' · Fee: '+esc(e.fee.year)+'.</p>':'')+'<button class="btn sec" data-open="'+esc(e.id)+'" data-mode="dates" style="width:100%">See dates & fees ›</button></div>';
+  h+='<div class="sec"><h3>Official links</h3>'+links(e)+'</div>';
+  return h+'<p class="small">'+esc(D.disclaimer||'')+'</p>'}
+function lk(label,u){return okUrl(u)?'<div class="lk"><b>'+esc(label)+'</b><button data-url="'+esc(u)+'">Open ›</button></div>':''}
+function links(e){var h=lk('Official website',e.web);
+  if(okUrl(e.apply)&&e.apply!==e.web)h+=lk('Application portal',e.apply);else if(e.applyNote)h+='<p class="small">Application: '+esc(e.applyNote)+'</p>';
+  if(okUrl(e.papers)&&e.papers!==e.web){h+=lk('Previous-year papers',e.papers);if(e.papersNote)h+='<p class="small">Previous papers: '+esc(e.papersNote)+'</p>'}else if(e.papersNote)h+='<p class="small">Previous papers: '+esc(e.papersNote)+'</p>';
+  if(!h)h='<p>'+esc(e.note||'Use the conducting organisation\'s official website.')+'</p>';
+  else if(e.note)h+='<p class="small">'+esc(e.note)+'</p>';
+  return h}
+
+/* ---------- dates & fees ---------- */
+function datesView(e){var h=bar('Dates & fees')+'<div class="dh"><h2>'+esc(e.name)+'</h2><div class="org">'+esc(e.org)+'</div></div>'+umb(e);
+  if(e.dates){var d=e.dates;
+    h+='<div class="sec"><h3>Dates <span class="'+bcls(d.label)+'">'+esc(d.label)+'</span></h3><p class="small">Based on: '+esc(d.basis)+'</p>'+(d.rows.length?kv(d.rows):'<p>No regular yearly schedule – watch the official website.</p>');
+    if(arr(d.hist).length)h+='<div class="flab" style="margin-top:10px">Previous years</div>'+ul(d.hist);
+    h+='</div>'}
+  if(e.fee){h+='<div class="sec"><h3>Application fee <span class="badge g">'+esc(e.fee.year)+'</span></h3>'+kv(e.fee.rows)+'<p class="small">'+esc(D.feeNote||'')+'</p></div>'}
+  h+='<div class="sec"><h3>Source</h3>'+lk('Official website',(e.dates&&e.dates.src)||e.web)+'<p class="small">'+esc(D.dateNote||'')+'</p></div>';
+  return h}
+
+/* ---------- syllabus & papers ---------- */
+function sylTxt(e){var s=e.sylStatus||(e.sylOfficial?'official':'overview');return s==='official'?'Syllabus status: official syllabus verified – subject and topic headings from the official syllabus. The notification has the full topic list.':s==='broad'?'Syllabus status: official broad syllabus – only the main headings are shown. See the notification for details.':s==='post'?'Syllabus status: post-specific – each post / notification has its own syllabus. The topics above are a guide only.':s==='na'?'Syllabus status: not applicable – there is no separate written syllabus for this entry.':s==='unable'?'Syllabus status: unable to verify from an accessible official source – use the official notification.':'Syllabus status: preparation overview written for J1 Pro – not the official syllabus. Use the official syllabus in the notification for the exact topics.'}
+function syl(e){var s=Array.isArray(e.syllabus)?e.syllabus.filter(function(x){return x&&x.s}):[];
+  return s.length?s.map(function(x){return '<div class="subj"><b>'+esc(x.s)+'</b>'+ul(x.t)+'</div>'}).join(''):'<p>No syllabus summary is available for this examination.</p>'}
+function sylView(e){var h=bar('Syllabus & papers')+'<div class="dh"><h2>'+esc(e.name)+'</h2><div class="org">'+esc(e.org)+'</div></div>'+umb(e);
+  h+='<div class="sec"><h3>Subjects and topics</h3>'+syl(e)+'<p class="small">'+sylTxt(e)+'</p></div>';
+  if(e.mock)h+='<div class="sec"><h3>Exam pattern used in the mock test</h3>'+patternKV(e.mock)+'</div>';
+  if(arr(e.stages).length)h+='<div class="sec"><h3>Selection process</h3>'+ol(e.stages)+'</div>';
+  h+='<div class="sec"><h3>Official syllabus & previous papers</h3>'+lk('Official website (syllabus / scheme)',e.web)+(okUrl(e.papers)&&e.papers!==e.web?lk('Previous-year question papers',e.papers)+(e.papersNote?'<p class="small">'+esc(e.papersNote)+'</p>':''):'<p class="small">'+esc(e.papersNote||'Official previous papers not located by J1 Pro.')+'</p>')+'</div>';
+  return h+'<div class="btns"><button class="btn sec" data-open="'+esc(e.id)+'" data-mode="det">Exam details</button><button class="btn" data-open="'+esc(e.id)+'" data-mode="prac">Practice</button></div>'}
+
+/* ---------- practice ---------- */
+var T=null,TM=null;
+function subs(e){return arr(e.practice).filter(function(k){return P[k]&&arr(P[k].q).length})}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function pick(pool,n){var u=[],s=[];shuffle(pool).forEach(function(q){(PROG.seen[q.id]?s:u).push(q)});return u.concat(s).slice(0,n)}
+function poolOf(keys){var o=[];keys.forEach(function(k){if(P[k])P[k].q.forEach(function(q){if(QI[q.id])o.push(q)})});return o}
+function fmtMark(x){return (Math.round(x*100)/100).toString()}
+function negTxt(m){return m.neg?'−'+(Math.abs(m.neg-1/3)<1e-6?'1/3':Math.abs(m.neg-2/3)<1e-6?'0.66':fmtMark(m.neg))+' per wrong answer':'No negative marking'}
+function genericMock(e){var s=subs(e),n=Math.min(50,poolOf(s).length),per=Math.max(1,Math.floor(n/s.length));
+  return {n:'J1 Pro Practice Mock (general)',generic:true,mix:s.map(function(k,i){return [P[k].name,[k],i===s.length-1?n-per*(s.length-1):per]}).filter(function(x){return x[2]>0}),min:n,mark:1,neg:0}}
+function mockOf(e){return e.mock||genericMock(e)}
+function isPrac(m){return m.generic||m.official===false}
+function secN(m,x){if(x[1][0]==='$branch')return m.branches?Math.min.apply(null,m.branches.map(function(b){return Math.min(x[2],poolOf([b[1]]).length)})):0;return Math.min(x[2],poolOf(x[1]).length)}
+function mockN(m){return m.mix.reduce(function(a,x){return a+secN(m,x)},0)}
+function patternKV(m){return kv([['Questions',mockN(m)],['Time',m.min+' minutes'],['Marks per question',fmtMark(m.mark)],['Negative marking',negTxt(m)]])+'<ul>'+m.mix.map(function(x){return '<li>'+esc(x[0])+' – '+secN(m,x)+' questions</li>'}).join('')+'</ul>'}
+function pracPick(e){var s=subs(e),m=mockOf(e),h=bar('Practice')+'<div class="dh"><h2>'+esc(e.name)+'</h2><div class="org">'+poolOf(s).length+' questions in this exam\'s subjects</div></div>';
+  if(!s.length)return h+'<div class="empty">No practice questions are available for this examination yet.</div>';
+  var cur=ls('j1_gov_cur');if(cur&&cur.exam===e.id)h+='<button class="tool hl" data-a="resume"><span class="ic">⏯</span><span><b>Continue your '+esc(cur.title)+'</b><small>'+cur.ans.filter(function(a){return a>=0}).length+' of '+cur.ids.length+' answered</small></span><span class="go">›</span></button>';
+  h+='<button class="tool" data-quick="'+esc(e.id)+'"><span class="ic">⚡</span><span><b>Quick practice</b><small>25 mixed questions · answer shown after each question</small></span><span class="go">›</span></button>';
+  h+='<button class="tool" data-mock="'+esc(e.id)+'"><span class="ic">⏱</span><span><b>'+(isPrac(m)?'J1 Pro Practice Mock':'Exam-pattern mock test')+'</b><small>'+mockN(m)+' questions · '+m.min+' min · '+esc(negTxt(m))+'</small></span><span class="go">›</span></button>';
+  h+='<div class="flab" style="margin-top:14px">Subject practice (20 questions)</div>'+s.map(function(k){return '<button class="tool sm" data-subj="'+esc(k)+'" data-exam="'+esc(e.id)+'"><span><b>'+esc(P[k].name)+'</b><small>'+P[k].q.length+' questions</small></span><span class="go">›</span></button>'}).join('');
+  var hs=PROG.hist.filter(function(x){return x.exam===e.id}).slice(-3).reverse();
+  if(hs.length)h+='<div class="sec"><h3>Your recent results</h3>'+hs.map(function(x){return '<div class="lk"><b>'+esc(x.title)+'</b><span>'+fmtMark(x.score)+' / '+fmtMark(x.max)+' · '+x.acc+'% accuracy · '+esc(x.date)+'</span></div>'}).join('')+'</div>';
+  return h+'<p class="small">'+esc(D.qNote||'Practice question – not an official previous-year question.')+'</p>'}
+function startTest(e,kind,subj){var qs=[],title,secs=null,m=null;
+  if(kind==='quick'){qs=pick(poolOf(subs(e)),25);title='Quick practice'}
+  else if(kind==='subj'){qs=pick(poolOf([subj]),20);title=P[subj].name+' practice'}
+  else{m=mockOf(e);var used={};secs=[];m.mix.forEach(function(x){var keys=x[1][0]==='$branch'?(subj?[subj]:[]):x[1];var p=poolOf(keys).filter(function(q){return !used[q.id]}),g=pick(p,x[2]);g.forEach(function(q){used[q.id]=1});secs.push([x[0],qs.length,qs.length+g.length]);qs=qs.concat(g)});title=isPrac(m)?'J1 Pro Practice Mock'+(subj&&m.branches?' ('+m.branches.filter(function(b){return b[1]===subj}).map(function(b){return b[0]})[0]+')':''):'Exam-pattern mock'}
+  if(!qs.length){toast('No questions available');return}
+  T={exam:e.id,kind:kind,subj:subj||null,title:title,ids:qs.map(function(q){return q.id}),ans:qs.map(function(){return -1}),lock:qs.map(function(){return false}),i:0,done:false,
+     mark:m?m.mark:1,neg:m?m.neg:0,secs:secs,limit:m?m.min*60:0,used:0,start:Date.now(),pal:false};
+  saveCur();go('test')}
+function saveCur(){if(T&&!T.done){var c={};for(var k in T)c[k]=T[k];ls('j1_gov_cur',c)}}
+function resume(){var c=ls('j1_gov_cur');if(!c||!Array.isArray(c.ids)){toast('No saved test');return}
+  if(!c.ids.every(function(id){return QI[id]})){ls('j1_gov_cur',null);toast('The saved test is no longer available');render();return}
+  T=c;T.start=Date.now();T.done=false;go('test')}
+function Q(i){return QI[T.ids[i]]}
+function elapsed(){return T.used+Math.floor((Date.now()-T.start)/1000)}
+function mmss(s){s=Math.max(0,s);var m=Math.floor(s/60),x=s%60;return m+':'+(x<10?'0':'')+x}
+function stopTimer(){if(TM){clearInterval(TM);TM=null}if(T&&!T.done){T.used=elapsed();T.start=Date.now()}}
+function tick(){if(!T||T.done||top().v!=='test'){stopTimer();return}var el=document.getElementById('tmr');
+  if(T.kind==='mock'){var left=T.limit-elapsed();if(el){el.textContent='⏱ '+mmss(left);el.className='tmr'+(left<300?' low':'')}if(left<=0){toast('Time is up – test submitted');finish()}}
+  else if(el)el.textContent='⏱ '+mmss(elapsed())}
+function testView(){if(!T)return bar('Practice')+'<div class="empty">Choose a practice mode to start.</div>';
+  if(T.done)return resultView();
+  var q=Q(T.i),n=T.ids.length,answered=T.ans.filter(function(a){return a>=0}).length,fb=T.kind!=='mock',a=T.ans[T.i],lk=fb&&T.lock[T.i];
+  var sec='';if(T.secs)T.secs.forEach(function(s){if(T.i>=s[1]&&T.i<s[2])sec=s[0]});
+  var h='<div class="bar"><button class="back" data-a="back">‹ Back</button><h2>'+esc(T.title)+'</h2><span id="tmr" class="tmr">⏱</span></div>';
+  h+='<div class="meta"><span>Question '+(T.i+1)+' of '+n+(sec?' · '+esc(sec):'')+'</span><span>'+answered+' answered · Practice question</span></div><div class="prog"><i style="width:'+((T.i+1)/n*100)+'%"></i></div>';
+  h+='<div class="qcard"><div class="qmeta">'+esc(P[q.s]?P[q.s].name:'')+' · '+esc(q.t||'')+'</div><div class="qt">'+esc(q.q)+'</div>'+q.o.map(function(o,k){var cl='';
+      if(lk){cl=k===q.a?' ok':(k===a?' bad':'')}else if(a===k)cl=' on';
+      return '<button class="opt'+cl+'" data-ans="'+k+'"'+(lk?' disabled':'')+'><i>'+'ABCD'.charAt(k)+'</i><span>'+esc(o)+'</span></button>'}).join('');
+  if(lk)h+='<div class="fb '+(a===q.a?'good':'badf')+'">'+(a===q.a?'✓ Correct. ':'✗ Not correct. The answer is '+'ABCD'.charAt(q.a)+'. ')+esc(q.e||'')+'</div>';
+  h+='</div>';
+  h+='<div class="btns"><button class="btn sec" data-a="prev"'+(T.i===0?' disabled':'')+'>‹ Previous</button>'+(T.i<n-1?'<button class="btn" data-a="next">Next ›</button>':'<button class="btn teal" data-a="submit">Finish</button>')+'</div>';
+  h+='<div class="btns">'+(fb?'<button class="btn sec" data-a="submit">Finish now</button><span></span>':'<button class="btn sec" data-a="clear"'+(a<0?' disabled':'')+'>Clear answer</button><button class="btn sec" data-a="pal">'+(T.pal?'Hide':'Show')+' all questions</button>')+'</div>';
+  if(!fb&&T.pal)h+='<div class="pal">'+T.ids.map(function(id,i){return '<button class="pq'+(T.ans[i]>=0?' done':'')+(i===T.i?' cur':'')+'" data-go="'+i+'">'+(i+1)+'</button>'}).join('')+'</div>';
+  if(!fb)h+='<button class="btn teal" data-a="submit" style="width:100%">Submit test</button>';
+  return h}
+function modal(html){var m=document.createElement('div');m.className='mask';m.innerHTML='<div class="mbox">'+html+'</div>';document.body.appendChild(m);
+  [].forEach.call(m.querySelectorAll('[data-m]'),function(b){b.onclick=function(){var v=b.getAttribute('data-m');m.remove();if(v==='yes')finish()}})}
+function confirmSubmit(){var n=T.ids.length,an=T.ans.filter(function(a){return a>=0}).length;
+  modal('<h3>Submit this test?</h3><p>'+an+' answered, <b>'+(n-an)+' not answered</b>.</p>'+(n-an?'<p class="small">Unanswered questions score zero.</p>':'')+'<div class="btns"><button class="btn sec" data-m="no">Keep answering</button><button class="btn teal" data-m="yes">Submit</button></div>')}
+function finish(){if(!T||T.done)return;T.used=elapsed();T.done=true;stopTimer();ls('j1_gov_cur',null);
+  var c=0,w=0;T.ids.forEach(function(id,i){var q=QI[id];PROG.seen[id]=1;if(T.ans[i]<0)return;if(T.ans[i]===q.a)c++;else w++});
+  T.res={c:c,w:w,u:T.ids.length-c-w,score:T.kind==='mock'&&T.neg?c*T.mark-w*T.neg:c*T.mark,max:T.ids.length*T.mark,acc:c+w?Math.round(c/(c+w)*100):0};
+  var d=new Date();PROG.hist.push({exam:T.exam,title:T.title,score:Math.round(T.res.score*100)/100,max:T.res.max,acc:T.res.acc,date:d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear()});
+  if(PROG.hist.length>40)PROG.hist=PROG.hist.slice(-40);saveProg();render();window.scrollTo(0,0)}
+function resultView(){var r=T.res,n=T.ids.length,e=byId(T.exam);
+  var h=bar('Result – '+T.title)+'<div class="qcard score"><div class="small">Your score</div><div class="big">'+fmtMark(r.score)+' / '+fmtMark(r.max)+'</div>'+(T.kind==='mock'&&T.neg&&r.w?'<div class="small">includes −'+fmtMark(r.w*T.neg)+' for '+r.w+' wrong answers</div>':'')+
+    '<div class="sgrid"><div><b>'+r.c+'</b>Correct</div><div><b>'+r.w+'</b>Wrong</div><div><b>'+r.u+'</b>Unanswered</div><div><b>'+r.acc+'%</b>Accuracy</div><div><b>'+mmss(T.used)+'</b>Time taken</div><div><b>'+Math.round(r.c/n*100)+'%</b>Of all questions</div></div></div>';
+  if(T.secs&&T.secs.length>1)h+='<div class="sec"><h3>Section-wise</h3>'+T.secs.map(function(s){var c=0,w=0;for(var i=s[1];i<s[2];i++){if(T.ans[i]<0)continue;if(T.ans[i]===QI[T.ids[i]].a)c++;else w++}return '<div class="lk"><b>'+esc(s[0])+'</b><span>'+c+' correct · '+w+' wrong · '+(s[2]-s[1]-c-w)+' skipped</span></div>'}).join('')+'</div>';
+  h+='<div class="btns"><button class="btn" data-a="restart">↻ New test</button><button class="btn sec" data-a="toexam">Back to practice</button></div>';
+  var lim=T.showAll?n:Math.min(n,30);
+  h+='<div class="sec"><h3>Answer review</h3>'+T.ids.slice(0,lim).map(function(id,i){var q=QI[id],a=T.ans[i];return '<div class="rv"><b>'+(i+1)+'. '+esc(q.q)+'</b>'+q.o.map(function(o,k){var cl=k===q.a?' ok':(k===a?' bad':'');return '<div class="opt'+cl+'" style="margin-top:6px"><i>'+'ABCD'.charAt(k)+'</i><span>'+esc(o)+'</span></div>'}).join('')+
+    '<div class="ex2">'+(a<0?'Not answered. ':a===q.a?'Correct. ':'Your answer was wrong. ')+esc(q.e||'')+'</div></div>'}).join('')+(lim<n?'<button class="btn sec" data-a="all" style="width:100%">Show all '+n+' answers</button>':'')+'</div>';
+  return h}
+
+/* ---------- home ---------- */
+function home(){var cur=ls('j1_gov_cur'),ce=cur&&byId(cur.exam);
+  var h='<div class="hero"><h1>Government Exams & Careers</h1><p>Find exams that match your education, check dates (with their official status) and fees, read the syllabus and practise. Works offline – exam information updates automatically when you are online.</p></div>';
+  if(ce)h+='<button class="tool hl" data-a="resume" style="margin-top:12px"><span class="ic">⏯</span><span><b>Continue: '+esc(cur.title)+'</b><small>'+esc(ce.short||ce.name)+' · '+cur.ans.filter(function(a){return a>=0}).length+' of '+cur.ids.length+' answered</small></span><span class="go">›</span></button>';
+  var nd=EX.filter(function(e){return e.dates}).length,nq=Object.keys(QI).length;
+  return h+'<div class="tools">'+[['explore','🔎','Exam Explorer','Search '+EX.length+' exams – eligibility, posts and selection process'],['pick-dates','📅','Exam Dates & Fees','Dates with status (official / calendar / expected) and fees for '+nd+' exams'],
+   ['pick-syl','📘','Syllabus & Previous Papers','Subjects, exam pattern and official links'],['pick-prac','📝','Practice Tests',nq+' questions · quick practice, subject practice and timed mock tests']]
+  .map(function(t){return '<button class="tool" data-a="'+t[0]+'"><span class="ic">'+t[1]+'</span><span><b>'+t[2]+'</b><small>'+t[3]+'</small></span><span class="go">›</span></button>'}).join('')+
+  '</div>'+(UPD?'<p class="small" style="margin-top:12px">✓ Latest online update of exam information: '+esc(UPD)+'</p>':'')+(NOTICE?'<div class="sec" style="margin-top:12px"><p>'+esc(NOTICE)+'</p></div>':'')+'<p class="small" style="margin-top:12px">'+esc(D.disclaimer||'')+'</p>'}
+
+/* ---------- render + events ---------- */
+function render(){var s=top(),h='';
+  try{
+    if(s.v==='home')h=home();
+    else if(s.v==='explore')h=explore(s.mode||'det',s.title||'Exam Explorer');
+    else if(s.v==='det'||s.v==='syl'||s.v==='prac'||s.v==='dates'){var e=byId(s.id);if(!e)h=bar('Not found')+'<div class="empty">This examination could not be found.</div>';else h=s.v==='det'?detail(e):s.v==='syl'?sylView(e):s.v==='dates'?datesView(e):pracPick(e)}
+    else if(s.v==='test')h=testView();
+  }catch(err){h=bar('Something went wrong')+'<div class="empty">This page could not be shown. Please go back and try again.</div>';if(window.console)console.error(err)}
+  app.innerHTML=h;bind();
+  if(s.v==='test'&&T&&!T.done){if(!TM){T.start=Date.now();TM=setInterval(tick,1000)}tick()}else if(TM)stopTimer()}
+var qT=null;
+function on(sel,fn){[].forEach.call(document.querySelectorAll(sel),function(b){b.onclick=function(){fn(b)}})}
+function bind(){
+  var q=document.getElementById('q');
+  if(q)q.addEventListener('input',function(){F.q=q.value;saveF();clearTimeout(qT);qT=setTimeout(function(){var m=top().mode||'det',l=filtered(m);document.getElementById('res').innerHTML=results(l,m);var all=m==='dates'?EX.filter(function(e){return e.dates}).length:EX.length;document.getElementById('cnt').textContent=l.length+' of '+all+' examinations';bindOpen()},120)});
+  var fc=document.getElementById('fcat');if(fc)fc.onchange=function(){F.cat=fc.value;saveF();render()};
+  var fs=document.getElementById('fstate');if(fs)fs.onchange=function(){F.state=fs.value;saveF();render()};
+  on('[data-qual]',function(b){F.qual=b.getAttribute('data-qual');saveF();render()});
+  on('[data-a]',function(b){act(b.getAttribute('data-a'))});
+  on('[data-url]',function(b){openUrl(b.getAttribute('data-url'))});
+  on('[data-quick]',function(b){startTest(byId(b.getAttribute('data-quick')),'quick')});
+  on('[data-mock]',function(b){var e=byId(b.getAttribute('data-mock')),m=mockOf(e);
+    modal('<h3>'+esc(m.n||'Start the mock test?')+'</h3>'+patternKV(m)+(m.note?'<p class="small"><b>'+esc(m.note)+'</b></p>':m.generic?'<p class="small"><b>This practice test does not represent the official examination pattern.</b> It mixes questions from this exam\'s subjects.</p>':'<p class="small">Number of questions, time and marking follow the official pattern; the questions are J1 Pro practice questions, not official previous-year questions.</p>')+(m.branches?'<p class="small">Choose your branch:</p><div class="btns">'+m.branches.map(function(b){return '<button class="btn teal" data-br="'+esc(b[1])+'">'+esc(b[0])+'</button>'}).join('')+'</div><div class="btns"><button class="btn sec" data-m="no">Cancel</button></div>':'<div class="btns"><button class="btn sec" data-m="no">Cancel</button><button class="btn teal" data-m="go">Start</button></div>'));
+    document.querySelectorAll('[data-br]').forEach(function(x){x.onclick=function(){document.querySelector('.mask').remove();startTest(e,'mock',x.getAttribute('data-br'))}});
+    var g=document.querySelector('[data-m="go"]');if(g)g.onclick=function(){document.querySelector('.mask').remove();startTest(e,'mock')}});
+  on('[data-subj]',function(b){startTest(byId(b.getAttribute('data-exam')),'subj',b.getAttribute('data-subj'))});
+  on('[data-ans]',function(b){if(!T||T.done)return;var k=+b.getAttribute('data-ans');if(T.kind!=='mock'){if(T.lock[T.i])return;T.ans[T.i]=k;T.lock[T.i]=true;PROG.seen[T.ids[T.i]]=1}else T.ans[T.i]=k;saveCur();render()});
+  on('[data-go]',function(b){T.i=+b.getAttribute('data-go');render()});
+  bindOpen()}
+function bindOpen(){on('[data-open]',function(b){go(b.getAttribute('data-mode')||'det',{id:b.getAttribute('data-open')})})}
+function act(a){
+  if(a==='back')back();
+  else if(a==='explore')go('explore',{mode:'det',title:'Exam Explorer'});
+  else if(a==='pick-dates')go('explore',{mode:'dates',title:'Exam Dates & Fees'});
+  else if(a==='pick-syl')go('explore',{mode:'syl',title:'Syllabus & papers – choose an exam'});
+  else if(a==='pick-prac')go('explore',{mode:'prac',title:'Practice – choose an exam'});
+  else if(a==='resume')resume();
+  else if(a==='clearq'){F.q='';saveF();render();var q=document.getElementById('q');if(q)q.focus()}
+  else if(a==='reset'){F={q:'',qual:'',cat:'',state:''};saveF();render()}
+  else if(!T)return;
+  else if(a==='prev'){if(T.i>0){T.i--;render()}}
+  else if(a==='next'){if(T.i<T.ids.length-1){T.i++;saveCur();render()}}
+  else if(a==='clear'){T.ans[T.i]=-1;saveCur();render()}
+  else if(a==='pal'){T.pal=!T.pal;render()}
+  else if(a==='submit'){if(T.done)return;if(T.kind==='mock'||T.ans.some(function(x){return x<0}))confirmSubmit();else finish()}
+  else if(a==='all'){T.showAll=true;render()}
+  else if(a==='restart'){var e=byId(T.exam),k=T.kind,s=T.subj;stack.pop();startTest(e,k,s)}
+  else if(a==='toexam'){var id=T.exam;T=null;while(stack.length>1&&top().v!=='prac')stack.pop();if(top().v!=='prac')go('prac',{id:id});else render()}
+}
+/* ---------- 2.4: online corrections of exam information (j1_content.js) ---------- */
+var NOTICE='',UPD='';
+function okField(f,v){if(v===null)return f==='note'||f==='papers'||f==='apply';
+  if(f==='dates')return typeof v==='object'&&typeof v.label==='string'&&Array.isArray(v.rows)&&v.rows.every(function(r){return Array.isArray(r)&&r.length===2});
+  if(f==='fee')return typeof v==='object'&&typeof v.year==='string'&&Array.isArray(v.rows)&&v.rows.every(function(r){return Array.isArray(r)&&r.length===2});
+  if(f==='mock')return typeof v==='object'&&Array.isArray(v.mix)&&v.mix.length>0&&v.min>0&&v.mark>0&&v.mix.every(function(x){return Array.isArray(x)&&Array.isArray(x[1])&&x[2]>0});
+  if(f==='syllabus')return Array.isArray(v)&&v.length>0&&v.every(function(x){return x&&typeof x.s==='string'&&Array.isArray(x.t)});
+  if(f==='posts'||f==='elig'||f==='stages'||f==='quals')return Array.isArray(v)&&v.length>0&&v.every(function(x){return typeof x==='string'});
+  if(f==='web'||f==='apply'||f==='papers')return typeof v==='string'&&/^https:\/\/[^\s]+$/.test(v);
+  return typeof v==='string'&&v.length>0}
+function applyGov(p){var FL=['dates','fee','note','web','apply','posts','age','elig','stages','about','career','papers','syllabus','mock','minQual','quals','fy','umb','applyNote','papersNote','sylStatus'];
+  Object.keys(p.exams&&typeof p.exams==='object'?p.exams:{}).forEach(function(id){var e=byId(id),src=p.exams[id];if(!e||!src)return;FL.forEach(function(f){if(Object.prototype.hasOwnProperty.call(src,f)&&okField(f,src[f]))e[f]=src[f]})});
+  (Array.isArray(p.add)?p.add:[]).forEach(function(e){if(e&&e.id&&e.name&&e.org&&e.cat&&Array.isArray(e.quals)&&Array.isArray(e.practice)&&!byId(e.id)){D.exams.push(e);EX.push(e)}});
+  Object.keys(p.questions&&typeof p.questions==='object'?p.questions:{}).forEach(function(k){if(!Array.isArray(p.questions[k]))return;if(!P[k])P[k]={name:k,q:[]};if(!Array.isArray(P[k].q))P[k].q=[];p.questions[k].forEach(function(q){if(q&&q.id&&typeof q.q==='string'&&!QI[q.id]&&Array.isArray(q.o)&&q.o.length>1&&q.a>=0&&q.a<q.o.length){q.s=k;P[k].q.push(q);QI[q.id]=q}})});
+  if(typeof p.notice==='string')NOTICE=p.notice;UPD=p.updated||UPD}
+if(window.J1Content)J1Content.load('gov',D.contentVer||0,applyGov,function(){if(top().v!=='test'){render();toast('Exam information updated')}});
+window.__gov={D:D,F:F,filtered:filtered,stack:stack,act:act,startTest:startTest,finish:finish,applyGov:applyGov,QI:QI,byId:byId,get T(){return T}};
+if(!EX.length){app.innerHTML='<div class="empty">The examination guide could not be loaded.</div>'}else render();
+})();
+</script>
+</body>
+</html>
