@@ -1,9 +1,1472 @@
 {
- "ver": 2026110101,
+ "ver": 2026111201,
  "app_min": 53,
- "updated": "1 November 2026",
+ "updated": "12 November 2026",
  "notice": "",
- "exams": {},
+ "exams": {
+  "upsc_ese": {
+   "fee": {
+    "year": "ESE 2027 notification (Notice No. 02/2027-ENGG, 16 Sep 2026)",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹200"
+     ],
+     [
+      "Women, SC, ST, PwBD",
+      "No fee"
+     ]
+    ],
+    "src": "https://www.upsc.gov.in/"
+   }
+  },
+  "upsc_ifos": {
+   "syllabus": [
+    {
+     "s": "Main examination (written)",
+     "t": [
+      "Paper I – General English (300 marks)",
+      "Paper II – General Knowledge (300 marks)",
+      "Papers III–VI – two optional subjects, two papers each (200 marks per paper) from the IFoS list: Agriculture, Agricultural Engineering, Animal Husbandry & Veterinary Science, Botany, Chemistry, Chemical Engineering, Civil Engineering, Forestry, Geology, Mathematics, Mechanical Engineering, Physics, Statistics, Zoology (some combinations are not allowed)"
+     ]
+    },
+    {
+     "s": "Preliminary",
+     "t": [
+      "Civil Services (Preliminary) Examination – common screening"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "upsc_cms": {
+   "elig": [
+    "Nationality: citizen of India, or a subject of Nepal or Bhutan, or a Tibetan refugee who came before 1 January 1962, or a person of Indian origin who migrated from the countries listed in the rules (certificate of eligibility needed for the last three groups).",
+    "Qualification: MBBS (written and practical parts of the final MBBS passed); the compulsory rotating internship must be completed before appointment.",
+    "Medical / physical standards as per the CMS rules; post-wise age limits (some posts lower than 32)."
+   ]
+  },
+  "ssc_cgl": {
+   "fee": {
+    "year": "CGL 2026 notification",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "stages": [
+    "Tier-I – computer-based test (qualifying / shortlisting)",
+    "Tier-II – Paper-I (all posts), Paper-II / III for specific posts",
+    "Computer knowledge and data entry speed tests are part of Tier-II (qualifying)",
+    "Document verification"
+   ],
+   "syllabus": [
+    {
+     "s": "Tier-I (100 questions, 200 marks, 60 min, −0.50 per wrong answer)",
+     "t": [
+      "General Intelligence and Reasoning – 25",
+      "General Awareness – 25",
+      "Quantitative Aptitude – 25",
+      "English Comprehension – 25"
+     ]
+    },
+    {
+     "s": "Tier-II Paper-I (merit; −1 per wrong answer in Sections I–III)",
+     "t": [
+      "Section I: Mathematical Abilities 30 + Reasoning and General Intelligence 30 (180 marks, 1 hour)",
+      "Section II: English Language and Comprehension 45 + General Awareness 25 (210 marks, 1 hour)",
+      "Section III: Computer Knowledge – 20 questions, 60 marks, 15 min (qualifying)",
+      "Section IV: Data Entry Speed Test – 15 min (qualifying)"
+     ]
+    },
+    {
+     "s": "Tier-II other papers (only for the posts concerned)",
+     "t": [
+      "Paper-II Statistics – JSO / Statistical Investigator Gr. II (100 questions, 200 marks, 2 h)",
+      "Paper-III General Studies (Finance and Economics) – Assistant Audit / Accounts Officer, as notified"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ssc_chsl": {
+   "fee": {
+    "year": "CHSL 2026 notification",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "elig": [
+    "DEO / DEO Grade A in the Ministry of Consumer Affairs, Food & Public Distribution, the Ministry of Culture and SSC: 12th in Science with Mathematics.",
+    "Skill / typing test (qualifying): DEO 8,000 key depressions per hour (DEO in C&AG 15,000); LDC / JSA typing 35 wpm English or 30 wpm Hindi.",
+    "Nationality as per SSC rules (citizen of India, or Nepal / Bhutan subject, or other categories with a certificate of eligibility)."
+   ],
+   "stages": [
+    "Tier I – computer-based test",
+    "Tier II – computer-based test (Sections I–III) and skill / typing test",
+    "Document verification"
+   ],
+   "syllabus": [
+    {
+     "s": "Tier-I (100 questions, 200 marks, 60 min, −0.50 per wrong answer)",
+     "t": [
+      "English Language (Basic Knowledge) – 25",
+      "General Intelligence – 25",
+      "Quantitative Aptitude (Basic Arithmetic Skill) – 25",
+      "General Awareness – 25"
+     ]
+    },
+    {
+     "s": "Tier-II Session I (−1 per wrong answer in Sections I–II)",
+     "t": [
+      "Section I: Mathematical Abilities 30 + Reasoning and General Intelligence 30 (180 marks)",
+      "Section II: English Language and Comprehension 40 + General Awareness 20 (180 marks)",
+      "Section III: Computer Knowledge Module – 15 questions, 45 marks (qualifying)"
+     ]
+    },
+    {
+     "s": "Tier-II Session II – skill / typing test (qualifying)",
+     "t": [
+      "DEO: 8,000 key depressions per hour (DEO in C&AG: 15,000)",
+      "LDC / JSA: 35 wpm English or 30 wpm Hindi"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ssc_mts": {
+   "fee": {
+    "year": "Historical fee – MTS 2025 notification (the 2026 notice was not checked; SSC has charged ₹100 for years)",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "stages": [
+    "Computer-based exam in two sessions on the same day (both compulsory): Session I 40 questions / 120 marks / 45 min, no negative marking; Session II 50 questions / 150 marks / 45 min, −1 per wrong answer",
+    "Havaldar only: PET (men 1,600 m walk in 15 min; women 1 km in 20 min) and PST",
+    "Document verification"
+   ],
+   "syllabus": [
+    {
+     "s": "Session I (45 min, no negative marking)",
+     "t": [
+      "Numerical and Mathematical Ability (20 questions, 60 marks) – number concepts, percentage, ratio, time and work, average, profit and loss, simple interest, basic geometry, simple graphs and data",
+      "Reasoning Ability and Problem Solving (20 questions, 60 marks) – series, coding-decoding, analogy, directions, classification, jumbling, non-verbal reasoning, age, calendar and clock"
+     ]
+    },
+    {
+     "s": "Session II (45 min, −1 per wrong answer)",
+     "t": [
+      "General Awareness (25 questions, 75 marks) – Class 10 social studies (history, geography, art and culture, civics, economics), general science, environment",
+      "English Language and Comprehension (25 questions, 75 marks) – vocabulary, grammar, sentence structure, synonyms / antonyms, usage, comprehension"
+     ]
+    }
+   ],
+   "sylStatus": "official"
+  },
+  "ssc_je": {
+   "fee": {
+    "year": "JE 2026 notification",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "stages": [
+    "Paper-I (CBT, 200 questions, 200 marks, 2 h, −0.25) – General Intelligence & Reasoning, General Awareness and the technical part of your branch. From JE 2026 Paper-I is reported to be qualifying (minimum UR 30%, OBC / EWS 25%, others 20%) – confirm in the notice",
+    "Paper-II (CBT, technical paper of your branch, 300 marks, 2 h) – merit from JE 2026 as reported",
+    "Document verification"
+   ],
+   "mock": {
+    "n": "J1 Pro Practice Mock – SSC JE Paper-I style (choose your branch)",
+    "official": false,
+    "note": "This practice test does not represent the complete official examination pattern. Choose Civil, Mechanical or Electrical – only that branch's technical questions are used (the J1 Pro technical banks are smaller than the official 100-question technical part). From JE 2026 Paper-I is reported to be qualifying – Paper-II is not simulated.",
+    "branches": [
+     [
+      "Civil",
+      "civil"
+     ],
+     [
+      "Mechanical",
+      "mech"
+     ],
+     [
+      "Electrical",
+      "elec"
+     ]
+    ],
+    "mix": [
+     [
+      "General Intelligence & Reasoning",
+      [
+       "reason"
+      ],
+      50
+     ],
+     [
+      "General Awareness",
+      [
+       "gk"
+      ],
+      50
+     ],
+     [
+      "Technical – your branch",
+      [
+       "$branch"
+      ],
+      100
+     ]
+    ],
+    "min": 120,
+    "mark": 1,
+    "neg": 0.25
+   }
+  },
+  "ssc_cpo": {
+   "fee": {
+    "year": "CPO 2026 notification",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "stages": [
+    "Paper I – computer-based test (revised in 2026: 100 questions, 1 hour)",
+    "Physical standard and endurance tests (PST / PET)",
+    "Paper II – computer-based test covering reasoning, GK, quantitative aptitude and English (revised in 2026)",
+    "Detailed medical examination",
+    "Document verification"
+   ],
+   "syllabus": [
+    {
+     "s": "Paper-I (2026 revised pattern: 100 questions, 100 marks, 1 hour, 15-minute sectional timer)",
+     "t": [
+      "General Intelligence and Reasoning – 25",
+      "General Knowledge and General Awareness – 25",
+      "Quantitative Aptitude – 25",
+      "English Comprehension – 25"
+     ]
+    },
+    {
+     "s": "Paper-II (2026 revised pattern)",
+     "t": [
+      "General Intelligence and Reasoning",
+      "General Knowledge and General Awareness",
+      "Quantitative Aptitude",
+      "English Comprehension (largest section)",
+      "Exact questions, marks and timing: see the SSC CPO 2026 notice"
+     ]
+    }
+   ],
+   "mock": {
+    "n": "J1 Pro Practice Mock – SSC CPO Paper-I (2026 format)",
+    "official": false,
+    "note": "Practice test in the 2026 Paper-I format (4 sections × 25 questions, 1 hour). Marking shown here (1 mark, −0.25) is as reported for 2026 – confirm in the SSC notice. Paper-II is not included.",
+    "mix": [
+     [
+      "General Intelligence & Reasoning",
+      [
+       "reason"
+      ],
+      25
+     ],
+     [
+      "General Knowledge & General Awareness",
+      [
+       "gk",
+       "hist",
+       "geo",
+       "polity",
+       "econ",
+       "sci"
+      ],
+      25
+     ],
+     [
+      "Quantitative Aptitude",
+      [
+       "quant"
+      ],
+      25
+     ],
+     [
+      "English Comprehension",
+      [
+       "eng"
+      ],
+      25
+     ]
+    ],
+    "min": 60,
+    "mark": 1,
+    "neg": 0.25
+   },
+   "sylStatus": "broad"
+  },
+  "ssc_gd": {
+   "fee": {
+    "year": "GD Constable 2026 notification",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "syllabus": [
+    {
+     "s": "Computer-based exam (80 questions, 160 marks, 60 min, −0.25 per wrong answer)",
+     "t": [
+      "General Intelligence and Reasoning – 20",
+      "General Knowledge and General Awareness – 20",
+      "Elementary Mathematics – 20",
+      "English / Hindi – 20"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ssc_steno": {
+   "fee": {
+    "year": "Historical fee – Stenographer 2025 notification (the 2026 notice was not checked; SSC has charged ₹100 for years)",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   },
+   "syllabus": [
+    {
+     "s": "Computer-based exam (200 questions, 200 marks, 2 hours, −0.25 per wrong answer)",
+     "t": [
+      "General Intelligence and Reasoning – 50",
+      "General Awareness – 50",
+      "English Language and Comprehension – 100"
+     ]
+    },
+    {
+     "s": "Skill test in stenography (qualifying)",
+     "t": [
+      "Dictation 10 minutes – Grade C: 100 words per minute; Grade D: 80 words per minute",
+      "Transcription on computer – Grade C: 40 min English / 55 min Hindi; Grade D: 50 min English / 65 min Hindi"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ssc_sp": {
+   "fee": {
+    "year": "Historical fee – Selection Post Phase-XIII notification (the 2026 notice was not checked; SSC has charged ₹100 for years)",
+    "rows": [
+     [
+      "General / OBC / EWS (men)",
+      "₹100"
+     ],
+     [
+      "Women, SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://ssc.gov.in/"
+   }
+  },
+  "rrb_ntpc": {
+   "fee": {
+    "year": "Historical fee – CEN 06/2025 and 07/2025 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://indianrailways.gov.in/"
+   },
+   "syllabus": [
+    {
+     "s": "CBT-1 (common, 100 questions, 90 min, −1/3)",
+     "t": [
+      "General Awareness – 40",
+      "Mathematics – 30",
+      "General Intelligence and Reasoning – 30"
+     ]
+    },
+    {
+     "s": "CBT-2 (post-level, 120 questions, 90 min, −1/3)",
+     "t": [
+      "General Awareness – 50",
+      "Mathematics – 35",
+      "General Intelligence and Reasoning – 35"
+     ]
+    },
+    {
+     "s": "Skill / aptitude tests (post-wise, qualifying)",
+     "t": [
+      "Computer-based typing skill test – typist and clerk posts",
+      "Computer-based aptitude test (CBAT) – Station Master / Traffic Assistant posts"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "rrb_groupd": {
+   "fee": {
+    "year": "Historical fee – CEN 08/2024 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://indianrailways.gov.in/"
+   },
+   "syllabus": [
+    {
+     "s": "CBT (100 questions, 90 min, −1/3)",
+     "t": [
+      "Mathematics – 25",
+      "General Intelligence and Reasoning – 30",
+      "General Science – 25 (10th standard Physics, Chemistry, Life Science)",
+      "General Awareness on current affairs – 20"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "rrb_alp": {
+   "fee": {
+    "year": "Historical fee – CEN 01/2025 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://indianrailways.gov.in/"
+   }
+  },
+  "rrb_tech": {
+   "fee": {
+    "year": "Historical fee – CEN 02/2025 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://indianrailways.gov.in/"
+   },
+   "elig": [
+    "Nationality as per the CEN: citizen of India, or Nepal / Bhutan subject, or other notified categories with a certificate of eligibility.",
+    "Grade I Signal and Grade III have separate qualification tables in the CEN – apply only for a post whose exact degree / diploma / ITI trade you hold.",
+    "Medical standard (A-3, B-1, C-1 etc.) is fixed post-wise in the CEN; check vision requirements before applying."
+   ],
+   "stages": [
+    "Single CBT – Grade I Signal and Grade III have different subject distributions (see syllabus)",
+    "Document verification and medical examination (medical standard fixed post-wise in the CEN)"
+   ],
+   "syllabus": [
+    {
+     "s": "Technician Grade I Signal – CBT (100 questions, 90 min, −1/3)",
+     "t": [
+      "General Awareness – 10",
+      "General Intelligence and Reasoning – 15",
+      "Basics of Computers and Applications – 20",
+      "Mathematics – 20",
+      "Basic Science and Engineering – 35"
+     ]
+    },
+    {
+     "s": "Technician Grade III – CBT (100 questions, 90 min, −1/3)",
+     "t": [
+      "Mathematics – 25",
+      "General Intelligence and Reasoning – 25",
+      "General Science – 40",
+      "General Awareness – 10"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "rrb_je": {
+   "fee": {
+    "year": "Historical fee – CEN 03/2024 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://indianrailways.gov.in/"
+   },
+   "elig": [
+    "Nationality as per the CEN: citizen of India, or Nepal / Bhutan subject, or other notified categories with a certificate of eligibility.",
+    "Only the engineering branches listed against each JE post in the CEN are accepted.",
+    "Medical standard is fixed post-wise in the CEN."
+   ]
+  },
+  "rpf_const": {
+   "fee": {
+    "year": "Historical fee – CEN RPF 02/2024 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://rpf.indianrailways.gov.in/"
+   },
+   "apply": "https://www.rrbapply.gov.in/",
+   "syllabus": [
+    {
+     "s": "CBT (120 questions, 90 min, −1/3)",
+     "t": [
+      "General Awareness – 50",
+      "Arithmetic – 35",
+      "General Intelligence and Reasoning – 35"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "rpf_si": {
+   "fee": {
+    "year": "Historical fee – CEN RPF 01/2024 (the next CEN gives the current fee)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹500 (₹400 refunded after appearing in CBT, minus bank charges)"
+     ],
+     [
+      "SC, ST, Ex-servicemen, PwBD, women, transgender, minorities, EBC",
+      "₹250 (refunded after appearing in CBT, minus bank charges)"
+     ]
+    ],
+    "src": "https://rpf.indianrailways.gov.in/"
+   },
+   "apply": "https://www.rrbapply.gov.in/",
+   "syllabus": [
+    {
+     "s": "CBT (120 questions, 90 min, −1/3)",
+     "t": [
+      "General Awareness – 50",
+      "Arithmetic – 35",
+      "General Intelligence and Reasoning – 35"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ibps_po": {
+   "elig": [
+    "Nationality: citizen of India, or a subject of Nepal or Bhutan, or a Tibetan refugee who came before 1 January 1962, or a person of Indian origin who migrated from the listed countries (certificate of eligibility needed for the last three).",
+    "Graduation in any discipline; the graduation percentage must be entered while registering and the result declared on or before the closing date (PO/MT-XVI: 21 Jul 2026)."
+   ],
+   "syllabus": [
+    {
+     "s": "Preliminary (100 questions, 60 min, −0.25)",
+     "t": [
+      "English Language – 30 (20 min)",
+      "Quantitative Aptitude – 35 (20 min)",
+      "Reasoning Ability – 35 (20 min)"
+     ]
+    },
+    {
+     "s": "Main (objective + descriptive, −0.25 in objective tests)",
+     "t": [
+      "Reasoning (and computer aptitude)",
+      "General / Economy / Banking / Digital / Financial Awareness (including RBI circulars)",
+      "English Language",
+      "Data Analysis and Interpretation",
+      "Descriptive paper in English (essay and comprehension / letter, as notified)"
+     ]
+    },
+    {
+     "s": "Personality test and interview",
+     "t": [
+      "Personality test – compulsory, non-qualifying",
+      "Interview – 100 marks; final score: Main 80 : Interview 20"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ibps_clerk": {
+   "fee": {
+    "year": "CRP CSA-XVI (2026)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹850 (incl. GST)"
+     ],
+     [
+      "SC, ST, PwBD, Ex-servicemen",
+      "₹175 (incl. GST)"
+     ]
+    ],
+    "src": "https://www.ibps.in/"
+   },
+   "syllabus": [
+    {
+     "s": "Preliminary (100 questions, 100 marks, 60 min, −0.25)",
+     "t": [
+      "English Language – 30",
+      "Numerical Ability – 35",
+      "Reasoning Ability – 35"
+     ]
+    },
+    {
+     "s": "Main (2026: 160 questions, 200 marks, 125 min, −0.25)",
+     "t": [
+      "General / Financial Awareness",
+      "General English",
+      "Reasoning Ability (and computer aptitude)",
+      "Quantitative Aptitude"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "ibps_rrb": {
+   "fee": {
+    "year": "CRP RRBs-XV (2026)",
+    "rows": [
+     [
+      "General / OBC / EWS – Officers and Office Assistants",
+      "₹850"
+     ],
+     [
+      "SC, ST, PwBD (and ESM / DESM for Office Assistant)",
+      "₹175"
+     ]
+    ],
+    "src": "https://www.ibps.in/"
+   }
+  },
+  "sbi_po": {
+   "fee": {
+    "year": "Historical fee – SBI PO 2025 notification (no current notification)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹750"
+     ],
+     [
+      "SC, ST, PwBD",
+      "No fee"
+     ]
+    ],
+    "src": "https://sbi.co.in/web/careers"
+   },
+   "elig": [
+    "Nationality: Indian citizen (and other categories as stated in the SBI notice).",
+    "Attempts: General / EWS 4; OBC, General-PwBD, EWS-PwBD and OBC-PwBD 7; SC / ST (including PwBD) no limit.",
+    "Graduation in any discipline; final-year candidates must show proof of passing by the date in the notice."
+   ],
+   "syllabus": [
+    {
+     "s": "Phase I – Preliminary (100 questions, 60 min, −0.25)",
+     "t": [
+      "English Language – 40",
+      "Quantitative Aptitude – 30",
+      "Reasoning Ability – 30"
+     ]
+    },
+    {
+     "s": "Phase II – Main",
+     "t": [
+      "Reasoning and Computer Aptitude",
+      "Data Analysis and Interpretation",
+      "General / Economy / Banking Awareness",
+      "English Language",
+      "Descriptive test – letter and essay"
+     ]
+    },
+    {
+     "s": "Phase III",
+     "t": [
+      "Psychometric test",
+      "Group exercise",
+      "Interview"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "sbi_clerk": {
+   "fee": {
+    "year": "Historical fee – SBI Junior Associates 2025 notification (no current notification)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹750"
+     ],
+     [
+      "SC, ST, PwBD, Ex-servicemen",
+      "No fee"
+     ]
+    ],
+    "src": "https://sbi.co.in/web/careers"
+   },
+   "syllabus": [
+    {
+     "s": "Preliminary (100 questions, 60 min, −0.25)",
+     "t": [
+      "English Language – 30",
+      "Numerical Ability – 35",
+      "Reasoning Ability – 35"
+     ]
+    },
+    {
+     "s": "Main",
+     "t": [
+      "General / Financial Awareness",
+      "General English",
+      "Quantitative Aptitude",
+      "Reasoning Ability and Computer Aptitude"
+     ]
+    },
+    {
+     "s": "Test of the specified local language (if not studied in 10th / 12th)",
+     "t": [
+      "Local language test as notified"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "rbi_gradeb": {
+   "fee": {
+    "year": "Historical fee – RBI Grade B 2025 notification (next fee not announced)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹850 + GST"
+     ],
+     [
+      "SC, ST, PwBD",
+      "₹100 + GST"
+     ]
+    ],
+    "src": "https://opportunities.rbi.org.in/"
+   }
+  },
+  "rbi_assistant": {
+   "fee": {
+    "year": "Historical fee – RBI Assistant 2023 notification (next fee not announced)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹450 + GST"
+     ],
+     [
+      "SC, ST, PwBD, Ex-servicemen",
+      "₹50 + GST"
+     ]
+    ],
+    "src": "https://opportunities.rbi.org.in/"
+   },
+   "syllabus": [
+    {
+     "s": "Preliminary (last notification, 2023)",
+     "t": [
+      "English Language – 30",
+      "Numerical Ability – 35",
+      "Reasoning Ability – 35"
+     ]
+    },
+    {
+     "s": "Main (last notification, 2023)",
+     "t": [
+      "Test of Reasoning",
+      "Test of English Language",
+      "Test of Numerical Ability",
+      "Test of General Awareness",
+      "Test of Computer Knowledge"
+     ]
+    },
+    {
+     "s": "Language Proficiency Test",
+     "t": [
+      "Official / local language of the state applied for"
+     ]
+    }
+   ],
+   "applyNote": "RBI posts the \"Apply online\" link on opportunities.rbi.org.in only while a recruitment is open.",
+   "sylStatus": "broad"
+  },
+  "nabard_a": {
+   "fee": {
+    "year": "Historical fee – latest NABARD Grade A notice (next fee not announced)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹850 (application + intimation)"
+     ],
+     [
+      "SC, ST, PwBD",
+      "₹150 (intimation only)"
+     ]
+    ],
+    "src": "https://www.nabard.org/"
+   },
+   "elig": [
+    "Nationality as per the NABARD advertisement.",
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ]
+  },
+  "lic_aao": {
+   "fee": {
+    "year": "Historical fee – LIC AAO 2025 notification (next fee not announced)",
+    "rows": [
+     [
+      "General / OBC / EWS",
+      "₹700 + charges + GST"
+     ],
+     [
+      "SC, ST, PwBD",
+      "₹85 + charges + GST"
+     ]
+    ],
+    "src": "https://licindia.in/careers"
+   },
+   "elig": [
+    "AAO Generalist: bachelor's degree in any discipline. AAO Specialist (CA, Actuarial, Legal, IT and others) and AE posts need the specific qualification given in the LIC notification.",
+    "Pre-recruitment medical examination applies.",
+    "Nationality and other conditions as per the LIC notification."
+   ],
+   "stages": [
+    "Preliminary examination (qualifying)",
+    "Main examination – objective and descriptive English",
+    "Interview",
+    "Pre-recruitment medical examination"
+   ],
+   "syllabus": [
+    {
+     "s": "Preliminary – AAO Generalist (2025 notification, 100 questions, 1 hour)",
+     "t": [
+      "Reasoning Ability – 35",
+      "Quantitative Aptitude – 35",
+      "English Language – 30 (qualifying; not counted for ranking)"
+     ]
+    },
+    {
+     "s": "Main – objective (300 marks, 2 hours)",
+     "t": [
+      "Reasoning Ability – 30 questions, 90 marks",
+      "General Knowledge and Current Affairs – 30 questions, 60 marks",
+      "Data Analysis and Interpretation – 30 questions, 90 marks",
+      "Insurance and Financial Market Awareness – 30 questions, 60 marks"
+     ]
+    },
+    {
+     "s": "Main – descriptive English (25 marks, 30 min, qualifying)",
+     "t": [
+      "Letter / e-mail, report, situation analysis and précis writing as notified"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "lic_assistant": {
+   "syllabus": [
+    {
+     "s": "Preliminary (last notification)",
+     "t": [
+      "English Language",
+      "Numerical Ability",
+      "Reasoning Ability"
+     ]
+    },
+    {
+     "s": "Main (last notification)",
+     "t": [
+      "General / Financial Awareness",
+      "General English",
+      "Quantitative Aptitude",
+      "Reasoning Ability",
+      "Hindi or regional language test as notified"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "afcat": {
+   "syllabus": [
+    {
+     "s": "AFCAT (100 questions, 300 marks, 2 hours: +3 / −1)",
+     "t": [
+      "General Awareness",
+      "Verbal Ability in English",
+      "Numerical Ability",
+      "Reasoning and Military Aptitude Test"
+     ]
+    },
+    {
+     "s": "Engineering Knowledge Test (Ground Duty Technical only)",
+     "t": [
+      "Mechanical, Computer Science or Electrical & Electronics – as chosen"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "isro_tech": {
+   "elig": [
+    "Indian nationals only (ISRO centre advertisements).",
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ]
+  },
+  "drdo_sci": {
+   "elig": [
+    "Indian nationals only.",
+    "A valid GATE score in the GATE paper specified for the discipline is required.",
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ]
+  },
+  "barc_oces": {
+   "apply": null,
+   "elig": [
+    "Indian nationals only.",
+    "Shortlisting route: either the BARC online exam or a valid GATE score – as chosen in the application.",
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ],
+   "applyNote": "The OCES / DGFS application portal opens only during the yearly cycle – use the link in the current OCES / DGFS notice (the old barconlineexam.in address no longer opens)."
+  },
+  "csir_labs": {
+   "elig": [
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ]
+  },
+  "ctet": {
+   "dates": {
+    "label": "REPORTED",
+    "basis": "CBSE notice of 14 Sep 2026 as reported – confirm on ctet.nic.in · checked 11 Nov 2026",
+    "rows": [
+     [
+      "22nd CTET (Sep 2026 cycle)",
+      "Application closed (reopened 25 Aug – 1 Sep 2026)"
+     ],
+     [
+      "Exam (rescheduled from 6 Sep 2026)",
+      "12 – 13 Dec 2026"
+     ],
+     [
+      "Next cycle",
+      "Not officially announced"
+     ]
+    ],
+    "hist": [
+     "CTET is normally held twice a year"
+    ],
+    "src": "https://ctet.nic.in/"
+   },
+   "fee": {
+    "year": "CTET September 2026 (22nd edition)",
+    "rows": [
+     [
+      "General / OBC (NCL) – one paper",
+      "₹1,000"
+     ],
+     [
+      "General / OBC (NCL) – both papers",
+      "₹1,200"
+     ],
+     [
+      "SC, ST, PwD – one paper",
+      "₹500"
+     ],
+     [
+      "SC, ST, PwD – both papers",
+      "₹600"
+     ]
+    ],
+    "src": "https://ctet.nic.in/"
+   },
+   "papers": "https://ctet.nic.in/archive/",
+   "papersNote": "Linked as \"Previous Year Question Paper\" on ctet.nic.in."
+  },
+  "ugc_net": {
+   "elig": [
+    "Paper II subject must be the subject of your Master's degree or a related subject from the UGC subject list.",
+    "JRF age limit applies only to JRF; no upper age limit for Assistant Professor and PhD admission."
+   ],
+   "papersNote": "Not published as a public download – NTA shows each candidate the question paper with recorded responses only during the answer-key challenge."
+  },
+  "csir_net": {
+   "elig": [
+    "Qualification: M.Sc or equivalent / Integrated BS-MS / BS-4 years / BE / B.Tech / B.Pharma / MBBS with at least 55% (50% for OBC-NCL, SC, ST, PwD and third gender), as listed in the bulletin.",
+    "Subjects: Chemical Sciences, Earth Sciences, Life Sciences, Mathematical Sciences and Physical Sciences."
+   ],
+   "papersNote": "Not published as a public download – NTA shows the question paper with recorded responses only during the answer-key challenge."
+  },
+  "kvs": {
+   "web": "https://kvs.gov.in/",
+   "elig": [
+    "CTET pass is required for PRT (Paper I) and TGT (Paper II) posts.",
+    "Proficiency to teach in both Hindi and English medium is required for teaching posts.",
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ]
+  },
+  "nvs": {
+   "elig": [
+    "CTET pass is required for TGT posts as notified.",
+    "Exact qualification, percentage, experience, age and other conditions vary by post and are fixed in each official notification."
+   ]
+  },
+  "neet_ug": {
+   "fee": {
+    "year": "Historical fee – NEET-UG 2025 (the 2027 fee is not announced)",
+    "rows": [
+     [
+      "General",
+      "₹1,700"
+     ],
+     [
+      "EWS / OBC-NCL",
+      "₹1,600"
+     ],
+     [
+      "SC, ST, PwBD, transgender",
+      "₹1,000"
+     ]
+    ],
+    "src": "https://neet.nta.nic.in/"
+   },
+   "elig": [
+    "Nationality: Indian nationals, NRIs, OCIs, PIOs and foreign nationals as per the NTA bulletin.",
+    "Physics, Chemistry, Biology / Biotechnology and English must have been studied in Class 12.",
+    "No upper age limit and no limit on the number of attempts under the current bulletin."
+   ],
+   "papers": "https://neet.nta.nic.in/archive/",
+   "papersNote": "NTA archive: NEET-UG 2020 question papers are published; later years have answer keys only."
+  },
+  "ini_cet": {
+   "elig": [
+    "Registration: permanent or provisional registration with NMC / State Medical Council (MBBS) or DCI / State Dental Council (BDS) is compulsory.",
+    "Internship must be completed by the cut-off date in the prospectus for the session (January / July).",
+    "Foreign medical graduates need the screening test and registration required by NMC."
+   ],
+   "syllabus": [
+    {
+     "s": "Computer-based test (200 questions, 3 hours, +1 / −1/3)",
+     "t": [
+      "Questions from the MBBS (or BDS for MDS) curriculum subjects – the subject list and weightage are not fixed in the prospectus"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "tn_civil_judge": {
+   "apply": "https://apply.tnpscexams.in/"
+  },
+  "mhc_staff": {
+   "apply": "https://www.mhc.tn.gov.in/recruitment/login"
+  },
+  "tnpsc_g1": {
+   "apply": "https://apply.tnpscexams.in/",
+   "syllabus": [
+    {
+     "s": "Preliminary – Part A General Studies (degree standard, 175 questions)",
+     "t": [
+      "General Science (10)",
+      "Geography of India (10)",
+      "History, Culture of India and Indian National Movement (25)",
+      "Indian Polity (40)",
+      "Indian Economy and Development Administration in Tamil Nadu (50)",
+      "History, Culture, Heritage and Socio-Political Movements in Tamil Nadu (40)"
+     ]
+    },
+    {
+     "s": "Preliminary – Part B Aptitude and Mental Ability (SSLC standard, 25 questions)",
+     "t": [
+      "Aptitude (15) – simplification, percentage, HCF / LCM, ratio and proportion, simple and compound interest, area, volume, time and work",
+      "Reasoning (10) – logical reasoning, puzzles, dice, visual and alphanumeric reasoning, number series"
+     ]
+    },
+    {
+     "s": "Main written examination (descriptive)",
+     "t": [
+      "Paper I – Compulsory Tamil Language Eligibility Test (SSLC standard, 100 marks, qualifying)",
+      "Paper II – General Studies I (250): Modern History of India and Indian Culture; Social Issues in India and Tamil Nadu; Ethics and Integrity",
+      "Paper III – General Studies II (250): Indian Polity and emerging political trends; Science and Technology in India's development; Tamil Society, Culture and Heritage",
+      "Paper IV – General Studies III (250): Geography of India with reference to Tamil Nadu; Environment, Biodiversity and Disaster Management; Indian Economy and global impact"
+     ]
+    }
+   ],
+   "sylStatus": "official"
+  },
+  "tnpsc_g2": {
+   "apply": "https://apply.tnpscexams.in/",
+   "syllabus": [
+    {
+     "s": "Preliminary – General Studies (degree standard, 75 questions)",
+     "t": [
+      "Unit I General Science (5)",
+      "Unit II Geography of India (5)",
+      "Unit III History, Culture of India and Indian National Movement (10)",
+      "Unit IV Indian Polity (15)",
+      "Unit V Indian Economy and Development Administration in Tamil Nadu (20)",
+      "Unit VI History, Culture, Heritage and Socio-Political Movements in Tamil Nadu (20)"
+     ]
+    },
+    {
+     "s": "Preliminary – Aptitude and Mental Ability (SSLC standard, 25 questions)",
+     "t": [
+      "Aptitude (15) – simplification, percentage, HCF / LCM, ratio and proportion, interest, area, volume, time and work",
+      "Reasoning (10) – logical reasoning, puzzles, dice, visual and alphanumeric reasoning, number series"
+     ]
+    },
+    {
+     "s": "Preliminary – General Tamil (பொதுத் தமிழ்) OR General English (SSLC standard, 100 questions)",
+     "t": [
+      "அலகு I இலக்கணம் (25) / Unit I Grammar (25)",
+      "அலகு II சொல்லகராதி (15) / Unit II Vocabulary (15)",
+      "அலகு III எழுதும் திறன் (15) / Unit III Writing Skills (10)",
+      "அலகு IV கலைச் சொற்கள் (10) / Unit IV Technical Terms (10)",
+      "அலகு V வாசித்தல் – புரிந்து கொள்ளும் திறன் (15) / Unit V Reading Comprehension (20)",
+      "அலகு VI எளிய மொழிபெயர்ப்பு (5) / Unit VI Translation (5)",
+      "அலகு VII இலக்கியம், தமிழ் அறிஞர்களும், தமிழ்த்தொண்டும் (15) / Unit VII Literary Works (15)"
+     ]
+    },
+    {
+     "s": "Main written examination – Group II",
+     "t": [
+      "Paper I – Tamil Eligibility Test (qualifying)",
+      "General Studies (degree standard, 300 marks): Modern History of India with reference to Tamil Nadu (40); Tamil Society – Culture and Heritage (30); Social Issues in India and Tamil Nadu (50); Science and Technology in Development (40); Constitution, Polity and Governance (60); Geography, Environment, Biodiversity and Disaster Management (40); Indian Economy with reference to Tamil Nadu (40)"
+     ]
+    }
+   ],
+   "sylStatus": "official"
+  },
+  "tnpsc_g2a": {
+   "apply": "https://apply.tnpscexams.in/",
+   "syllabus": [
+    {
+     "s": "Preliminary – General Studies (degree standard, 75 questions)",
+     "t": [
+      "Unit I General Science (5)",
+      "Unit II Geography of India (5)",
+      "Unit III History, Culture of India and Indian National Movement (10)",
+      "Unit IV Indian Polity (15)",
+      "Unit V Indian Economy and Development Administration in Tamil Nadu (20)",
+      "Unit VI History, Culture, Heritage and Socio-Political Movements in Tamil Nadu (20)"
+     ]
+    },
+    {
+     "s": "Preliminary – Aptitude and Mental Ability (SSLC standard, 25 questions)",
+     "t": [
+      "Aptitude (15) – simplification, percentage, HCF / LCM, ratio and proportion, interest, area, volume, time and work",
+      "Reasoning (10) – logical reasoning, puzzles, dice, visual and alphanumeric reasoning, number series"
+     ]
+    },
+    {
+     "s": "Preliminary – General Tamil (பொதுத் தமிழ்) OR General English (SSLC standard, 100 questions)",
+     "t": [
+      "அலகு I இலக்கணம் (25) / Unit I Grammar (25)",
+      "அலகு II சொல்லகராதி (15) / Unit II Vocabulary (15)",
+      "அலகு III எழுதும் திறன் (15) / Unit III Writing Skills (10)",
+      "அலகு IV கலைச் சொற்கள் (10) / Unit IV Technical Terms (10)",
+      "அலகு V வாசித்தல் – புரிந்து கொள்ளும் திறன் (15) / Unit V Reading Comprehension (20)",
+      "அலகு VI எளிய மொழிபெயர்ப்பு (5) / Unit VI Translation (5)",
+      "அலகு VII இலக்கியம், தமிழ் அறிஞர்களும், தமிழ்த்தொண்டும் (15) / Unit VII Literary Works (15)"
+     ]
+    },
+    {
+     "s": "Main written examination – Group IIA (objective)",
+     "t": [
+      "Paper I – Tamil Eligibility Test (qualifying)",
+      "Part A General Studies (150 questions): Modern History of Tamil Nadu, Tamil Society, Culture and Heritage (30); Administration of States with reference to Tamil Nadu (45); Science and Technology in Development (20); Tamil Nadu Economy and Social Issues (30); Geography of Tamil Nadu, Environment, Biodiversity and Disaster Management (25)",
+      "Part B General Intelligence and Reasoning (SSLC standard, 50 questions)"
+     ]
+    }
+   ],
+   "sylStatus": "official"
+  },
+  "tnpsc_g4": {
+   "apply": "https://apply.tnpscexams.in/",
+   "stages": [
+    "Single written exam (OMR, 200 questions): Part A General Studies 75, Part B Aptitude & Mental Ability 25, Part C Tamil Eligibility-cum-Scoring Test 100 (General English instead of Part C only for eligible differently abled candidates)",
+    "Certificate verification",
+    "Counselling"
+   ],
+   "syllabus": [
+    {
+     "s": "Part A – General Studies (SSLC standard, 75 questions)",
+     "t": [
+      "Unit I General Science (5)",
+      "Unit II Geography (5)",
+      "Unit III History, Culture of India and Indian National Movement (10)",
+      "Unit IV Indian Polity (15)",
+      "Unit V Indian Economy and Development Administration in Tamil Nadu (20)",
+      "Unit VI History, Culture, Heritage and Socio-Political Movements of Tamil Nadu (20)"
+     ]
+    },
+    {
+     "s": "Part B – Aptitude and Mental Ability (SSLC standard, 25 questions)",
+     "t": [
+      "Aptitude (15) – simplification, percentage, HCF / LCM, ratio and proportion, interest, area, volume, time and work",
+      "Reasoning (10) – logical reasoning, puzzles, dice, visual and alphanumeric reasoning, number series"
+     ]
+    },
+    {
+     "s": "Part C – Tamil Eligibility-cum-Scoring Test (SSLC standard, 100 questions)",
+     "t": [
+      "அலகு I இலக்கணம் (25)",
+      "அலகு II சொல்லகராதி (15)",
+      "அலகு III எழுதும் திறன் (15)",
+      "அலகு IV கலைச் சொற்கள் (10)",
+      "அலகு V வாசித்தல் – புரிந்து கொள்ளும் திறன் (15)",
+      "அலகு VI எளிய மொழிபெயர்ப்பு (5)",
+      "அலகு VII இலக்கியம், தமிழ் அறிஞர்களும், தமிழ்த்தொண்டும் (15)"
+     ]
+    }
+   ],
+   "sylStatus": "official"
+  },
+  "tnpsc_cts": {
+   "apply": "https://apply.tnpscexams.in/"
+  },
+  "tnpsc_cese": {
+   "apply": "https://apply.tnpscexams.in/"
+  },
+  "tnusrb_si": {
+   "fee": {
+    "year": "Historical fee – SI 2025 recruitment (next fee not announced)",
+    "rows": [
+     [
+      "All candidates",
+      "₹500"
+     ]
+    ],
+    "src": "https://www.tnusrb.tn.gov.in/"
+   },
+   "stages": [
+    "Written exam – Part I Tamil Language Eligibility Test and Part II main written exam (open candidates)",
+    "Certificate verification",
+    "Physical measurement, endurance and physical efficiency tests (PET 15 marks)",
+    "Viva voce (10 marks)",
+    "Medical examination"
+   ],
+   "papers": "https://www.tnusrb.tn.gov.in/archivesquestionpapers-tnusrb.php",
+   "syllabus": [
+    {
+     "s": "Part I – Tamil Language Eligibility Test (qualifying)",
+     "t": [
+      "100 questions, 100 marks, 100 minutes; minimum 40 marks; not counted for selection"
+     ]
+    },
+    {
+     "s": "Part II – Main written exam (70 marks, 2½ hours, ½ mark per question, minimum 25)",
+     "t": [
+      "Part A General Knowledge – 80 questions, 40 marks",
+      "Part B Psychology Test – 60 questions, 30 marks: logical analysis, numerical skills, mental ability, communication skills, information handling"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "tnusrb_pc": {
+   "fee": {
+    "year": "Historical fee – Common Recruitment 2025 (next fee not announced)",
+    "rows": [
+     [
+      "All candidates",
+      "₹250"
+     ]
+    ],
+    "src": "https://www.tnusrb.tn.gov.in/"
+   },
+   "papers": "https://www.tnusrb.tn.gov.in/archivesquestionpapers-tnusrb.php",
+   "syllabus": [
+    {
+     "s": "Part I – Tamil Language Eligibility Test (qualifying)",
+     "t": [
+      "80 questions, 80 marks, 80 minutes; minimum 32 marks; not counted for selection"
+     ]
+    },
+    {
+     "s": "Part II – Main written exam (70 marks, 1 h 20 min, minimum 25)",
+     "t": [
+      "Part A General Knowledge – 45 marks",
+      "Part B Psychology – 25 marks"
+     ]
+    }
+   ],
+   "sylStatus": "broad"
+  },
+  "tn_tet": {
+   "fee": {
+    "year": "Historical fee – TNTET 2025 notification (No. 03/2025)",
+    "rows": [
+     [
+      "General – per paper",
+      "₹600"
+     ],
+     [
+      "SC, SC(A), ST, differently abled – per paper",
+      "₹300"
+     ],
+     [
+      "Note",
+      "Paper I and Paper II need separate applications and fees"
+     ]
+    ],
+    "src": "https://www.trb.tn.gov.in/"
+   },
+   "age": "At least 18 years (2025 notification: as on 1 Jul 2025). No upper age limit.",
+   "elig": [
+    "Age: at least 18 years (2025 notification: as on 1 Jul 2025); no upper age limit.",
+    "Paper I: Higher Secondary with 50% (45% under NCTE 2002 norms) plus D.El.Ed / B.El.Ed / D.Ed (Special Education), passed or in the final year.",
+    "Paper II: graduation (50% with B.Ed, or 45% with B.Ed under NCTE norms) or 4-year B.El.Ed / B.A.Ed / B.Sc.Ed. B.E. with B.Ed may take Paper II only for Mathematics and Science.",
+    "Up to 5% relaxation in qualifying marks for SC, SC(A), ST, BC, BC(M), MBC/DNC and differently abled candidates."
+   ],
+   "stages": [
+    "Paper I and / or Paper II – 150 multiple-choice questions, 150 marks, 3 hours, OMR (no negative marking)",
+    "Pass mark (2025 notification): General 60% (90); SC, SC(A), BC, BC(M), MBC/DNC, PwD 55% (82); ST 40% (60, one-time concession). Certificate valid for life"
+   ],
+   "syllabus": [
+    {
+     "s": "Paper I (Classes I–V) – 150 questions, 150 marks, 3 hours",
+     "t": [
+      "Child Development and Pedagogy (age 6–11) – 30",
+      "Language I (Tamil / Telugu / Malayalam / Kannada / Urdu) – 30",
+      "Language II (English) – 30",
+      "Mathematics – 30",
+      "Environmental Studies – 30"
+     ]
+    },
+    {
+     "s": "Paper II (Classes VI–VIII) – 150 questions, 150 marks, 3 hours",
+     "t": [
+      "Child Development and Pedagogy (age 11–14) – 30",
+      "Language I – 30",
+      "Language II (English) – 30",
+      "Mathematics & Science OR Social Science – 60 (other subject teachers choose either)"
+     ]
+    }
+   ],
+   "fy": "Eligible: candidates in the final year of D.El.Ed / B.Ed (or the other listed courses) can apply (TNTET 2025 notification).",
+   "papersNote": "Official previous papers not located – TRB publishes answer keys (trb.tn.gov.in → Answer Keys) after each exam.",
+   "sylStatus": "official"
+  },
+  "kerala_psc": {
+   "apply": "https://thulasi.psc.kerala.gov.in/thulasi/",
+   "papers": "https://www.keralapsc.gov.in/previous-question-papers"
+  },
+  "karnataka_psc": {
+   "web": "https://kpsc.karnataka.gov.in/"
+  },
+  "ap_psc": {
+   "apply": "https://psc.ap.gov.in/OnlineApplication/LandingPage_Application.aspx"
+  },
+  "mpsc": {
+   "apply": "https://mpsconline.gov.in/candidate",
+   "papers": "https://mpsc.gov.in/prev_que_papers/9"
+  },
+  "uppsc": {
+   "papersNote": "Unable to verify – uppsc.up.nic.in could not be opened during this check."
+  },
+  "bpsc": {
+   "web": "https://bpsc.bihar.gov.in/",
+   "apply": "https://onlinebpsc.bihar.gov.in/"
+  },
+  "rpsc": {
+   "apply": "https://rpsc.rajasthan.gov.in/applyonline",
+   "papers": "https://rpsc.rajasthan.gov.in/viewcommon?Slice=QP"
+  },
+  "wbpsc": {
+   "web": "https://psc.wb.gov.in/",
+   "apply": "https://www.pscwbonline.gov.in/",
+   "papers": "https://psc.wb.gov.in/previous_year_question_paper.jsp"
+  },
+  "gpsc": {
+   "apply": "https://gpsc.gujarat.gov.in/RecruitmentOpen",
+   "papers": "https://gpsc.gujarat.gov.in/QuestionPaper?name=questionpaperprelimwithans"
+  },
+  "opsc": {
+   "apply": "https://opscechayan.in/",
+   "papers": "https://www.opsc.gov.in/Public/Pages/View_Content.aspx?id=p/5qRxj7CZtpXYhZHF7BXQ=="
+  },
+  "rly_apprentice": {
+   "elig": [
+    "Usually: 10th with at least 50% marks and ITI (NCVT / SCVT) in the notified trade; selection on merit of 10th and ITI marks.",
+    "Exact trade, age cut-off and medical conditions are fixed in each RRC notification."
+   ]
+  }
+ },
  "add": [],
  "questions": {}
 }
