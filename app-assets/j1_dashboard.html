@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="j1ls" content="event"><script src="j1_ls.js"></script>
+<script src="j1_content.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}body{margin:0;background:#f3f6fb;color:#13233f;font-family:Arial,sans-serif}.app{padding:15px 14px 70px}.hero{background:linear-gradient(135deg,#172554,#075985 58%,#0f766e);border-radius:24px;padding:20px;color:#fff;box-shadow:0 10px 26px #17365d30}.brand{display:flex;align-items:center;gap:12px}.logo{width:55px;height:55px;border-radius:17px;background:#ffffff18;border:1px solid #ffffff36;display:grid;place-items:center;font-size:24px;font-weight:900}.hero h1{font-size:26px;margin:0}.hero p{margin:4px 0 0;color:#dbeafe;font-size:13px}
+.accountTop{display:flex;align-items:center;justify-content:space-between;gap:12px}.accountWelcome{margin-top:9px;font-size:13px;font-weight:800;color:#e0f2fe}.profileBtn{width:42px;height:42px;border-radius:14px;border:1px solid #ffffff45;background:#ffffff18;color:#fff;font-size:20px;display:grid;place-items:center}.profileShade{display:none;position:fixed;inset:0;background:#0f172a99;z-index:120;padding:18px;align-items:center;justify-content:center}.profileShade.show{display:flex}.profileBox{width:min(430px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:22px;padding:20px;box-shadow:0 20px 55px #0005}.profileHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.profileHead h3{margin:0;font-size:21px}.profileClose{border:0;background:#eef2f7;color:#334155;border-radius:10px;width:36px;height:36px;font-size:18px}.profileRow{padding:10px 0;border-bottom:1px solid #edf2f7}.profileRow small{display:block;color:#64748b;font-size:11px;font-weight:700;margin-bottom:3px}.profileRow strong{font-size:14px;word-break:break-word}.profileForm{display:none}.profileForm.show{display:block}.profileView.hide{display:none}.profileForm label{display:block;font-size:12px;font-weight:800;color:#475569;margin:11px 0 5px}.profileForm input,.profileForm select{width:100%;height:43px;border:1px solid #cbd5e1;border-radius:10px;padding:0 11px;font-size:14px}.profileActions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:15px}.profileActions button,.profileFullBtn{border:0;border-radius:11px;padding:11px 9px;font-size:12px;font-weight:800}.profilePrimary{background:#2563eb;color:#fff}.profileSecondary{background:#edf2f7;color:#334155}.profileDanger{width:100%;margin-top:10px;background:#fff1f2;color:#b42318;border:1px solid #fecdd3!important}.profileMsg{display:none;margin-top:10px;padding:9px 10px;border-radius:9px;font-size:12px}.profileMsg.err{display:block;background:#fff0f0;color:#9e2020}.profileMsg.ok{display:block;background:#edfff2;color:#186a32}
+.search{position:relative;margin-top:17px}.search input{width:100%;height:52px;border:0;border-radius:16px;padding:0 45px 0 17px;font-size:16px;color:#172554;outline:none;box-shadow:0 5px 15px #00000018}.searchIcon{position:absolute;right:16px;top:13px;color:#64748b;font-size:23px}.suggestions{display:none;position:absolute;left:0;right:0;top:58px;background:#fff;border-radius:15px;box-shadow:0 12px 30px #0f172a35;overflow:hidden;z-index:20}.suggestions.show{display:block}.suggestion{display:flex;align-items:center;gap:11px;padding:12px 14px;border-bottom:1px solid #edf2f7;color:#172554}.suggestion:last-child{border:0}.suggestion .si{font-size:21px;width:30px;text-align:center}.suggestion small{display:block;color:#64748b;margin-top:2px}.noResult{padding:16px;text-align:center;color:#64748b}.feature{margin-top:15px;background:linear-gradient(135deg,#e8f1ff,#e6fffb);border:1px solid #bfdbfe;border-radius:20px;padding:15px}.featureTop{display:flex;align-items:center;justify-content:space-between}.featureActions{display:flex;align-items:center;gap:5px}.hvacAll{display:none;margin-top:12px}.hvacAll.open{display:grid}.feature h2{font-size:19px;margin:0;color:#123d70}.pill{font-size:11px;font-weight:800;background:#0f766e;color:#fff;border-radius:20px;padding:6px 10px}.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:13px}.quickCard{background:#fff;border-radius:14px;padding:11px 4px;text-align:center;box-shadow:0 3px 10px #17365d12}.quickCard span{display:block;font-size:22px}.quickCard small{display:block;font-size:10px;font-weight:700;margin-top:6px;color:#27415f}.section{margin-top:20px}.sectionHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.sectionTitle{display:flex;align-items:center;gap:9px}.bar{width:5px;height:29px;border-radius:8px;background:var(--accent,#2563eb)}.section h2{font-size:20px;margin:0}.count{font-size:13px;color:#64748b;font-weight:400}.seeAll{border:0;background:transparent;color:var(--accent,#2563eb);font-size:14px;font-weight:800;padding:7px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tool{position:relative;min-height:105px;background:#fff;border:1px solid #e7edf5;border-radius:18px;padding:14px 11px;box-shadow:0 4px 14px #1725540d;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.tool:active{transform:scale(.98)}.toolIcon{width:43px;height:43px;border-radius:14px;background:var(--soft,#e8f1ff);display:grid;place-items:center;font-size:22px}.toolName{font-size:14px;font-weight:800;margin-top:9px;line-height:1.2}.toolSub{font-size:10px;color:#718096;margin-top:4px;line-height:1.25}.fav{position:absolute;right:9px;top:8px;border:0;background:transparent;font-size:20px;color:#b8c2d1;padding:5px}.fav.on{color:#f59e0b}.hiddenCard{display:none}.emptyBox{background:#fff;border:1px dashed #cbd5e1;border-radius:16px;padding:18px;text-align:center;color:#64748b;font-size:13px}.bottom{position:fixed;left:0;right:0;bottom:0;height:56px;background:#f8fbff;border-top:1px solid #dbe4ef;display:grid;grid-template-columns:repeat(4,1fr);z-index:30;box-shadow:0 -5px 20px #17255412}.nav{border:0;background:transparent;color:#52647c;font-size:9px;font-weight:700;padding:2px 0}.nav span{display:block;font-size:18px;margin-bottom:1px}.nav.active{color:#2563eb;background:#e9f1ff}.toast{position:fixed;left:50%;bottom:64px;transform:translateX(-50%);background:#172554;color:#fff;border-radius:22px;padding:10px 16px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:40}.toast.show{opacity:1}@media(min-width:600px){.app{max-width:650px;margin:auto}.grid{grid-template-columns:repeat(3,1fr)}}
+
+.grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+.tool{min-height:92px!important;border-radius:14px!important;padding:10px 3px 8px!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+.toolIcon{width:40px!important;height:40px!important;border-radius:13px!important;font-size:21px!important}
+.toolName{font-size:10.5px!important;margin-top:6px!important;line-height:1.15!important;min-height:24px;display:flex;align-items:center;justify-content:center}
+.toolSub{display:none!important}.fav{right:1px!important;top:0!important;font-size:14px!important;padding:4px!important}.hiddenCard{display:flex!important}
+@media(min-width:600px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+
+.shareApp{width:100%;margin-top:12px;border:1px solid #ffffff55;background:#ffffff1f;color:#fff;border-radius:14px;padding:11px 14px;font-size:14px;font-weight:800}
+.growthShade{display:none;position:fixed;inset:0;background:#0f172a99;z-index:90;padding:18px;align-items:center;justify-content:center}.growthShade.show{display:flex}.growthBox{width:min(420px,100%);background:#fff;border-radius:22px;padding:21px;box-shadow:0 20px 55px #0005}.growthBox h3{margin:0 0 8px;font-size:21px}.growthBox p{margin:0 0 16px;color:#52647c;font-size:14px;line-height:1.45}.growthPrimary{display:grid;grid-template-columns:1fr 1fr;gap:9px}.growthBox button{border:0;border-radius:13px;padding:12px 8px;font-weight:800;font-size:13px}.growthShare{background:#0f766e;color:#fff}.growthRate{background:#2563eb;color:#fff}.growthLater{background:#edf2f7;color:#334155}.growthNever{background:#fff;color:#64748b;border:1px solid #dbe4ef!important}.growthSecondary{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
+
+
+.j1upd{margin-top:14px;background:#e8f7f3;border:1px solid #a7e0d4;border-radius:16px;padding:12px 13px;color:#0b3b36;box-shadow:0 4px 13px #1725540b}.j1upd b{display:block;font-size:14.5px;color:#0d2f52}.j1upd p{margin:3px 0 0;font-size:13px;line-height:1.4;color:#33504c}.j1upd .j1upd-b{display:flex;gap:8px;margin-top:10px}.j1upd button{flex:1;min-height:40px;border-radius:11px;border:0;font-weight:700;font-size:14px;font-family:inherit;cursor:pointer}.j1upd .go{background:#0a7c73;color:#fff}.j1upd .later{background:#fff;color:#334155;border:1px solid #cbd5e1}
+.j1imp{display:none;position:fixed;inset:0;background:#0f172a99;z-index:95;padding:18px;align-items:center;justify-content:center}.j1imp.show{display:flex}.j1imp .box{width:min(420px,100%);background:#fff;border-radius:20px;padding:20px}.j1imp h3{margin:0 0 6px;color:#0d2f52}.j1imp p{margin:0 0 14px;color:#334155;font-size:14px;line-height:1.5}.j1imp .j1upd-b{display:flex;gap:8px}.j1imp button{flex:1;min-height:44px;border-radius:12px;border:0;font-weight:700;font-size:14.5px;font-family:inherit}.j1imp .go{background:#0a7c73;color:#fff}.j1imp .later{background:#eef2f6;color:#334155}
+.calendarReminder{display:none;margin-top:14px;background:#fff7dd;border:1px solid #f2d16b;border-radius:16px;padding:12px 13px;color:#684900;box-shadow:0 4px 13px #1725540b}.calendarReminder.show{display:block}.calendarReminderTop{display:flex;align-items:center;justify-content:space-between;gap:8px}.calendarReminderTitle{font-size:13px;font-weight:900}.calendarReminderBtn{border:0;background:#2563eb;color:#fff;border-radius:10px;padding:7px 10px;font-size:10px;font-weight:800}.calendarReminderItems{font-size:11px;line-height:1.5;margin-top:6px}
+.homeOnly{}
+.gamesView{display:none;margin-top:18px}
+.gamesTop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.gamesTop h2{margin:0;font-size:21px}.gamesHome{border:0;border-radius:12px;background:#172554;color:#fff;padding:9px 14px;font-size:12px;font-weight:800}
+.dailyAboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.miniSection{background:#fff;border:1px solid #e7edf5;border-radius:16px;padding:11px;box-shadow:0 4px 14px #1725540d}
+.miniTitle{display:flex;align-items:center;gap:7px;font-size:14px;font-weight:900;color:#172554;margin-bottom:9px}
+.miniTitle .miniBar{width:4px;height:20px;border-radius:4px;background:var(--mini-accent,#64748b)}
+.miniOpen{width:100%;min-height:46px;border:0;border-radius:12px;background:#f5f7fb;color:#172554;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:6px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="hero">
+    <div class="accountTop"><div><div class="brand"><div class="logo">J1</div><div><h1>J1 Pro</h1><p>Engineering, productivity and entertainment</p></div></div><div id="accountWelcome" class="accountWelcome">Welcome 👋</div></div><button id="profileBtn" class="profileBtn" onclick="openProfile()" aria-label="Profile">👤</button></div>
+    <div class="search"><input id="search" placeholder="Search tools & calculators…" autocomplete="off" oninput="searchTools(this.value)" onfocus="searchTools(this.value)"><span class="searchIcon">⌕</span><div id="suggestions" class="suggestions"></div></div>
+  </div>
+  <div id="j1upd" class="j1upd" style="display:none"></div>
+  <div id="calendarReminder" class="calendarReminder"><div class="calendarReminderTop"><div class="calendarReminderTitle">🔔 Today’s Calendar Reminders</div><button class="calendarReminderBtn" onclick="openTool('calendarpro')">Open Calendar</button></div><div id="calendarReminderItems" class="calendarReminderItems"></div></div>
+  <div id="recentSection" class="section" style="--accent:#0ea5e9;display:none"><div class="sectionHead"><div class="sectionTitle"><span class="bar"></span><h2>Recently Used</h2></div><button class="seeAll" onclick="clearRecent()">Clear</button></div><div id="recentGrid" class="grid"></div></div>
+  <div id="favoriteSection" class="section" style="--accent:#f59e0b;display:none"><div class="sectionHead"><div class="sectionTitle"><span class="bar"></span><h2>Favourites</h2></div></div><div id="favoriteGrid" class="grid"></div></div>
+  <div id="categories"></div>
+  <div id="gamesView" class="gamesView"><div class="gamesTop"><h2>🎮 Games</h2><button class="gamesHome" onclick="showHome(document.querySelector('.nav:first-child'))">⌂ Home</button></div><div id="gamesGrid" class="grid"></div></div>
+</div>
+<div class="bottom"><button class="nav active" onclick="showHome(this)"><span>⌂</span>Home</button><button class="nav" onclick="showFavourites(this)"><span>♡</span>Favourites</button><button class="nav" onclick="showRecent(this)"><span>↶</span>Recent</button><button class="nav" onclick="showGames(this)"><span>🎮</span>Games</button></div>
+<div id="toast" class="toast"></div><div id="profileShade" class="profileShade"><div class="profileBox"><div class="profileHead"><h3>Profile</h3><button class="profileClose" onclick="closeProfile()">✕</button></div><div id="profileView" class="profileView"><div class="profileRow"><small>Full Name</small><strong id="pvName">—</strong></div><div class="profileRow"><small>Email</small><strong id="pvEmail">—</strong></div><div class="profileRow"><small>Phone Number</small><strong id="pvPhone">—</strong></div><div class="profileRow"><small>User Type</small><strong id="pvUserType">Select User Type</strong></div><div class="profileRow"><small>Account Type</small><strong id="pvType">—</strong></div><div class="profileActions"><button class="profilePrimary" onclick="editProfile()">Edit Profile</button><button class="profileSecondary" onclick="closeProfile()">Close</button></div><button class="profileFullBtn" style="display:block;width:100%;margin-top:12px;background:#e6f4f2;color:#0a7c73;font-size:14px;padding:12px" onclick="closeProfile();window.j1CloudOpen&&j1CloudOpen()">☁️ Cloud Backup</button><button id="profileLogoutBtn" class="profileFullBtn profileDanger" onclick="profileLogout()">Logout</button></div><div id="profileForm" class="profileForm"><label>Full Name</label><input id="pfName" autocomplete="name"><label>Email</label><input id="pfEmail" type="email" autocomplete="email"><label>Phone Number (optional)</label><input id="pfPhone" inputmode="tel"><label>User Type</label><select id="pfUserType"><option value="">Select User Type</option><option value="Student">Student</option><option value="Working">Working</option></select><div id="profileMsg" class="profileMsg"></div><div class="profileActions"><button class="profilePrimary" onclick="saveProfile()">Save Profile</button><button class="profileSecondary" onclick="cancelEditProfile()">Cancel</button></div></div></div></div>
+<div id="growthPrompt" class="growthShade"><div class="growthBox"><h3>Enjoying J1 Pro?</h3><p>If J1 Pro is useful, please share it with a friend or leave an honest Play Store rating.</p><div class="growthPrimary"><button class="growthShare" onclick="growthShare()">Share App</button><button class="growthRate" onclick="growthRate()">Rate App</button></div><div class="growthSecondary"><button class="growthLater" onclick="growthLater()">Remind Me Later</button><button class="growthNever" onclick="growthNever()">Don’t Ask Again</button></div></div></div>
+<script>
+
+
+const j1Account={type:'Guest',uid:'guest',email:'',name:'Guest'};
+const j1ProfileCache={};
+const j1ProfileLoaded={};
+let j1PendingProfile=null;
+function j1ProfileKey(){return j1Account.type==='Registered'?'profile_uid_'+j1Account.uid:'profile_guest'}
+function j1DefaultProfile(){return {name:j1Account.name||'',email:j1Account.email||'',phone:'',userType:''}}
+function j1LoadProfile(){
+  const key=j1ProfileKey(),p=Object.assign(j1DefaultProfile(),j1ProfileCache[key]||{});
+  if(j1Account.type==='Registered'&&j1Account.email)p.email=j1Account.email;
+  return p;
+}
+function j1RequestProfileLoad(){
+  const key=j1ProfileKey();
+  try{window.AppInventor.setWebViewString('PROFILE_LOAD§§'+key)}catch(e){}
+}
+function j1ApplyProfile(){
+  const p=j1LoadProfile(),n=(p.name||'').trim();
+  document.getElementById('accountWelcome').textContent=j1Account.type==='Guest'?(n&&n!=='Guest'?'Welcome, '+n+' 👋':'Welcome, Guest 👋'):(n?'Welcome, '+n+' 👋':'Welcome 👋');
+  document.getElementById('pvName').textContent=n||'—';
+  document.getElementById('pvEmail').textContent=(p.email||'').trim()||'—';
+  document.getElementById('pvPhone').textContent=(p.phone||'').trim()||'—';
+  document.getElementById('pvUserType').textContent=(p.userType||'').trim()||'Select User Type';
+  document.getElementById('pvType').textContent=j1Account.type;
+  document.getElementById('profileLogoutBtn').textContent=j1Account.type==='Guest'?'Exit Guest Mode':'Logout';
+}
+function j1SetContext(raw){setTimeout(function(){try{window.j1CloudOnContext&&window.j1CloudOnContext()}catch(e){}},0);
+  const a=raw.split('§§');
+  if(a[0]!=='PROFILE_CONTEXT')return;
+  j1Account.type=a[1]==='registered'?'Registered':'Guest';
+  j1Account.uid=a[2]||'guest';
+  j1Account.email=a[3]||'';
+  j1Account.name=a[4]||(j1Account.type==='Guest'?'Guest':'');
+  j1ApplyProfile();
+  j1RequestProfileLoad();
+}
+function j1HandleProfileNative(raw){
+  const a=raw.split('§§'),cmd=a[0]||'';
+  if(cmd==='PROFILE_DATA'){
+    const key=a[1]||'',encoded=a.slice(2).join('§§');
+    if(!key)return;
+    let p={};
+    if(encoded){try{p=JSON.parse(decodeURIComponent(encoded))||{}}catch(e){p={}}}
+    j1ProfileCache[key]=p;j1ProfileLoaded[key]=true;
+    if(key===j1ProfileKey()){j1ApplyProfile();if(document.getElementById('profileForm').classList.contains('show'))j1PopulateProfileForm()}
+    return;
+  }
+  if(cmd==='PROFILE_SAVED'){
+    const key=a[1]||'';
+    if(j1PendingProfile&&key===j1PendingProfile.key){
+      j1ProfileCache[key]=j1PendingProfile.profile;j1ProfileLoaded[key]=true;
+      j1Account.name=j1PendingProfile.profile.name||j1Account.name;
+      j1PendingProfile=null;j1ApplyProfile();cancelEditProfile();
+    }
+  }
+}
+function openProfile(){j1ApplyProfile();j1RequestProfileLoad();document.getElementById('profileForm').classList.remove('show');document.getElementById('profileView').classList.remove('hide');document.getElementById('profileShade').classList.add('show')}
+function closeProfile(){document.getElementById('profileShade').classList.remove('show')}
+function j1PopulateProfileForm(){
+  const p=j1LoadProfile();
+  pfName.value=p.name||'';pfEmail.value=p.email||'';pfPhone.value=p.phone||'';pfUserType.value=(p.userType==='Student'||p.userType==='Working')?p.userType:'';
+  pfEmail.readOnly=j1Account.type==='Registered';
+}
+function editProfile(){
+  j1PopulateProfileForm();j1RequestProfileLoad();
+  document.getElementById('profileMsg').className='profileMsg';document.getElementById('profileMsg').textContent='';
+  document.getElementById('profileView').classList.add('hide');document.getElementById('profileForm').classList.add('show');
+}
+function cancelEditProfile(){document.getElementById('profileForm').classList.remove('show');document.getElementById('profileView').classList.remove('hide')}
+function saveProfile(){
+  const email=pfEmail.value.trim(),phone=pfPhone.value.trim(),msg=document.getElementById('profileMsg');
+  if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.textContent='Please enter a valid email address.';msg.className='profileMsg err';return}
+  if(phone&&!/^[0-9+() \-]{7,20}$/.test(phone)){msg.textContent='Please enter a valid phone number.';msg.className='profileMsg err';return}
+  const p={name:pfName.value.trim(),email:j1Account.type==='Registered'?j1Account.email:email,phone,userType:pfUserType.value};
+  const key=j1ProfileKey(),encoded=encodeURIComponent(JSON.stringify(p));
+  j1PendingProfile={key,profile:p};msg.textContent='Saving profile...';msg.className='profileMsg';
+  try{window.AppInventor.setWebViewString('PROFILE_SAVE§§'+key+'§§'+encoded)}catch(e){j1PendingProfile=null;msg.textContent='Unable to save profile on this device.';msg.className='profileMsg err'}
+}
+function profileLogout(){try{window.AppInventor.setWebViewString('PROFILE_LOGOUT')}catch(e){}}
+let j1LastNative='';
+setInterval(()=>{try{const v=window.AppInventor.getWebViewString()||'';if(v&&v!==j1LastNative){j1LastNative=v;if(v.startsWith('PROFILE_CONTEXT§§'))j1SetContext(v);else if(v.startsWith('PROFILE_DATA§§')||v.startsWith('PROFILE_SAVED§§'))j1HandleProfileNative(v)}}catch(e){}},250);
+
+const J1_PLAY_LINK='https://play.google.com/store/apps/details?id=appinventor.ai_j1tamiltube.J1Pro';
+const J1_SHARE_TEXT='J1 Pro brings useful HVAC, plumbing, finance, student and utility tools together in one app. Download it on Google Play: '+J1_PLAY_LINK;
+function shareJ1Pro(){if(navigator.share){navigator.share({title:'J1 Pro',text:J1_SHARE_TEXT}).catch(()=>{})}else{try{navigator.clipboard.writeText(J1_SHARE_TEXT);toast('App link copied')}catch(e){prompt('Share this link',J1_PLAY_LINK)}}}
+function growthClose(){document.getElementById('growthPrompt').classList.remove('show')}
+function growthShare(){localStorage.setItem('j1_growth_prompt_done','1');growthClose();shareJ1Pro()}
+function growthRate(){localStorage.setItem('j1_growth_prompt_done','1');growthClose();try{if(window.AppInventor){AppInventor.setWebViewString('J1RATE§§'+Date.now());return}}catch(e){}window.open(J1_PLAY_LINK,'_blank')}
+function growthLater(){localStorage.setItem('j1_growth_prompt_later',String(Date.now()+7*24*60*60*1000));growthClose()}
+function growthNever(){localStorage.setItem('j1_growth_prompt_never','1');growthClose()}
+function checkGrowthPrompt(){if(localStorage.getItem('j1_growth_prompt_never')==='1'||localStorage.getItem('j1_growth_prompt_done')==='1')return;const n=Number(localStorage.getItem('j1_successful_calculations')||0),later=Number(localStorage.getItem('j1_growth_prompt_later')||0);if(n>=5&&Date.now()>=later)document.getElementById('growthPrompt').classList.add('show')}
+
+/* ---- 2.4: "new version available" notice (j1pro.in/app/version.json). Banner on Home; pop-up only for an important fix. ---- */
+function j1UpdOpen(){try{if(window.AppInventor){AppInventor.setWebViewString('J1RATE§§'+Date.now());return}}catch(e){}window.open(J1_PLAY_LINK,'_blank')}
+function j1UpdLater(code){try{localStorage.setItem('j1_upd_later',JSON.stringify({code:code,until:Date.now()+7*864e5}))}catch(e){}var b=document.getElementById('j1upd');if(b){b.setAttribute('data-on','0');b.style.display='none'}}
+function j1UpdImpClose(){var m=document.getElementById('j1imp');if(m)m.classList.remove('show')}
+function j1UpdEsc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function j1UpdCheck(){if(!window.J1Content)return;J1Content.version(function(v){
+  if(!v||v.latest_code<=J1Content.APP_CODE)return;
+  try{localStorage.setItem('j1_upd_info',JSON.stringify(v))}catch(e){}
+  var nm=j1UpdEsc(v.latest_name||''),msg=j1UpdEsc(v.short||'New tools and improvements.');
+  if(v.important_below&&J1Content.APP_CODE<v.important_below){var t=0;try{t=Number(localStorage.getItem('j1_upd_imp_t')||0)}catch(e){}
+    if(Date.now()-t>12*36e5){try{localStorage.setItem('j1_upd_imp_t',String(Date.now()))}catch(e){}
+      var m=document.getElementById('j1imp');if(!m){m=document.createElement('div');m.id='j1imp';m.className='j1imp';document.body.appendChild(m)}
+      m.innerHTML='<div class="box"><h3>Important update</h3><p>'+j1UpdEsc(v.important_msg||'Please update J1 Pro – this version fixes an important problem.')+'</p><div class="j1upd-b"><button class="later" onclick="j1UpdImpClose()">Not now</button><button class="go" onclick="j1UpdImpClose();j1UpdOpen()">Update</button></div></div>';m.classList.add('show')}}
+  var d=null;try{d=JSON.parse(localStorage.getItem('j1_upd_later')||'null')}catch(e){}
+  if(d&&d.code===v.latest_code&&Date.now()<d.until)return;
+  var b=document.getElementById('j1upd');if(!b)return;
+  b.innerHTML='<b>🆕 New in J1 Pro '+nm+'</b><p>'+msg+'</p><div class="j1upd-b"><button class="later" onclick="j1UpdLater('+Number(v.latest_code)+')">Later</button><button class="go" onclick="j1UpdOpen()">Update</button></div>';
+  b.setAttribute('data-on','1');b.style.display=(function(){var c=document.getElementById('categories');return !c||c.style.display!=='none'})()?'block':'none'})}
+setTimeout(j1UpdCheck,2500);
+window.addEventListener('focus',()=>setTimeout(checkGrowthPrompt,250));document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(checkGrowthPrompt,250)});setTimeout(checkGrowthPrompt,600);
+
+const tools=[
+{id:'cooling',name:'Cooling Load',sub:'Room capacity estimate',icon:'❄️',screen:'ScreenCooling',cat:'HVAC',keys:'heat load tonnage tr airflow'},
+{id:'duct',name:'Duct Sizer',sub:'Duct dimensions & loss',icon:'▣',screen:'ScreenDuctWeb',cat:'HVAC',keys:'air duct velocity friction'},
+{id:'ductesp',name:'Duct ESP',sub:'Fan external static pressure',icon:'📏',screen:'ScreenESP',cat:'HVAC',keys:'esp external static pressure fan duct friction fittings index run ashrae'},
+{id:'fansize',name:'Fan Sizing',sub:'Fan motor kW from airflow & ESP',icon:'🌀',screen:'ScreenFanSizing',cat:'HVAC',keys:'fan motor kw sizing airflow esp shaft power absorbed fan selection ahu exhaust'},
+{id:'pumphead',name:'CHW Pump Head',sub:'Chilled water pump head',icon:'🔄',screen:'ScreenPumpHead',cat:'HVAC',keys:'pump head chilled water chw pipe friction fittings index circuit carrier ashrae bar'},
+{id:'bbs',name:'Bar Bending Schedule',sub:'Cutting length & steel weight (BS 8666)',icon:'🔩',screen:'ScreenBBS',cat:'Civil',keys:'bbs bar bending schedule rebar reinforcement steel cutting length weight shape code bs 8666 is 2502 stirrup'},
+{id:'structqty',name:'Concrete Quantities',sub:'Footings, columns, beams, slabs & substructure',icon:'🏗️',screen:'ScreenStructQty',cat:'Civil',keys:'concrete quantity takeoff boq footing column beam slab formwork shuttering blinding excavation backfill waterproofing qs'},
+{id:'sitemat',name:'Site Materials',sub:'Blocks, mesh steel, tiles, paint, earthwork, ready-mix, plaster',icon:'🧮',screen:'ScreenSiteMat',cat:'Civil',keys:'site materials block work blocks mortar cement sand tiles tiling adhesive grout paint litres earthwork excavation fill truck ready mix concrete order plaster screed mesh steel spacing'},
+{id:'finishqty',name:'Finishes Quantities',sub:'Flooring, skirting, walls, ceiling & block work',icon:'🎨',screen:'ScreenFinishQty',cat:'Civil',keys:'finishes quantity takeoff boq flooring skirting wall paint plaster ceiling block work external qs'},
+{id:'pipe',name:'Pipe Sizer',sub:'CHW pipe selection',icon:'🔵',screen:'ScreenPipeSizer',cat:'HVAC',keys:'chilled water flow'},
+{id:'airoutlet',name:'Air Outlet Selection',sub:'Diffuser & grille sizing',icon:'⊙',screen:'ScreenAirOutlet',cat:'HVAC',keys:'air outlet diffuser grille slot bar'},
+{id:'chwflow',name:'CHW Flow',sub:'Forward and reverse flow',icon:'💦',screen:'ScreenCHWFlow',cat:'HVAC',keys:'chilled water capacity delta temperature gpm lps'},
+{id:'ctmakeup',name:'Cooling Tower Makeup',sub:'Evaporation, drift, blowdown & makeup',icon:'🗼',screen:'ScreenCTMakeup',cat:'HVAC',keys:'cooling tower makeup water blowdown bleed off evaporation drift cycles of concentration coc condenser'},
+{id:'chwvolume',name:'CHW System Volume',sub:'Water volume, chiller minimum & buffer tank',icon:'🛢️',screen:'ScreenCHWVolume',cat:'HVAC',keys:'chilled water system volume pipe water content buffer tank chiller minimum loop volume inertia'},
+{id:'exptank',name:'Expansion Tank',sub:'Diaphragm tank size & pre-charge',icon:'🎈',screen:'ScreenExpTank',cat:'HVAC',keys:'expansion tank vessel diaphragm bladder pressurisation pre-charge acceptance chilled heating water'},
+{id:'psychro',name:'Psychrometrics',sub:'Air-property calculations',icon:'💧',screen:'ScreenPsychro',cat:'HVAC',keys:'dbt wbt rh humidity'},
+{id:'ach',name:'ACH / Airflow',sub:'Ventilation estimates',icon:'🌬️',screen:'ScreenACH',cat:'HVAC',keys:'air changes ventilation'},
+{id:'vent621',name:'Ventilation Rate (62.1)',sub:'Outdoor air with your saved space types',icon:'🌬️',screen:'ScreenVent621',cat:'HVAC',keys:'ashrae 62.1 ventilation rate procedure outdoor air fresh air rp ra breathing zone vbz voz vot doas fahu'},
+{id:'louvre',name:'Louvre Sizing',sub:'Face & free area',icon:'🏢',screen:'ScreenLouvre',cat:'HVAC',keys:'louver grill free area'},
+{id:'fahu',name:'FAHU Capacity',sub:'Total sensible and latent load',icon:'❄️',screen:'ScreenFAHU',cat:'HVAC',keys:'fresh air handling unit'},
+{id:'kitchencanopy',name:'Kitchen Canopy Extract',sub:'Appliance exhaust & make-up air',icon:'🍳',screen:'ScreenKitchenCanopy',cat:'HVAC',keys:'commercial kitchen hood canopy extract exhaust makeup appliance'},
+{id:'stairpress',name:'Staircase Pressurisation',sub:'Required pressurisation airflow',icon:'🏢',screen:'ScreenStairWeb',cat:'HVAC',keys:'stair staircase pressurisation smoke control pressure leakage airflow'},
+{id:'electricheater',name:'Electric Heater Sizing',sub:'Capacity, current & stages',icon:'🔥',screen:'ScreenElectricHeater',cat:'HVAC',keys:'electric duct heater reheat airflow temperature rise capacity current stages'},
+{id:'domesticwater',name:'Domestic Water Cooling',sub:'Cooling load and CHW flow',icon:'🚿',screen:'ScreenDomesticWaterCooling',cat:'HVAC',keys:'domestic water tank cooling heat exchanger chilled water'},
+{id:'condensate',name:'Condensate Drain Flow',sub:'Coil moisture and drain flow',icon:'💧',screen:'ScreenCondensateDrain',cat:'HVAC',keys:'condensate drain coil moisture dry bulb wet bulb psychrometric'},
+{id:'area',name:'Area & Volume',sub:'Geometry calculations',icon:'📐',screen:'ScreenAreaWeb',cat:'HVAC',keys:'room shape'},
+{id:'converter',name:'Unit Converter',sub:'Engineering conversions',icon:'↔️',screen:'ScreenConverterWeb',cat:'HVAC',keys:'units conversion'},
+{id:'hvacquiz',name:'HVAC Quiz',sub:'Test your knowledge',icon:'📝',screen:'ScreenQuizHVAC',cat:'HVAC',keys:'questions learning'},
+{id:'waterpipe',name:'Water Supply Pipe Sizer',sub:'IPC WSFU demand & pipe sizing',icon:'🚿',screen:'ScreenWaterSupplyPipe',cat:'Plumbing',keys:'water supply pipe sizing wsfu ipc hunter demand plumbing'},
+{id:'waterheater',name:'Water Heater Sizing',sub:'ASHRAE storage & heater kW',icon:'♨️',screen:'ScreenWaterHeater',cat:'Plumbing',keys:'water heater geyser calorifier hot water storage ashrae fixture shower bathtub kw'},
+{id:'tankdomestic',name:'Domestic Water Tank',sub:'DEWA occupancy storage',icon:'🚰',screen:'ScreenTankDomestic',cat:'Plumbing',keys:'water tank domestic occupancy dewa storage'},
+{id:'tankfire',name:'Fire Water Tank',sub:'Pump flow and duration',icon:'🚒',screen:'ScreenTankFire',cat:'Plumbing',keys:'fire fighting tank pump gpm storage'},
+{id:'tankcondensate',name:'Condensate Drain Tank',sub:'Condensate storage sizing',icon:'💧',screen:'ScreenTankCondensate',cat:'Plumbing',keys:'condensate drain collection tank'},
+{id:'tankirrigation',name:'Irrigation Water Tank',sub:'Landscape water storage',icon:'🌴',screen:'ScreenTankIrrigation',cat:'Plumbing',keys:'irrigation tree shrub dewa tank'},
+{id:'eload',name:'Electrical Load',sub:'MDB / SMDB load schedule',icon:'⚡',screen:'ScreenElectricalLoad',cat:'Electrical',keys:'connected demand kva current mdb smdb'},
+{id:'breaker',name:'Breaker & Cable',sub:'Thumb-rule preliminary sizing',icon:'🔌',screen:'ScreenBreakerCable',cat:'Electrical',keys:'breaker cable sizing kw'},
+{id:'voltdrop',name:'Cable Voltage Drop',sub:'Voltage drop, result voltage & cable loss',icon:'📉',screen:'ScreenVoltageDrop',cat:'Electrical',keys:'voltage drop cable loss result voltage awg swg circular mil'},
+{id:'capacitor',name:'Capacitor Bank',sub:'Power-factor correction',icon:'🔋',screen:'ScreenCapacitorBank',cat:'Electrical',keys:'kvar power factor correction'},
+{id:'pumpcap',name:'Pump Capacity',sub:'Flow head and motor power',icon:'⚙️',screen:'ScreenPumpCapacity',cat:'Electrical',keys:'pump hydraulic motor flow head'},
+{id:'lighting',name:'Lighting Design',sub:'Fittings, layout spacing & lux (lumen method)',icon:'💡',screen:'ScreenLighting',cat:'Electrical',keys:'lighting lux lumen method luminaire fitting spacing layout room index utilisation maintenance factor lpd illuminance'},
+{id:'earthing',name:'Earth Conductor Size',sub:'Protective earth (PE) conductor, IEC 60364-5-54',icon:'⏚',screen:'ScreenEarthing',cat:'Electrical',keys:'earthing earth conductor protective pe cpc adiabatic k factor fault current iec 60364'},
+{id:'generator',name:'Generator Sizing',sub:'kVA from running load & motor starting',icon:'🏭',screen:'ScreenGenerator',cat:'Electrical',keys:'generator genset dg diesel kva standby motor starting voltage dip'},
+{id:'upsbattery',name:'UPS & Battery Backup',sub:'UPS kVA and battery Ah for backup time',icon:'🔋',screen:'ScreenUPS',cat:'Electrical',keys:'ups battery backup ah autonomy vrla inverter'},
+{id:'solarpv',name:'Solar Rooftop PV',sub:'System size, panels, energy & payback',icon:'☀️',screen:'ScreenSolar',cat:'Electrical',keys:'solar pv rooftop photovoltaic kwp panel inverter net metering payback'},
+{id:'procalc',name:'Pro Calculator',sub:'Standard & scientific',icon:'🧮',screen:'Screen2',cat:'Utility',keys:'math calculator scientific'},
+{id:'cgpa',name:'CGPA Calculator',sub:'Calculate academic CGPA',icon:'🎓',screen:'ScreenStudentCGPA',cat:'Student',keys:'grade gpa'},
+{id:'attendance',name:'Attendance Calculator',sub:'Track attendance target',icon:'📅',screen:'ScreenStudentAttendance',cat:'Student',keys:'class college school'},
+{id:'marks',name:'Marks & Grade',sub:'Marks and grade result',icon:'📊',screen:'ScreenStudentMarks',cat:'Student',keys:'percentage score'},
+{id:'planner',name:'Study Planner',sub:'Plan study sessions',icon:'📚',screen:'ScreenStudentPlanner',cat:'Student',keys:'schedule learning'},
+{id:'predictor',name:'Grade Predictor',sub:'Estimate final grade',icon:'🎯',screen:'ScreenGradePredictor',cat:'Student',keys:'marks result'},
+{id:'countdown',name:'Exam Countdown',sub:'Days until examination',icon:'⏳',screen:'ScreenExamCountdown',cat:'Student',keys:'date timer'},
+{id:'studentquiz',name:'Student Quiz',sub:'Practice and learn',icon:'🧠',screen:'ScreenQuizStudent',cat:'Student',keys:'aptitude general knowledge science english'},
+{id:'govcareers',name:'Government Exams & Careers',sub:'Find exams, eligibility, syllabus & practice tests',icon:'🏛️',screen:'ScreenGovCareers',cat:'Student',keys:'government exams careers jobs upsc ssc tnpsc railway rrb banking ibps sbi defence police teacher tet gate psu apprentice eligibility syllabus practice test'},
+{id:'syllabus',name:'Engineering Syllabus',sub:'Official university syllabus structure',icon:'📘',screen:'ScreenSyllabus',cat:'Student',keys:'university regulation department semester subject units'},
+{id:'textbooks',name:'School Textbooks',sub:'Free official books: NCERT, Tamil Nadu & Kerala',icon:'📗',screen:'ScreenTextbooks',cat:'Student',keys:'school textbook ncert cbse class 1 2 3 4 5 6 7 8 9 10 11 12 book pdf samacheer tamil nadu state board kerala scert malayalam'},
+{id:'studentvault',name:'Student Vault',sub:'Private academic document organizer',icon:'🔐',screen:'ScreenStudentVault',cat:'Student',keys:'documents certificates marksheets vault private academic'},
+{id:'bmi',name:'BMI & Blood Pressure',sub:'BMI, healthy weight & BP guide',icon:'⚖️',screen:'ScreenBMI',cat:'Health',keys:'weight height health blood pressure bp systolic diastolic'},
+{id:'calorie',name:'Calorie Calculator',sub:'Daily calorie estimate',icon:'🔥',screen:'ScreenCalorie',cat:'Health',keys:'food bmr tdee'},
+{id:'water',name:'Water Intake',sub:'Daily hydration estimate',icon:'💧',screen:'ScreenWater',cat:'Health',keys:'drink hydration daily'},
+
+{id:'sip',name:'SIP Calculator',sub:'Monthly investment growth',icon:'📈',screen:'ScreenFinanceSIP',cat:'Finance',keys:'mutual fund monthly investment'},
+{id:'saving',name:'Savings Goal',sub:'Plan a savings target',icon:'🎯',screen:'ScreenFinanceSaving',cat:'Finance',keys:'target monthly saving'},
+{id:'fdrd',name:'FD / RD Calculator',sub:'Deposit maturity estimate',icon:'🏛️',screen:'ScreenFinanceFDRD',cat:'Finance',keys:'fixed recurring deposit'},
+{id:'emi',name:'EMI Calculator',sub:'Loan EMI & prepayment',icon:'🏦',screen:'ScreenEMI',cat:'Finance',keys:'loan interest monthly home car prepayment'},
+{id:'interest',name:'Interest Calculator',sub:'Simple, compound, GST & VAT',icon:'📈',screen:'ScreenInterest',cat:'Finance',keys:'principal rate gst vat tax discount'},
+{id:'fuel',name:'Fuel Cost',sub:'Travel fuel estimate',icon:'⛽',screen:'ScreenFuel',cat:'Finance',keys:'mileage petrol distance'},
+{id:'split',name:'Split Bill',sub:'Share expenses',icon:'🧾',screen:'ScreenTipSplit',cat:'Finance',keys:'people payment'},
+{id:'electricity',name:'TNEB Bill',sub:'Bill by units or by appliances',icon:'⚡',screen:'ScreenElectricity',cat:'Finance',keys:'units current bill eb appliance ac power cost kwh'},
+{id:'expense',name:'Budget Planner',sub:'Track spending',icon:'📒',screen:'ScreenExpense',cat:'Finance',keys:'expense saving daily monthly'},
+{id:'livemetals',name:'Live Gold & Silver',sub:'Online spot market prices',icon:'🥇',screen:'ScreenLiveMetals',cat:'Finance',keys:'gold silver xau xag live market price country'},
+{id:'livefx',name:'Currency Converter',sub:'Online reference exchange rates',icon:'💱',screen:'ScreenLiveCurrency',cat:'Finance',keys:'currency exchange forex online live rate converter'},
+{id:'gratuity',name:'Gulf Gratuity',sub:'End-of-service benefit: UAE, KSA, Qatar, Oman, Kuwait, Bahrain',icon:'🧮',screen:'ScreenGratuity',cat:'Finance',keys:'gratuity end of service benefit eosb uae dubai saudi ksa qatar oman kuwait bahrain gulf gcc labour law'},
+{id:'luxmeter',name:'Lux Meter',sub:'Light level with the phone sensor',icon:'💡',screen:'ScreenLuxMeter',cat:'Utility',keys:'lux meter light meter illuminance lighting level survey sensor brightness'},
+{id:'compass',name:'Compass',sub:'Direction and heading',icon:'🧭',screen:'ScreenCompass',cat:'Utility',keys:'compass direction north bearing heading orientation'},
+{id:'heightfinder',name:'Height Finder',sub:'Height of buildings & trees with the tilt sensor',icon:'📐',screen:'ScreenHeightFinder',cat:'Utility',keys:'height finder clinometer measure height building tree pole tower angle tilt inclinometer distance'},
+{id:'colourpicker',name:'Colour Picker',sub:'Colour codes from a photo – HEX, RGB, CMYK',icon:'🎨',screen:'ScreenColourPicker',cat:'Utility',keys:'colour color picker hex rgb cmyk paint palette shade code camera photo interior design'},
+{id:'ruler',name:'Ruler',sub:'Measure small objects on the screen',icon:'📏',screen:'ScreenRuler',cat:'Utility',keys:'ruler measure scale mm inch length size screw small object'},
+{id:'soundmeter',name:'Sound Meter',sub:'Noise level in dB',icon:'🔊',screen:'ScreenSoundMeter',cat:'Utility',keys:'sound meter noise level decibel db dba acoustic nc nr noise rating criteria octave fan coil ahu'},
+{id:'speedtest',name:'Speed Test',sub:'Internet download, upload & ping',icon:'📶',screen:'ScreenSpeedTest',cat:'Utility',keys:'speed test internet wifi wi-fi network mbps download upload ping latency broadband 4g 5g mobile data'}, {id:'passport',name:'Passport Photo',sub:'Passport & ID photo with 4×6 print sheet',icon:'🪪',screen:'ScreenPassportPhoto',cat:'Utility',keys:'passport photo id visa photo size 35x45 2x2 print sheet white background'}, {id:'qr',name:'QR & Barcode',sub:'Create QR codes · scan QR & barcodes',icon:'▦',screen:'ScreenUtilityQR',cat:'Utility',keys:'qr code generator scanner scan barcode reader whatsapp phone wifi email contact'},
+{id:'translator',name:'Translator',sub:'Text, image & camera translation',icon:'🌐',screen:'ScreenUtilityTranslator',cat:'Utility',keys:'translate language image camera ocr'},
+{id:'pdfeditor',name:'PDF Tools',sub:'Combine, split, compress PDF & photos',icon:'📄',screen:'ScreenUtilityPDFEditor',cat:'Utility',keys:'pdf editor create combine extract split preview save export share images scan pages document'},
+{id:'knowledge',name:'Knowledge Challenge',sub:'Flags, capitals, currencies & logos',icon:'🧠',screen:'__LOCAL_KNOWLEDGE__',cat:'Games',keys:'quiz flags country capital currency car logo brand logo knowledge'},
+{id:'sudoku',name:'Sudoku',sub:'Beginner to Expert logic puzzles',icon:'🧩',screen:'__LOCAL_SUDOKU__',cat:'Games',keys:'sudoku number logic puzzle brain'},
+
+{id:'memorychallenge',name:'Memory Challenge',sub:'Number, sequence & position memory',icon:'🧠',screen:'__LOCAL_MEMORY_CHALLENGE__',cat:'Games',keys:'memory number sequence position brain'},
+{id:'fruit',name:'Fruit Slash',sub:'Slice and score',icon:'🍉',screen:'ScreenFruit',cat:'Games',keys:'ninja fruit'},
+{id:'flappy',name:'Flappy Bird',sub:'Tap and fly',icon:'🐦',screen:'ScreenFlappy',cat:'Games',keys:'bird fly'},
+{id:'brick',name:'Brick Breaker',sub:'Break bricks and level up',icon:'🧱',screen:'ScreenBrickBreaker',cat:'Games',keys:'paddle ball arcade'},
+{id:'mole',name:'English Crossword',sub:'Offline vocabulary puzzles',icon:'🧩',screen:'ScreenWhackMole',cat:'Games',keys:'crossword english words spelling vocabulary puzzle'},
+{id:'wordsearch',name:'Word Search Explorer',sub:'Hidden-word puzzles • Easy to Hard',icon:'🔎',screen:'ScreenStack',cat:'Games',keys:'word search hidden words vocabulary spelling puzzle explorer'},
+{id:'colorswitch',name:'Color Switch',sub:'Match colours quickly',icon:'🎨',screen:'ScreenColorSwitch',cat:'Games',keys:'color colour reflex match'},
+{id:'snake',name:'Snake Game',sub:'Eat, grow and survive',icon:'🐍',screen:'ScreenSnakeGame',cat:'Games',keys:'sna snake classic'},
+{id:'game2048',name:'2048 Puzzle',sub:'Join numbers and win',icon:'🔢',screen:'Screen2048',cat:'Games',keys:'number puzzle'},
+{id:'memory',name:'Memory Match',sub:'10 timed challenges',icon:'🃏',screen:'ScreenMemoryLevels',cat:'Games',keys:'cards match'},
+{id:'tictac',name:'Tic-Tac-Toe',sub:'Challenge the computer',icon:'❌',screen:'ScreenTTMode',cat:'Games',keys:'xo nought cross'},
+{id:'daily',name:'Daily Engineering',sub:'Engineering facts, formulas, MEP knowledge, quiz and learning progress',icon:'⚙️',screen:'ScreenDaily',cat:'Daily',keys:'engineering daily fact formula hvac mep site knowledge symbol quiz case study favourite reminder streak learning'},
+{id:'about',name:'About J1 Pro',sub:'App information',icon:'ℹ️',screen:'ScreenAbout',cat:'About',keys:'support contact privacy'}
+];
+const categoryStyle={HVAC:['#2563eb','#e8f1ff'],Plumbing:['#0284c7','#e0f2fe'],Civil:['#b45309','#fdeedc'],Electrical:['#6d4cbe','#f0eaff'],Calculators:['#7c3aed','#f1eafe'],Student:['#0f766e','#e5faf5'],Health:['#e11d48','#fff0f4'],Finance:['#b7791f','#fff8df'],Utility:['#0891b2','#e7faff'],Games:['#db2777','#fff0f8'],Daily:['#ea580c','#fff3e8'],About:['#64748b','#f1f5f9']};
+let favourites=readStore('j1_favourites',[]),recent=readStore('j1_recent',[]);window.addEventListener('j1storage',function(){favourites=readStore('j1_favourites',[]);recent=readStore('j1_recent',[]);try{renderAll()}catch(e){}try{checkGrowthPrompt()}catch(e){}});
+favourites=favourites.filter(id=>!['stopwatch','timer','password','date','calendarpro','worldtime','age'].includes(id));recent=recent.filter(id=>!['stopwatch','timer','password','date','calendarpro','worldtime','age'].includes(id));writeStore('j1_favourites',favourites);writeStore('j1_recent',recent);
+function readStore(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}
+function writeStore(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function toolById(id){return tools.find(t=>t.id===id)}
+function openTool(id){const t=toolById(id);if(!t)return;try{localStorage.setItem('j1_successful_calculations',String(Number(localStorage.getItem('j1_successful_calculations')||0)+1))}catch(e){}if(id==='cloudbackup'){try{closeProfile()}catch(e){}if(window.j1CloudOpen)window.j1CloudOpen();return}if(id==='voltdrop'){try{window.AppInventor.setWebViewString('ScreenVoltageDrop')}catch(e){toast('Unable to open Voltage Drop')}return}if(t.cat==='Games'){try{localStorage.setItem('j1_return_view','games')}catch(e){}}else{try{localStorage.removeItem('j1_return_view')}catch(e){}}recent=[id,...recent.filter(x=>x!==id)].slice(0,8);writeStore('j1_recent',recent);renderPersonal();if(id==='worldtime'){window.location.href='world_time_converter.html';return}if(id==='knowledge'){window.location.href='knowledge_challenge.html';return}if(id==='sudoku'){window.location.href='sudoku_game.html';return}if(id==='memorychallenge'){window.location.href='memory_challenge.html';return}try{window.AppInventor.setWebViewString('');setTimeout(function(){window.AppInventor.setWebViewString(t.screen)},40)}catch(e){toast('Unable to open tool')}}
+function openToolByScreen(screen){const t=tools.find(x=>x.screen===screen);if(t)openTool(t.id);else try{window.AppInventor.setWebViewString(screen)}catch(e){}}
+function toggleFav(id,event){event.stopPropagation();favourites=favourites.includes(id)?favourites.filter(x=>x!==id):[...favourites,id];writeStore('j1_favourites',favourites);renderAll();toast(favourites.includes(id)?'Added to favourites':'Removed from favourites')}
+function card(t,index,expanded){return `<div class="tool ${!expanded&&index>=4?'hiddenCard':''}" onclick="openTool('${t.id}')"><button class="fav ${favourites.includes(t.id)?'on':''}" onclick="toggleFav('${t.id}',event)">${favourites.includes(t.id)?'★':'☆'}</button><div class="toolIcon" style="--soft:${categoryStyle[t.cat]?.[1]||'#eef2f7'}">${t.icon}</div><div class="toolName">${t.name}</div><div class="toolSub">${t.sub}</div></div>`}
+function renderCategories(){
+ const root=document.getElementById('categories');
+ const cats=['HVAC','Plumbing','Electrical','Civil','Student','Health','Finance','Utility'];
+ let sections=cats.map(cat=>{let list=tools.filter(t=>t.cat===cat);if(cat==='Utility')list=list.sort((a,b)=>(a.id==='procalc'?-1:b.id==='procalc'?1:0));const style=categoryStyle[cat];return `<section class="section category" id="cat_${cat}" style="--accent:${style[0]}"><div class="sectionHead"><div class="sectionTitle"><span class="bar"></span><h2>${cat} <span class="count">(${list.length})</span></h2></div></div><div class="grid">${list.map((t,i)=>card(t,i,true)).join('')}</div></section>`}).join('');
+ const daily=toolById('daily'),about=toolById('about');
+ sections+=`<div class="dailyAboutGrid"><section class="miniSection" style="--mini-accent:#ea580c"><div class="miniTitle"><span class="miniBar"></span>Daily Engineering</div><button class="miniOpen" onclick="openTool('daily')"><span>${daily.icon}</span> Open Daily Engineering</button></section><section class="miniSection" style="--mini-accent:#64748b"><div class="miniTitle"><span class="miniBar"></span>About</div><button class="miniOpen" onclick="openTool('about')"><span>${about.icon}</span> Open About</button></section></div>`;
+ root.innerHTML=sections;
+}
+function renderGames(){const list=tools.filter(t=>t.cat==='Games');document.getElementById('gamesGrid').innerHTML=list.map((t,i)=>card(t,i,true)).join('')}
+function toggleCategory(cat,btn){const sec=document.getElementById('cat_'+cat),hidden=sec.querySelectorAll('.hiddenCard'),open=btn.textContent==='Show less';hidden.forEach(x=>x.style.display=open?'none':'flex');btn.textContent=open?'See all':'Show less'}
+function renderQuick(){document.getElementById('hvacQuick').innerHTML=['cooling','duct','pipe','psychro'].map(id=>{const t=toolById(id);return `<div class="quickCard" onclick="openTool('${id}')"><span>${t.icon}</span><small>${t.name}</small></div>`}).join('');document.getElementById('hvacAll').innerHTML=tools.filter(t=>t.cat==='HVAC').map((t,i)=>card(t,i,true)).join('')}function toggleHVAC(){const box=document.getElementById('hvacAll'),btn=document.getElementById('hvacSeeAll'),open=box.classList.toggle('open');btn.textContent=open?'Show less':'See all'}
+function renderPersonal(){const rs=recent.map(toolById).filter(Boolean),fs=favourites.map(toolById).filter(Boolean);document.getElementById('recentSection').style.display=rs.length?'block':'none';document.getElementById('recentGrid').innerHTML=rs.slice(0,4).map((t,i)=>card(t,i,true)).join('');document.getElementById('favoriteSection').style.display=fs.length?'block':'none';document.getElementById('favoriteGrid').innerHTML=fs.map((t,i)=>card(t,i,true)).join('')}
+function calendarTodayEvents(){try{var a=JSON.parse(localStorage.getItem('j1_calendar_events')||'[]'),d=new Date(),y=d.getFullYear(),m=('0'+(d.getMonth()+1)).slice(-2),day=('0'+d.getDate()).slice(-2),today=y+'-'+m+'-'+day,md=m+'-'+day,out=[];for(var i=0;i<a.length;i++){if(a[i]&&((a[i].repeat&&String(a[i].date||'').slice(5)===md)||(!a[i].repeat&&a[i].date===today)))out.push(a[i])}return out}catch(e){return[]}}
+function renderCalendarReminder(){var box=document.getElementById('calendarReminder'),items=document.getElementById('calendarReminderItems'),a=calendarTodayEvents();if(!box||!items)return;if(!a.length){box.classList.remove('show');items.innerHTML='';return}var icons={birthday:'🎂',anniversary:'💜',meeting:'👥',bill:'💳',reminder:'🔔',other:'📌'},h='';for(var i=0;i<a.length;i++){h+=(icons[a[i].type]||'📌')+' <b>'+String(a[i].title||'Event').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})+'</b>'+(a[i].time?' • '+a[i].time:'')+(i<a.length-1?'<br>':'')}items.innerHTML=h;box.classList.add('show')}
+function renderAll(){renderPersonal();renderCategories();renderGames();renderCalendarReminder()}
+function searchTools(q){const box=document.getElementById('suggestions'),s=q.trim().toLowerCase();if(!s){box.classList.remove('show');box.innerHTML='';return}const found=tools.filter(t=>(t.name+' '+t.sub+' '+t.cat+' '+t.keys).toLowerCase().includes(s)).slice(0,6);box.innerHTML=found.length?found.map(t=>`<div class="suggestion" onclick="openTool('${t.id}')"><span class="si">${t.icon}</span><div><b>${t.name}</b><small>${t.cat} • ${t.sub}</small></div></div>`).join(''):'<div class="noResult">No matching tool found.</div>';box.classList.add('show')}
+function clearRecent(){recent=[];writeStore('j1_recent',recent);renderPersonal();toast('Recent tools cleared')}
+function activate(btn){document.querySelectorAll('.nav').forEach(x=>x.classList.remove('active'));btn.classList.add('active')}
+function setMainView(){document.getElementById('gamesView').style.display='none';document.getElementById('categories').style.display='block';var f=document.getElementById('j1fxFab'),p=document.getElementById('j1fxPanel');if(f)f.style.display='none';if(p)p.classList.remove('open');renderPersonal()}
+function showHome(btn){activate(btn);try{localStorage.removeItem('j1_return_view')}catch(e){}setMainView();window.scrollTo({top:0,behavior:'smooth'})}
+function showGames(btn){activate(btn);document.getElementById('recentSection').style.display='none';document.getElementById('favoriteSection').style.display='none';document.getElementById('categories').style.display='none';document.getElementById('gamesView').style.display='block';var f=document.getElementById('j1fxFab');if(f)f.style.display='flex';window.scrollTo({top:0,behavior:'smooth'})}
+function showFavourites(btn){activate(btn);setMainView();if(!favourites.length){toast('No favourites added yet');return}document.getElementById('favoriteSection').scrollIntoView({behavior:'smooth'})}
+function showRecent(btn){activate(btn);setMainView();if(!recent.length){toast('No recently used tools');return}document.getElementById('recentSection').scrollIntoView({behavior:'smooth'})}
+function toast(text){const x=document.getElementById('toast');x.textContent=text;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1500)}
+document.addEventListener('click',e=>{if(!e.target.closest('.search'))document.getElementById('suggestions').classList.remove('show')});renderAll();try{if(localStorage.getItem('j1_return_view')==='games'){localStorage.removeItem('j1_return_view');showGames(document.querySelectorAll('.nav')[3])}}catch(e){}
+</script>
+<style id="j1fx-style">
+.j1fx-fab{display:none;position:fixed;right:10px;bottom:66px;z-index:9998;width:44px;height:44px;border:0;border-radius:50%;background:#172554;color:#fff;font-size:19px;box-shadow:0 4px 14px #0003;align-items:center;justify-content:center}.j1fx-panel{position:fixed;right:10px;bottom:116px;z-index:9999;width:210px;background:#fff;color:#172033;border:1px solid #dbe3ee;border-radius:14px;padding:10px;box-shadow:0 10px 28px #0003;display:none;font-family:Arial,sans-serif}.j1fx-panel.open{display:block}.j1fx-title{font-size:13px;font-weight:900;margin:1px 2px 8px}.j1fx-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 3px;font-size:13px;font-weight:700}.j1fx-toggle{min-width:62px;height:34px;border:0;border-radius:18px;background:#e7edf7;color:#26364e;font-weight:900}.j1fx-toggle.on{background:#2563eb;color:#fff}.j1fx-note{font-size:10px;line-height:1.35;color:#718096;padding:5px 3px 1px}
+</style>
+<button type="button" id="j1fxFab" class="j1fx-fab" aria-label="Sound and vibration settings">🎵</button>
+<div id="j1fxPanel" class="j1fx-panel" role="dialog" aria-label="Game feedback settings"><div class="j1fx-title">Game Feedback</div><div class="j1fx-row"><span>🔊 Sound</span><button type="button" id="j1fxSound" class="j1fx-toggle">ON</button></div><div class="j1fx-row"><span>📳 Vibration</span><button type="button" id="j1fxVibrate" class="j1fx-toggle">ON</button></div><div class="j1fx-note">Light feedback only. Your choice is remembered for the games.</div></div>
+<script id="j1fx-script">(function(){
+ if(window.J1FX)return;
+ var audio=null;
+ function get(k,d){try{var v=localStorage.getItem(k);return v===null?d:v==='1'}catch(e){return d}}
+ function set(k,v){try{localStorage.setItem(k,v?'1':'0')}catch(e){}}
+ var s=get('j1_fx_sound',true),v=get('j1_fx_vibrate',true);
+ function tone(freq,dur,type,vol,delay){if(!s)return;try{var A=window.AudioContext||window.webkitAudioContext;if(!A)return;if(!audio)audio=new A();if(audio.state==='suspended'&&audio.resume)audio.resume();var o=audio.createOscillator(),g=audio.createGain(),n=audio.currentTime+(delay||0);o.type=type||'sine';o.frequency.setValueAtTime(freq,n);g.gain.setValueAtTime(vol||.025,n);g.gain.exponentialRampToValueAtTime(.0001,n+dur);o.connect(g);g.connect(audio.destination);o.start(n);o.stop(n+dur)}catch(e){}}
+ function vib(p){if(!v)return;try{if(navigator.vibrate)navigator.vibrate(p)}catch(e){}}
+ function tap(){tone(430,.025,'sine',.012)}
+ function correct(){tone(620,.055,'sine',.025);tone(860,.075,'sine',.022,.055);vib(24)}
+ function wrong(){tone(180,.11,'triangle',.025);vib([55,28,45])}
+ function win(){tone(600,.06,'sine',.025);tone(820,.07,'sine',.025,.07);tone(1040,.10,'sine',.025,.15);vib([30,35,60])}
+ function fail(){tone(140,.16,'sawtooth',.025);vib([80,40,70])}
+ function sync(){var sb=document.getElementById('j1fxSound'),vb=document.getElementById('j1fxVibrate'),fb=document.getElementById('j1fxFab');if(sb){sb.textContent=s?'ON':'OFF';sb.className='j1fx-toggle'+(s?' on':'')}if(vb){vb.textContent=v?'ON':'OFF';vb.className='j1fx-toggle'+(v?' on':'')}if(fb)fb.textContent=s?'🎵':'🔇'}
+ window.J1FX={tap:tap,correct:correct,wrong:wrong,win:win,fail:fail,vibrate:vib,soundEnabled:function(){return s},vibrateEnabled:function(){return v}};
+ var fab=document.getElementById('j1fxFab'),panel=document.getElementById('j1fxPanel'),sb=document.getElementById('j1fxSound'),vb=document.getElementById('j1fxVibrate');
+ if(fab)fab.onclick=function(){panel.classList.toggle('open');tap()};
+ if(sb)sb.onclick=function(){s=!s;set('j1_fx_sound',s);sync();if(s)tone(520,.06,'sine',.02)};
+ if(vb)vb.onclick=function(){v=!v;set('j1_fx_vibrate',v);sync();if(v)vib(35)};
+ document.addEventListener('click',function(e){var t=e.target;if(t&&t.tagName==='BUTTON'&&!t.closest('.j1fx-panel')&&t!==fab){tap()}},true);
+ sync();
+})();</script>
+<style id="j1home-style">
+/* v1.32 home: category cards, My Work, category pages */
+.hero{background:#0d2f52!important}
+.bottom,#recentSection,#favoriteSection,#gamesView{display:none!important}
+.app{padding-bottom:28px!important}
+.toast{bottom:24px!important}
+.j1h-sec{margin-top:18px}
+.j1h-lbl{font-size:11px;font-weight:700;letter-spacing:1.2px;color:#566577;margin:0 2px 9px}
+.j1h-g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.j1h-g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.j1h-work{background:#fff;border:1px solid #d9e1e8;border-radius:12px;padding:11px 10px;text-align:left;color:#0c1b2a;display:flex;flex-direction:column;gap:2px;min-height:78px;font:inherit}
+.j1h-work b{font-size:13.5px}.j1h-work small{font-size:11.5px;color:#566577;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.j1h-work .ic{font-size:18px;line-height:1.2}
+.j1h-work.pri{background:#0a7c73;border-color:#0a7c73;color:#fff}.j1h-work.pri small{color:#d6f5ef}
+.j1h-big{width:100%;border:0;background:#0d2f52;color:#fff;border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px;text-align:left;font:inherit;margin-bottom:8px}
+.j1h-big .ic{width:46px;height:46px;border-radius:11px;background:#123d66;color:#7fe0cf;display:grid;place-items:center;font-size:22px;flex:none}
+.j1h-big b{font-size:18px;display:block}.j1h-big small{font-size:12px;color:#b9cde0}.j1h-big .go{margin-left:auto;color:#7fe0cf;font-size:22px}
+.j1h-card{border:1px solid #d9e1e8;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-align:left;font:inherit;color:#0c1b2a}
+.j1h-card .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:19px}
+.j1h-card b{font-size:15.5px}.j1h-card small{font-size:11.5px;color:#566577}
+.j1h-more{border:1px solid #d9e1e8;background:#fff;border-radius:12px;padding:11px 4px;display:flex;flex-direction:column;align-items:center;gap:3px;font:inherit;color:#0c1b2a;min-height:84px;justify-content:center}
+.j1h-more .ic{font-size:21px}.j1h-more b{font-size:12.5px;font-weight:600}.j1h-more small{font-size:11px;color:#566577}
+.j1v-head{display:flex;align-items:center;gap:10px;margin:16px 0 12px}
+.j1v-back{width:44px;height:44px;border-radius:12px;border:1px solid #d9e1e8;background:#fff;color:#0a7c73;font-size:20px;flex:none}
+.j1v-head h2{margin:0;font-size:21px;color:#0d2f52}.j1v-head small{display:block;color:#566577;font-size:12px}
+.j1v-empty{background:#fff;border:1px dashed #b9c6d2;border-radius:12px;padding:18px;text-align:center;color:#566577;font-size:13px;line-height:1.5}
+.j1v-home{width:100%;margin-top:16px;height:50px;border:0;border-radius:12px;background:#444;color:#fff;font-size:16px;font-weight:700}
+.j1p-grp{font-size:12px;font-weight:700;color:#0d2f52;margin:14px 2px 6px}
+.j1p-item{width:100%;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #d9e1e8;border-radius:11px;padding:10px 12px;margin-bottom:6px;text-align:left;font:inherit;color:#0c1b2a}
+.j1p-item b{display:block;font-size:14px}.j1p-item small{display:block;font-size:11.5px;color:#566577}.j1p-item .r{color:#0a7c73;font-size:11.5px}
+.j1p-item .go{margin-left:auto;color:#0a7c73;font-weight:700;font-size:13px;flex:none}
+</style>
+<script id="j1home-script">
+(function(){
+var PROJ={"cooling": {"tag": "j1pro_cooling-load", "calc": "cooling-load"}, "duct": {"tag": "j1pro_duct-sizer", "calc": "duct-sizer"}, "ductesp": {"tag": "j1pro_esp_projects", "calc": "esp"}, "pumphead": {"tag": "j1pro_pumphead_projects", "calc": "pumphead"}, "bbs": {"tag": "j1pro_bbs_projects", "calc": "bbs"}, "structqty": {"tag": "j1pro_structqty_projects", "calc": "structqty"}, "finishqty": {"tag": "j1pro_finishqty_projects", "calc": "finishqty"}, "sitemat": {"tag": "j1pro_sitemat_projects", "calc": "sitemat"}, "pipe": {"tag": "j1pro_pipe-sizer", "calc": "pipe-sizer"}, "airoutlet": {"tag": "j1pro_air-outlet", "calc": "air-outlet"}, "chwflow": {"tag": "j1pro_chw-flow", "calc": "chw-flow"}, "ctmakeup": {"tag": "j1pro_cooling-tower-makeup", "calc": "cooling-tower-makeup"}, "chwvolume": {"tag": "j1pro_chw-system-volume", "calc": "chw-system-volume"}, "exptank": {"tag": "j1pro_expansion-tank", "calc": "expansion-tank"}, "vent621": {"tag": "j1pro_ventilation-621", "calc": "ventilation-621"}, "psychro": {"tag": "j1pro_psychrometrics", "calc": "psychrometrics"}, "ach": {"tag": "j1pro_ach-airflow", "calc": "ach-airflow"}, "louvre": {"tag": "j1pro_louvre", "calc": "louvre"}, "fahu": {"tag": "j1pro_fahu", "calc": "fahu"}, "kitchencanopy": {"tag": "j1pro_kitchen-canopy", "calc": "kitchen-canopy"}, "stairpress": {"tag": "j1pro_staircase", "calc": "staircase"}, "electricheater": {"tag": "j1pro_electric-heater", "calc": "electric-heater"}, "domesticwater": {"tag": "j1pro_domestic-water", "calc": "domestic-water"}, "condensate": {"tag": "j1pro_condensate", "calc": "condensate"}, "area": {"tag": "j1pro_area-volume", "calc": "area-volume"}, "converter": {"tag": "j1pro_unit-converter", "calc": "unit-converter"}, "waterpipe": {"tag": "j1pro_water-supply-pipe", "calc": "water-supply-pipe"}, "tankdomestic": {"tag": "j1pro_tank-domestic", "calc": "tank-domestic"}, "tankfire": {"tag": "j1pro_tank-fire", "calc": "tank-fire"}, "tankcondensate": {"tag": "j1pro_tank-condensate", "calc": "tank-condensate"}, "tankirrigation": {"tag": "j1pro_tank-irrigation", "calc": "tank-irrigation"}, "eload": {"tag": "j1pro_electrical-load", "calc": "electrical-load"}, "lighting": {"tag": "j1pro_lighting-lux", "calc": "lighting-lux"}, "earthing": {"tag": "j1pro_earth-conductor", "calc": "earth-conductor"}, "generator": {"tag": "j1pro_generator-sizing", "calc": "generator-sizing"}, "upsbattery": {"tag": "j1pro_ups-battery", "calc": "ups-battery"}, "solarpv": {"tag": "j1pro_solar-rooftop", "calc": "solar-rooftop"}, "gratuity": {"tag": "j1pro_gulf-gratuity", "calc": "gulf-gratuity"}, "breaker": {"tag": "j1pro_breaker-cable", "calc": "breaker-cable"}, "voltdrop": {"tag": "j1pro_voltage-drop", "calc": "voltage-drop"}, "capacitor": {"tag": "j1pro_capacitor-bank", "calc": "capacitor-bank"}, "pumpcap": {"tag": "j1pro_pump-capacity", "calc": "pump-capacity"}, "fansize": {"tag": "j1pro_fan-sizing", "calc": "fan-sizing"}, "waterheater": {"tag": "j1pro_water-heater", "calc": "water-heater"}};
+var CATS={HVAC:{t:'HVAC',sub:'Loads, ducts, psychro, ESP',ic:'❄️'},Electrical:{t:'Electrical',sub:'Load, cable, VD',ic:'⚡',bg:'#f0eaff'},Plumbing:{t:'Plumbing',sub:'Pipes, tanks',ic:'💧',bg:'#e0f2fe'},Civil:{t:'Civil',sub:'BBS, concrete, finishes, materials',ic:'🏗️',bg:'#fdeedc'},
+ Student:{t:'Student',ic:'🎓',bg:'#e5faf5'},Finance:{t:'Finance',ic:'💰',bg:'#fff8df'},Utility:{t:'Utilities',ic:'🛠️',bg:'#e7faff'},Health:{t:'Health',ic:'❤️',bg:'#fff0f4'},Games:{t:'Games',ic:'🎮',bg:'#fff0f8'}};
+var J1GROUPS={
+ Student:[
+  {id:'academic',name:'Academic Calculator',sub:'CGPA, marks, grade prediction & attendance',icon:'🎓',children:[{id:'cgpa'},{id:'marks'},{id:'predictor'},{id:'attendance'}]},
+  {id:'study',name:'Study Planner',sub:'Study planning & exam countdown',icon:'📚',children:[{id:'planner'},{id:'countdown'}]},
+  {id:'studentquiz',direct:'studentquiz'},
+  {id:'studentvault',direct:'studentvault'},
+  {id:'syllabus',direct:'syllabus'},
+  {id:'govcareers',direct:'govcareers'},
+  {id:'textbooks',direct:'textbooks'}
+ ],
+ Finance:[
+  {id:'investment',name:'Investment Calculator',sub:'SIP, FD & RD calculators',icon:'📈',children:[{id:'sip'},{id:'fdrd',alias:'FD Calculator',sub:'Fixed deposit maturity estimate'},{id:'fdrd',alias:'RD Calculator',sub:'Recurring deposit maturity estimate'}]},
+  {id:'loaninterest',name:'Loan & Interest Calculator',sub:'EMI and interest calculations',icon:'🏦',children:[{id:'emi'},{id:'interest'}]},
+  {id:'budget',name:'Budget Planner',sub:'Budget, savings goal & fuel cost',icon:'📒',children:[{id:'expense'},{id:'saving'},{id:'fuel'}]},
+  {id:'gratuity',direct:'gratuity'},
+  {id:'electricity',direct:'electricity'},
+  {id:'livemetals',direct:'livemetals'},
+  {id:'livefx',direct:'livefx'},
+  {id:'split',direct:'split'}
+ ],
+ Utility:[
+  {id:'procalc',direct:'procalc'},
+  {id:'luxmeter',direct:'luxmeter'},
+  {id:'compass',direct:'compass'},
+  {id:'soundmeter',direct:'soundmeter'},
+  {id:'ruler',direct:'ruler'},
+  {id:'speedtest',direct:'speedtest'},
+  {id:'qr',direct:'qr'},
+  {id:'passport',direct:'passport'},
+  {id:'translator',direct:'translator'},
+  {id:'pdfeditor',direct:'pdfeditor'},
+  {id:'colourpicker',direct:'colourpicker'},
+  {id:'heightfinder',direct:'heightfinder'},
+ ],
+ Health:[
+  {id:'bmi',direct:'bmi'},
+  {id:'calorie',direct:'calorie'},
+  {id:'water',direct:'water'}
+ ]
+};
+function j1MainCount(cat){return J1GROUPS[cat]?J1GROUPS[cat].length:tools.filter(function(t){return t.cat===cat}).length}
+function j1GroupById(cat,id){var a=J1GROUPS[cat]||[];for(var i=0;i<a.length;i++)if(a[i].id===id)return a[i];return null}
+function j1MainCard(cat,g){
+ if(g.direct){var t=toolById(g.direct);return t?card(t,0,true):''}
+ return '<div class="tool" onclick="j1ShowGroup(\''+cat+'\',\''+g.id+'\')"><div class="toolIcon" style="--soft:'+(CATS[cat]&&CATS[cat].bg?CATS[cat].bg:'#eef2f7')+'">'+(g.icon||'▦')+'</div><div class="toolName">'+esc(g.name)+'</div><div class="toolSub">'+esc(g.sub||'Open tools')+'</div></div>'
+}
+function j1AliasCard(ch){var t=toolById(ch.id);if(!t)return '';var x={id:t.id,name:ch.alias||t.name,sub:ch.sub||t.sub,icon:t.icon,cat:t.cat};return card(x,0,true)}
+
+var view={k:'home'};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function cnt(cat){return j1MainCount(cat)}
+function holder(){var h=document.getElementById('j1view');if(!h){h=document.createElement('div');h.id='j1view';document.getElementById('categories').after(h)}return h}
+function fab(show){var f=document.getElementById('j1fxFab'),p=document.getElementById('j1fxPanel');if(f)f.style.display=show?'flex':'none';if(!show&&p)p.classList.remove('open')}
+var projCount=null;
+function renderHome(){
+ var rs=recent.map(toolById).filter(Boolean),fs=favourites.map(toolById).filter(Boolean);
+ var h='<div class="j1h-sec"><div class="j1h-lbl">MY WORK</div><div class="j1h-g3">'+
+ '<button class="j1h-work" onclick="j1ShowList(\'fav\')"><span class="ic" style="color:#b7791f">★</span><b>Favourites</b><small>'+fs.length+' tool'+(fs.length===1?'':'s')+'</small></button>'+
+ '<button class="j1h-work" onclick="j1ShowList(\'recent\')"><span class="ic" style="color:#0a7c73">🕘</span><b>Recent</b><small>'+(rs.length?esc(rs[0].name):'None yet')+'</small></button>'+
+ '<button class="j1h-work pri" onclick="j1ShowProjects()"><span class="ic">📁</span><b>My Projects</b><small id="j1projcount">'+(projCount==null?'Open saved work':projCount+' saved')+'</small></button></div></div>'+
+ '<div class="j1h-sec"><div class="j1h-lbl">ENGINEERING</div>'+
+ '<button class="j1h-big" onclick="j1ShowCat(\'HVAC\')"><span class="ic">❄️</span><span><b>HVAC</b><small>'+CATS.HVAC.sub+' · '+cnt('HVAC')+' tools</small></span><span class="go">›</span></button>'+
+ '<div class="j1h-g3">'+['Electrical','Plumbing','Civil'].map(function(c){return '<button class="j1h-card" onclick="j1ShowCat(\''+c+'\')"><span class="ic" style="background:'+CATS[c].bg+'">'+CATS[c].ic+'</span><b>'+c+'</b><small>'+CATS[c].sub+' · '+cnt(c)+'</small></button>'}).join('')+'</div></div>'+
+ '<div class="j1h-sec"><div class="j1h-lbl">MORE TOOLS</div><div class="j1h-g3">'+
+ ['Student','Finance','Utility','Health','Daily','Games'].map(function(c){
+   if(c==='Daily'){var d=toolById('daily');return '<button class="j1h-more" onclick="openTool(\'daily\')"><span class="ic">'+(d?d.icon:'🌅')+'</span><b>Daily Engineering</b><small>Learn engineering daily</small></button>'}
+   return '<button class="j1h-more" onclick="j1ShowCat(\''+c+'\')"><span class="ic">'+CATS[c].ic+'</span><b>'+CATS[c].t+'</b><small>'+cnt(c)+(c==='Games'?' games':' tools')+'</small></button>'}).join('')+
+ '</div><button class="j1h-more" style="width:100%;margin-top:8px;min-height:48px;flex-direction:row;gap:8px" onclick="openTool(\'about\')"><span class="ic" style="font-size:17px">ℹ️</span><b>About J1 Pro</b></button></div>';
+ document.getElementById('categories').innerHTML=h;
+}
+function show(k){view={k:k};var home=k==='home';var j1u=document.getElementById('j1upd');if(j1u)j1u.style.display=(home&&j1u.getAttribute('data-on')==='1')?'block':'none';document.getElementById('categories').style.display=home?'block':'none';holder().style.display=home?'none':'block';
+ ['calendarReminder'].forEach(function(id){var e=document.getElementById(id);if(e&&!home)e.classList.remove('show')});if(home)renderCalendarReminder();fab(false);try{window.scrollTo(0,0)}catch(e){}}
+function headHTML(title,sub){return '<div class="j1v-head"><button class="j1v-back" aria-label="Back to home" onclick="j1Home()">‹</button><div><h2>'+esc(title)+'</h2><small>'+esc(sub||'')+'</small></div></div>'}
+window.j1Home=function(){show('home');renderHome()};
+window.j1ShowCat=function(cat){
+ var groups=J1GROUPS[cat], list=tools.filter(function(t){return t.cat===cat});
+ show('cat');view.cat=cat;
+ var title=(CATS[cat]?CATS[cat].t:cat)+(cat==='Games'?'':' Tools'), count=groups?groups.length:list.length;
+ var body=groups?groups.map(function(g){return j1MainCard(cat,g)}).join(''):list.map(function(t,i){return card(t,i,true)}).join('');
+ holder().innerHTML=headHTML(title,count+(cat==='Games'?' games':' main tools'))+'<div class="grid">'+body+'</div>'+'<button class="j1v-home" onclick="j1Home()">Home</button>';
+ if(cat==='Games')fab(true)
+};
+window.j1ShowGroup=function(cat,id){
+ var g=j1GroupById(cat,id);if(!g||!g.children){j1ShowCat(cat);return}
+ show('group');view.cat=cat;view.group=id;
+ var h='<div class="j1v-head"><button class="j1v-back" aria-label="Back to '+esc(cat)+'" onclick="j1ShowCat(\''+cat+'\')">‹</button><div><h2>'+esc(g.name)+'</h2><small>'+g.children.length+' sub-tools</small></div></div>';
+ h+='<div class="grid">'+g.children.map(function(ch){return j1AliasCard(ch)}).join('')+'</div>';
+ h+='<button class="j1v-home" onclick="j1ShowCat(\''+cat+'\')">Back to '+esc(cat)+'</button>';
+ holder().innerHTML=h;
+};
+window.j1ShowList=function(kind){var ids=kind==='fav'?favourites:recent,list=ids.map(toolById).filter(Boolean);show(kind);
+ holder().innerHTML=headHTML(kind==='fav'?'Favourites':'Recently Used',kind==='fav'?'Tap ☆ on any tool to add it here':'Your last '+list.length+' tools')+
+ (list.length?'<div class="grid">'+list.map(function(t,i){return card(t,i,true)}).join('')+'</div>'+(kind==='recent'?'<button class="j1v-home" style="background:#e7edf5;color:#334155" onclick="clearRecent();j1ShowList(\'recent\')">Clear recent</button>':''):'<div class="j1v-empty">'+(kind==='fav'?'No favourites yet. Tap the ☆ on any tool tile.':'No recently used tools yet.')+'</div>')+'<button class="j1v-home" onclick="j1Home()">Home</button>'};
+/* ---- My Projects: read every calculator's saved projects from the app (TinyDB via Screen1) ---- */
+function dbLoad(tag,cb0){if(window.__j1cloudBusy){setTimeout(function(){dbLoad(tag,cb0)},150);return}window.__j1dbBusy=true;var cb=function(d){window.__j1dbBusy=false;cb0(d)};var n=0;try{AppInventor.setWebViewString('J1DBLOAD§§'+tag)}catch(e){cb(null);return}
+ var iv=setInterval(function(){n++;var v='';try{v=AppInventor.getWebViewString()||''}catch(e){}if(v.indexOf('J1DBDATA§§')===0||n>25){clearInterval(iv);var d=null;try{d=JSON.parse(v.indexOf('J1DBDATA§§')===0?v.slice(10):'{}')}catch(e){d=null}try{AppInventor.setWebViewString('')}catch(e){}cb(d)}},80)}
+function collect(done){var ids=Object.keys(PROJ),out=[],i=0;
+ if(!window.AppInventor){done(out);return}
+ (function next(){if(i>=ids.length){done(out);return}var id=ids[i++],p=PROJ[id],t=toolById(id);dbLoad(p.tag,function(d){if(d&&t){var l=(['esp','pumphead','bbs','structqty','finishqty','sitemat','luxmeter','compass'].indexOf(p.calc)>=0)?(Array.isArray(d.list)?d.list:[]):(Array.isArray(d['projects:'+p.calc])?d['projects:'+p.calc]:[]);
+  l.forEach(function(x){out.push({tool:t,name:x.name,date:x.date||'',result:x.result||'',calc:p.calc,tag:p.tag})})}setTimeout(next,40)})})()}
+window.j1ShowProjects=function(){show('proj');holder().innerHTML=headHTML('My Projects','Loading saved projects…')+'<div class="j1v-empty">Loading…</div>';
+ collect(function(all){projCount=all.length;if(view.k!=='proj')return;var by={};all.forEach(function(x){(by[x.tool.id]=by[x.tool.id]||[]).push(x)});
+  var h=headHTML('My Projects',all.length+' saved project'+(all.length===1?'':'s'));
+  if(!all.length)h+='<div class="j1v-empty">No saved projects yet.<br>Open any engineering calculator, calculate, then press <b>Save Project</b>.</div>';
+  Object.keys(by).forEach(function(id){var t=toolById(id);h+='<div class="j1p-grp">'+t.icon+' '+esc(t.name)+' <span style="color:#566577;font-weight:400">· '+esc(t.cat)+'</span></div>'+
+   by[id].map(function(x,k){return '<button class="j1p-item" onclick="j1OpenProject(\''+id+'\','+k+')"><span><b>'+esc(x.name)+'</b><small>'+esc(x.date)+'</small>'+(x.result?'<small class="r">'+esc(x.result)+'</small>':'')+'</span><span class="go">Open ›</span></button>'}).join('')});
+  window.__j1proj=by;holder().innerHTML=h+'<button class="j1v-home" onclick="j1Home()">Home</button>'})};
+window.j1OpenProject=function(id,k){var x=(window.__j1proj||{})[id][k];if(!x)return;
+ try{AppInventor.setWebViewString('J1DBSAVE§§j1pro_pending§§'+JSON.stringify({calc:x.calc,name:x.name}).replace(/§/g,'\\u00a7'))}catch(e){}
+ setTimeout(function(){openTool(id)},150)};
+function refreshCount(){collect(function(all){projCount=all.length;var e=document.getElementById('j1projcount');if(e)e.textContent=projCount+' saved'})}
+/* ---- navigation messages from the app: "J1NAV§§home" or "J1NAV§§cat§§HVAC" ---- */
+setInterval(function(){var v='';try{v=window.AppInventor?AppInventor.getWebViewString()||'':''}catch(e){}
+ if(v.indexOf('J1NAV§§')!==0)return;try{AppInventor.setWebViewString('')}catch(e){}
+ var a=v.split('§§');if(a[1]==='cat'&&a[2])j1ShowCat(a[2]);else if(a[1]==='tool'&&a[2]&&toolById(a[2])){j1ShowCat(toolById(a[2]).cat);setTimeout(function(){openTool(a[2])},200)}else j1Home()},250);
+
+/* Search both restructured main tools and original sub-tools without changing stored tool IDs. */
+window.searchTools=function(q){
+ var box=document.getElementById('suggestions'),s=String(q||'').trim().toLowerCase();if(!s){box.classList.remove('show');box.innerHTML='';return}
+ var rows=[];
+ Object.keys(J1GROUPS).forEach(function(cat){(J1GROUPS[cat]||[]).forEach(function(g){
+  if(!g.direct){var hay=(g.name+' '+g.sub+' '+cat).toLowerCase();if(hay.indexOf(s)>=0)rows.push({kind:'group',cat:cat,g:g})}
+  (g.children||[]).forEach(function(ch){var t=toolById(ch.id);if(!t)return;var name=ch.alias||t.name,sub=ch.sub||t.sub,hay=(name+' '+sub+' '+cat+' '+t.keys).toLowerCase();if(hay.indexOf(s)>=0)rows.push({kind:'tool',t:t,name:name,sub:sub,cat:cat})})
+ })});
+ tools.forEach(function(t){var hay=(t.name+' '+t.sub+' '+t.cat+' '+t.keys).toLowerCase();if(hay.indexOf(s)>=0&&!rows.some(function(r){return r.kind==='tool'&&r.t.id===t.id&&r.name===t.name}))rows.push({kind:'tool',t:t,name:t.name,sub:t.sub,cat:t.cat})});
+ rows=rows.slice(0,8);
+ box.innerHTML=rows.length?rows.map(function(r){if(r.kind==='group')return '<div class="suggestion" onclick="j1ShowGroup(\''+r.cat+'\',\''+r.g.id+'\');document.getElementById(\'suggestions\').classList.remove(\'show\')"><span class="si">'+(r.g.icon||'▦')+'</span><div><b>'+esc(r.g.name)+'</b><small>'+esc(r.cat)+' • '+esc(r.g.sub)+'</small></div></div>';return '<div class="suggestion" onclick="openTool(\''+r.t.id+'\')"><span class="si">'+r.t.icon+'</span><div><b>'+esc(r.name)+'</b><small>'+esc(r.cat)+' • '+esc(r.sub)+'</small></div></div>'}).join(''):'<div class="noResult">No matching tool found.</div>';box.classList.add('show')
+};
+/* keep the old entry points working */
+window.renderAll=function(){renderPersonal();renderCalendarReminder();if(view.k==='home')renderHome();else if(view.k==='cat')j1ShowCat(view.cat);else if(view.k==='fav'||view.k==='recent')j1ShowList(view.k)};
+window.showHome=function(){j1Home()};window.showGames=function(){j1ShowCat('Games')};window.showFavourites=function(){j1ShowList('fav')};window.showRecent=function(){j1ShowList('recent')};
+show('home');renderHome();
+})();
+</script>
+<script src="j1_auth_config.js"></script><script src="j1_cloud.js"></script>
+</body></html>
