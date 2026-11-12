@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head><script src="j1_kb.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0d2f52">
+<title>J1 Pro – Engineering Syllabus</title>
+<style>
+:root{--navy:#0d2f52;--navy2:#123b66;--teal:#0f8f7e;--ink:#1d2939;--mut:#5b6b82;--line:#e3e9f2;--bg:#f2f5fa;--card:#fff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px;line-height:1.5;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:12px 14px 30px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:16px}
+.hero h1{margin:0;font-size:20px}.hero p{margin:6px 0 0;color:#c9d6e6;font-size:13.5px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-top:12px}
+.flab{font-size:12px;font-weight:700;color:var(--mut);margin:8px 0 5px;text-transform:uppercase;letter-spacing:.03em}
+select{width:100%;height:44px;border:1px solid var(--line);border-radius:11px;background:#fff;font-size:14.5px;padding:0 10px;color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.search{position:relative;margin-top:10px}.search input{width:100%;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 42px 0 14px;font-size:15px;background:#fff}
+.search button{position:absolute;right:6px;top:6px;width:34px;height:34px;border:0;border-radius:9px;background:#eef2f7;color:var(--mut);font-size:18px}
+.meta{display:flex;justify-content:space-between;align-items:center;margin:12px 2px 4px;color:var(--mut);font-size:13px;gap:8px}
+.sub{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:8px;font:inherit;color:inherit}
+.sub .cd{flex:none;min-width:62px;font-size:12px;font-weight:800;color:var(--teal)}
+.sub .nm{flex:1;min-width:0}.sub .nm b{display:block;font-size:14.5px;color:var(--navy);overflow-wrap:anywhere}.sub .nm small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.sub .go{color:var(--teal);font-size:20px;font-weight:700}
+.sub.el{background:#f8fafc}.sub.el .cd{color:var(--mut)}
+.tag{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:2px 8px;background:#e6f6f2;color:var(--teal);margin-top:4px}
+.bar{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.back{border:1px solid var(--line);background:#fff;border-radius:10px;height:38px;padding:0 12px;font:600 14px inherit;color:var(--navy);flex:none}
+.bar h2{margin:0;font-size:16.5px;color:var(--navy);flex:1;min-width:0;overflow-wrap:anywhere}
+.dh{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:16px;padding:14px}
+.dh .c{font-size:12.5px;font-weight:800;color:#7ee0c8}.dh h2{margin:2px 0 0;font-size:18px;overflow-wrap:anywhere}.dh p{margin:4px 0 0;color:#c9d6e6;font-size:13px}
+.nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 4px}.nav::-webkit-scrollbar{display:none}
+.nav button,.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font:600 13px inherit;color:var(--mut)}
+.nav button.on,.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.sec{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:10px}
+.sec h3{margin:0 0 6px;font-size:13px;color:var(--teal);text-transform:uppercase;letter-spacing:.04em}
+.kv{display:grid;grid-template-columns:42% 58%;gap:4px 10px;font-size:14px}.kv div:nth-child(odd){color:var(--mut)}
+ul,ol{margin:4px 0;padding-left:20px}li{margin:3px 0;overflow-wrap:break-word}
+.unit{border:1px solid var(--line);border-radius:12px;margin-top:8px;overflow:hidden}
+.unit>button{display:flex;width:100%;gap:10px;align-items:center;text-align:left;background:#fff;border:0;padding:12px;font:inherit;color:inherit}
+.unit>button i{font-style:normal;flex:none;width:28px;height:28px;border-radius:8px;background:#e6f6f2;color:var(--teal);display:grid;place-items:center;font-weight:800;font-size:13px}
+.unit>button b{flex:1;color:var(--navy);font-size:14.5px}.unit>button span{color:var(--mut)}
+.unit .bd{padding:0 14px 12px 50px;font-size:14px}
+.iq{border-top:1px solid var(--line);padding:9px 0;font-size:14px;display:flex;gap:8px}.iq:first-child{border:0}
+.iq em{flex:none;font-style:normal;font-size:10.5px;font-weight:800;border-radius:6px;padding:2px 6px;height:fit-content;margin-top:2px}
+.k-S{background:#e8f0fe;color:#1a56b0}.k-L{background:#fff1e6;color:#b05a00}.k-N{background:#ecfdf3;color:#1a7f4b}
+.small{font-size:12.5px;color:var(--mut);margin:6px 0}
+.sb{display:inline-block;font-size:10px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:1px;background:#f1f4f9;color:var(--mut)}.sb-P{background:#ecfdf3;color:#1a7f4b}
+.exl li{margin:6px 0}.lab-note{background:#f4f7fb;border-radius:10px;padding:9px 11px;font-size:13px;color:var(--ink);margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:42px;border:0;border-radius:11px;padding:0 14px;font:700 14px inherit;background:var(--navy);color:#fff;margin-top:10px}
+.btn.sec{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn.teal{background:var(--teal)}.btn[disabled]{opacity:.45}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btns .btn{width:100%}
+.qcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:8px}
+.qcard .qt{font-size:15.5px;font-weight:600}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 12px;margin-top:8px;font:inherit;color:inherit}
+.opt i{flex:none;width:26px;height:26px;border-radius:50%;background:#eef2f7;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:13px;color:var(--mut)}
+.opt.on{border-color:var(--teal);background:#effaf7}.opt.on i{background:var(--teal);color:#fff}
+.opt.ok{border-color:#1a7f4b;background:#ecfdf3}.opt.ok i{background:#1a7f4b;color:#fff}.opt.bad{border-color:#b42318;background:#fef3f2}.opt.bad i{background:#b42318;color:#fff}
+.fb{margin-top:10px;border-radius:10px;padding:10px 12px;font-size:14px}.fb.good{background:#ecfdf3;color:#1a7f4b}.fb.badf{background:#fef3f2;color:#b42318}.fb.ex{background:#f4f7fb;color:var(--ink)}
+.prog{height:6px;background:#e3e9f2;border-radius:6px;overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;background:var(--teal)}
+.score{text-align:center}.score .big{font-size:38px;font-weight:800;color:var(--navy)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.sgrid div{background:#f4f7fb;border-radius:10px;padding:8px;text-align:center;font-size:12px;color:var(--mut)}.sgrid b{display:block;font-size:20px;color:var(--ink)}
+.lk{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:9px 0;font-size:14px}.lk:last-child{border:0}
+.lk button{height:36px;border-radius:9px;border:0;background:var(--teal);color:#fff;font:700 13px inherit;padding:0 12px;flex:none}
+.rescard{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:linear-gradient(135deg,#e6f6f2,#eef5ff);border:1px solid #cfe9e2;border-radius:14px;padding:12px;margin-top:10px;font:inherit;color:inherit}.rescard .ic{font-size:24px;flex:none}.rescard b{display:block;color:var(--navy);font-size:14.5px}.rescard small{display:block;color:var(--mut);font-size:12px}.rescard .go{color:var(--teal);font-size:20px;font-weight:700;margin-left:auto}
+.rk{display:inline-block;font-size:10.5px;font-weight:800;border-radius:6px;padding:1px 6px;margin-right:6px;vertical-align:1px}.rk-v{background:#e8f0fe;color:#1a56b0}.rk-b{background:#ecfdf3;color:#1a7f4b}.rk-h{background:#fff1e6;color:#b05a00}
+.lk .rt{flex:1;min-width:0}.lk .rt small{display:block;color:var(--mut);font-size:12px}.lk .rt small.rm{color:var(--teal);font-weight:700}.lk .rt small.rc{color:var(--ink);margin-top:2px}.lk .rt small.rc b{display:inline;font-size:12px;color:var(--navy)}
+.rg{margin-top:6px}.rg+.rg{border-top:1px solid var(--line);padding-top:6px}.rgh{font-size:12px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.03em;margin:4px 0 0}
+.empty{background:#fff;border:1px dashed #c9d3e1;border-radius:14px;padding:16px;text-align:center;color:var(--mut);margin-top:10px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:9;max-width:90%}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script src="eng_syllabus_data.js"></script>
+<script src="j1_ls.js"></script>
+<script src="j1_content.js"></script>
+<script>
+/* J1 Pro 2.3 – Engineering Syllabus: Department → Semester → Subject. Batch 1: Mechanical + CSE, CSE (Cyber Security), CSE (AI & ML) R2021 theory units, practical experiment lists (type:'lab') and integrated-course practical exercises (pr). */
+(function(){
+'use strict';
+var D=window.J1_SYL||{curriculum:{},subjects:{}},SB=D.subjects||{},APP=!!window.AppInventor,app=document.getElementById('app');
+var RES={};/* 2.4: free books & courses, downloaded with syllabus.json (resources: {CODE:[{t,s,u,k}]}) */
+function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function send(m){try{AppInventor.setWebViewString(m)}catch(e){}}
+function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove()},2400)}
+function openUrl(u){if(!/^https:\/\/\S+$/.test(u||'')){toast('Link not available');return}if(APP){send('GOVURL§§'+u);toast('Opening…')}else window.open(u,'_blank','noopener')}
+function ls(k,v){try{if(v===undefined){var s=localStorage.getItem(k);return s?JSON.parse(s):null}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+/* 2.4: regulation-ready – D.byReg['Regulation 2025'] = {curriculum:{...}} can be added later; only regulations with data are listed */
+var REGS=(D.regs||['Regulation 2021']).filter(function(r){return r==='Regulation 2021'||(D.byReg&&D.byReg[r]&&D.byReg[r].curriculum)});if(!REGS.length)REGS=['Regulation 2021'];
+function curOf(r){return (D.byReg&&D.byReg[r]&&D.byReg[r].curriculum)||(r===REGS[0]?D.curriculum:null)||{}}
+var U=ls('j1_syl_ui')||{},REG=REGS.indexOf(U.reg)>=0?U.reg:REGS[0],C=curOf(REG),DEPTS=Object.keys(C);
+var S={dept:DEPTS.indexOf(U.dept)>=0?U.dept:(DEPTS.indexOf('Mechanical Engineering')>=0?'Mechanical Engineering':DEPTS[0]),sem:U.sem||'Semester 3',q:''};
+function saveU(){ls('j1_syl_ui',{dept:S.dept,sem:S.sem,reg:REG})}
+var stack=[{v:'home'}];
+function top(){return stack[stack.length-1]}
+function go(v,o){var s={v:v};for(var k in o||{})s[k]=o[k];stack.push(s);render();window.scrollTo(0,0)}
+function back(){if(stack.length>1){stack.pop();render();window.scrollTo(0,0)}else if(APP)send('GOVNAV§§close')}
+window.J1GovSystemBack=back;
+function bar(t){return '<div class="bar"><button class="back" data-a="back">‹ Back</button><h2>'+esc(t)+'</h2></div>'}
+function semOf(dept,code){var o='';Object.keys(C[dept]||{}).forEach(function(s){(C[dept][s]||[]).forEach(function(x){if(x.code===code&&!o)o=s})});return o}
+function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+function list(){var d=C[S.dept]||{},q=norm(S.q),out=[];
+  if(q){Object.keys(d).forEach(function(sm){(d[sm]||[]).forEach(function(x){var h=' '+norm(x.code+' '+x.name);if(q.split(' ').every(function(w){return h.indexOf(' '+w)>=0||norm(x.code).indexOf(w)===0}))out.push({x:x,sem:sm})})})}
+  else (d[S.sem]||[]).forEach(function(x){out.push({x:x,sem:S.sem})});return out}
+/* 2.4: verified free resources (syllabus.json "resources"): k = book | notes | video | ref ; old v/b/h still read */
+var KMAP={v:'video',b:'book',h:'ref'};var RK={book:1,notes:1,video:1,ref:1};
+function resOf(c){return RES[c]||[]}
+function acc(a){return a==='pdf'?'Free PDF':a==='both'?'Read online · PDF':'Read online'}
+function rcard(r,full){var ttl='<b>'+esc(r.t)+'</b>',sub=[r.a,r.p].filter(Boolean).map(esc).join(' · ');
+  var meta=r.k==='video'||r.k==='notes'?'':'<small class="rm">'+esc(acc(r.acc))+(r.lic?' · '+esc(r.lic):'')+'</small>';
+  var cov=r.units?'<small class="rc"><b>Covers:</b> '+esc(r.units)+(full&&r.note?' – '+esc(r.note):'')+'</small>':'';
+  return '<div class="lk"><span class="rt">'+ttl+(sub?'<small>'+sub+'</small>':'')+meta+cov+'</span><button data-url="'+esc(r.u)+'">'+(r.k==='video'?'Watch ›':'Open ›')+'</button></div>'}
+var GRP=[['book','Free textbooks'],['notes','Learning materials'],['video','Video courses'],['ref','Additional references']];
+function resGroups(l,full){var h='';
+  GRP.forEach(function(g){var it=l.filter(function(r){return r.k===g[0]});
+    if(g[0]==='book'&&!it.length){if(l.length)h+='<div class="rg"><div class="rgh">Free textbooks</div><p class="small">No verified free textbook is currently available for this subject.</p></div>';return}
+    if(it.length)h+='<div class="rg"><div class="rgh">'+g[1]+'</div>'+it.map(function(r){return rcard(r,full)}).join('')+'</div>'});
+  return h}
+var RESNOTE='<p class="small">Only legally free resources. Links open the official site in your browser (internet needed).</p>';
+var RESEMPTY='<p class="small">Verified free learning resources are currently unavailable for this subject.</p>';
+function freeSec(c){var l=resOf(c);return '<div class="sec"><h3>Free books &amp; courses</h3>'+(l.length?resGroups(l,true)+RESNOTE:RESEMPTY)+'</div>'}
+function semRes(){return (C[S.dept]&&C[S.dept][S.sem]||[]).filter(function(x){return x.code&&resOf(x.code).length})}
+function cnt(l,k){return l.filter(function(r){return r.k===k}).length}
+function resView(){var l=semRes(),all=[];l.forEach(function(x){all=all.concat(resOf(x.code))});var nb=cnt(all,'book'),nv=cnt(all,'video')+cnt(all,'notes');
+  var h=bar('Free books & courses')+'<div class="dh"><div class="c">'+esc(S.sem)+'</div><h2>📚 Free books &amp; courses</h2><p>'+esc(S.dept)+' · '+nb+' free textbook'+(nb===1?'':'s')+' · '+nv+' NPTEL course'+(nv===1?'':'s')+'</p></div>';
+  if(!l.length)return h+'<div class="empty">No verified free resources are listed for this semester yet.</div>';
+  return h+l.map(function(x){return '<div class="sec"><h3>'+esc(x.code)+' · '+esc(x.name)+'</h3>'+resGroups(resOf(x.code),false)+'</div>'}).join('')+RESNOTE}
+function kind(x){var n=x.name.toLowerCase();return !x.code?'Elective':/laboratory|lab\b|drawing|project|internship|induction|development|training|camp|portfolio/.test(n)?'Practical':'Theory'}
+function subCard(o){var x=o.x,full=x.code&&SB[x.code],k=kind(x);
+  if(!x.code)return '<div class="sub el"><span class="cd">ELECTIVE</span><span class="nm"><b>'+esc(x.name)+'</b><small>Choose from the elective list given by your college</small></span></div>';
+  return '<button class="sub" data-sub="'+esc(x.code)+'" data-sem="'+esc(o.sem)+'"><span class="cd">'+esc(x.code)+'</span><span class="nm"><b>'+esc(x.name)+'</b><small>'+(S.q?esc(o.sem)+' · ':'')+k+'</small>'+(full?'<span class="tag">'+(full.type==='lab'?'Official experiment list':(full.mcq&&full.mcq.length?'Units · questions · practice':'Units · questions'))+'</span>':'')+'</span><span class="go">›</span></button>'}
+function listHtml(){var l=list(),full=l.filter(function(o){return o.x.code&&SB[o.x.code]}).length;
+  return '<div class="meta"><span>'+(S.q?l.length+' result'+(l.length===1?'':'s')+' in '+esc(S.dept):l.length+' subjects in '+esc(S.sem))+'</span>'+(full?'<span>'+full+' with full content</span>':'')+'</div>'+(l.length?l.map(subCard).join(''):'<div class="empty">No subject matches. Try another name or code.</div>')}
+function home(){
+  var h='<div class="hero"><h1>📘 Engineering Syllabus</h1><p>'+esc(D.university||'Anna University')+' · '+esc(REG)+' · Affiliated institutions</p></div>';
+  h+='<div class="card"><div class="flab">Department</div><select id="dept">'+DEPTS.map(function(d){return '<option'+(d===S.dept?' selected':'')+'>'+esc(d)+'</option>'}).join('')+'</select>'+
+     '<div class="row2"><div><div class="flab">Regulation</div><select id="reg">'+REGS.map(function(r){return '<option'+(r===REG?' selected':'')+'>'+esc(r)+'</option>'}).join('')+'</select></div>'+
+     '<div><div class="flab">Semester</div><select id="sem"'+(S.q?' disabled':'')+'>'+Object.keys(C[S.dept]||{}).map(function(s){return '<option'+(s===S.sem?' selected':'')+'>'+esc(s)+'</option>'}).join('')+'</select></div></div>'+
+     '<div class="search"><input id="q" type="text" placeholder="Search subject name or code" value="'+esc(S.q)+'" autocomplete="off"><button data-a="clearq" aria-label="Clear">×</button></div></div>';
+  var sr=S.q?[]:semRes(),srn=0,sra=[];sr.forEach(function(x){srn+=resOf(x.code).length;sra=sra.concat(resOf(x.code))});var srb=cnt(sra,'book'),srv=cnt(sra,'video')+cnt(sra,'notes');
+  if(srn)h+='<button class="rescard" data-a="semres"><span class="ic">📚</span><span><b>Free books &amp; courses for this semester</b><small>'+srb+' free textbook'+(srb===1?'':'s')+' · '+srv+' NPTEL course'+(srv===1?'':'s')+'</small></span><span class="go">›</span></button>';
+  h+='<div id="lst">'+listHtml()+'</div>';
+  if(!list().some(function(o){return o.x.code&&SB[o.x.code]}))h+='<p class="small">Full unit-wise content is available now for Mechanical Engineering and Computer Science and Engineering (including Cyber Security and AI &amp; ML) core subjects and laboratories. More subjects and departments are being added – they download automatically when you are online.</p>';
+  return h}
+/* ---------- subject ---------- */
+var SECS=[['ov','Overview'],['units','Units'],['iq','Important questions'],['prac','Practice'],['books','Reference & resources']];
+function secsOf(sb){if(sb.type==='lab')return [['ov','Overview'],['ex',sb.kind==='activities'?'Activities':'Experiments'],['books','Reference']];var l=SECS.slice();if(sb.pr&&sb.pr.length)l.splice(2,0,['pr','Practical']);return l}
+var SRCL={P:'Previous-year (verified)',S:'Syllabus-based',G:'J1 Pro practice'};
+function ptype(sb){var p=(sb.ltpc||'').split('-');return sb.type==='lab'?'Practical / Laboratory':(p.length===4&&+p[2]>0&&+p[0]>0?'Theory + Practical (integrated)':'Theory')}
+function exHtml(g){return g.map(function(x){return '<div class="sec">'+(x.t?'<h3>'+esc(x.t)+'</h3>':'')+'<ol class="exl">'+x.x.map(function(e){return '<li>'+esc(e)+'</li>'}).join('')+'</ol></div>'}).join('')}
+function labView(c,sb,sec,sem){var h='',n=sb.ex.reduce(function(a,g){return a+g.x.length},0),p=(sb.ltpc||'').split('-');
+  if(sec==='ov'){h+='<div class="sec"><h3>Subject information</h3><div class="kv"><div>Subject code</div><div>'+esc(c)+'</div><div>Subject name</div><div>'+esc(sb.name)+'</div><div>Department</div><div>'+esc(S.dept)+'</div><div>Semester</div><div>'+esc(sem)+'</div><div>Regulation</div><div>'+esc(REG.replace(/^Regulation\s*/,''))+'</div>'+(p.length===4?'<div>Credits</div><div>'+esc(p[3])+' (L '+esc(p[0])+' · T '+esc(p[1])+' · P '+esc(p[2])+')</div>':'')+'<div>Course category</div><div>'+esc(sb.cat)+'</div><div>Type</div><div>Practical / Laboratory</div></div></div>';
+    if(sb.obj&&sb.obj.length)h+='<div class="sec"><h3>Course objectives</h3><ul>'+sb.obj.map(function(o){return '<li>'+esc(o)+'</li>'}).join('')+'</ul></div>';
+    h+='<div class="sec"><h3>At a glance</h3><p class="small" style="margin:0">'+n+' '+(sb.kind==='activities'?'activity items':'experiments / exercises')+' listed in the official syllabus'+(sb.ex.length>1?' · '+sb.ex.length+' parts':'')+'.</p></div>'}
+  else if(sec==='ex'){h+=exHtml(sb.ex)+(sb.note?'<div class="lab-note">'+esc(sb.note)+'</div>':'')+'<p class="small">Experiment titles follow the Anna University R2021 syllabus. Procedures, equipment and marks are given in your college lab manual.</p>'}
+  else{h+='<div class="sec"><h3>Official syllabus</h3><div class="lk"><span class="rt"><b>Anna University – R2021 curricula and syllabi</b><small>Centre for Academic Courses, Anna University</small></span><button data-url="https://cac.annauniv.edu/aidetails/ai_ug_cands_2021ft.html">Open ›</button></div></div>'}
+  return h}
+function subject(st){var c=st.code,sb=SB[c],x=null;Object.keys(C[S.dept]||{}).forEach(function(s){(C[S.dept][s]||[]).forEach(function(y){if(y.code===c)x=y})});
+  var name=sb?sb.name:(x?x.name:c),sem=st.sem||semOf(S.dept,c);
+  var h=bar(c)+'<div class="dh"><div class="c">'+esc(c)+'</div><h2>'+esc(name)+'</h2><p>'+esc(S.dept)+' · '+esc(sem)+' · '+esc(REG)+'</p></div>';
+  if(!sb){return h+'<div class="sec"><h3>Subject information</h3><div class="kv"><div>Code</div><div>'+esc(c)+'</div><div>Semester</div><div>'+esc(sem)+'</div><div>Type</div><div>'+kind(x||{name:name,code:c})+'</div></div></div>'+
+    '<div class="empty">Full unit-wise content and questions for this subject are coming in a future update. They download automatically when you are online – no app update needed. Until then, please use your college copy of the Anna University syllabus.</div>'+(kind(x||{name:name,code:c})==='Theory'?freeSec(c):'')}
+  var sec=st.sec||'ov',SX=secsOf(sb);if(!SX.some(function(s){return s[0]===sec}))sec='ov';
+  h+='<div class="nav">'+SX.map(function(s){return '<button class="'+(s[0]===sec?'on':'')+'" data-sec="'+s[0]+'">'+s[1]+'</button>'}).join('')+'</div>';
+  if(sb.type==='lab')return h+labView(c,sb,sec,sem);
+  if(sec==='ov'){var p=(sb.ltpc||'').split('-'),ni=sb.iq.reduce(function(a,u){return a+u.length},0);
+    h+='<div class="sec"><h3>Subject information</h3><div class="kv"><div>Subject code</div><div>'+esc(c)+'</div><div>Subject name</div><div>'+esc(sb.name)+'</div><div>Department</div><div>'+esc(S.dept)+'</div><div>Semester</div><div>'+esc(sem)+'</div><div>Regulation</div><div>'+esc(REG.replace(/^Regulation\s*/,''))+'</div>'+
+      (p.length===4?'<div>Credits</div><div>'+esc(p[3])+' (L '+esc(p[0])+' · T '+esc(p[1])+' · P '+esc(p[2])+')</div>':'')+'<div>Course category</div><div>'+esc(sb.cat)+'</div><div>Type</div><div>'+ptype(sb)+'</div></div></div>';
+    h+='<div class="sec"><h3>Units at a glance</h3><ol>'+sb.units.map(function(u){return '<li>'+esc(u.t)+'</li>'}).join('')+'</ol><p class="small">'+ni+' important questions · '+(sb.mcq.length?sb.mcq.length+' practice MCQs':'practice MCQs coming soon')+(sb.pr&&sb.pr.length?' · '+sb.pr.reduce(function(a,g){return a+g.x.length},0)+' practical exercises':'')+'</p></div>'}
+  else if(sec==='pr'){h+=exHtml(sb.pr)+'<p class="small">Practical exercises as listed in the official syllabus for this integrated course.</p>'}
+  else if(sec==='units'){h+=sb.units.map(function(u,i){var open=st.open===i;return '<div class="unit"><button data-unit="'+i+'"><i>'+(i+1)+'</i><b>'+esc(u.t)+'</b><span>'+(open?'−':'+')+'</span></button>'+(open?'<div class="bd"><ul>'+u.k.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul></div>':'')+'</div>'}).join('')+'<p class="small">'+esc(D.source||'')+'</p>'}
+  else if(sec==='iq'){var uf=st.uf||0;h+='<div class="chips" style="margin-top:6px">'+['All units',1,2,3,4,5].map(function(u,i){return '<button class="chip'+(uf===i?' on':'')+'" data-uf="'+i+'">'+(i?'Unit '+u:u)+'</button>'}).join('')+'</div>';
+    var n=0;sb.iq.forEach(function(lst,ui){if(uf&&uf!==ui+1)return;h+='<div class="sec"><h3>Unit '+(ui+1)+' · '+esc(sb.units[ui].t)+'</h3>'+lst.map(function(q){n++;return '<div class="iq"><em class="k-'+q.k+'">'+({S:'SHORT',L:'LONG',N:'NUMERICAL'})[q.k]+'</em><span>'+n+'. '+esc(q.q)+(q.s&&SRCL[q.s]?'<span class="sb sb-'+esc(q.s)+'">'+esc(SRCL[q.s])+'</span>':'')+'</span></div>'}).join('')+'</div>'});
+    h+='<p class="small">Short = 2-mark type · Long = 13/16-mark type · Numerical = problem. '+esc(sb.qnote||D.qnote||'')+'</p>'}
+  else if(sec==='prac')h+=practice(c,sb);
+    else if(sec==='books'){h+='<div class="sec"><h3>Text books (as listed in the syllabus)</h3>'+(sb.books.length?'<ul>'+sb.books.map(function(b){return '<li>'+esc(b)+'</li>'}).join('')+'</ul>':'<p class="small">No text book is listed for this subject in the syllabus.</p>')+(sb.refs&&sb.refs.length?'<div class="rgh" style="margin-top:8px">References</div><ul>'+sb.refs.map(function(b){return '<li>'+esc(b)+'</li>'}).join('')+'</ul>':'')+'<p class="small">Use the latest edition available in your library.</p></div>'+freeSec(c);
+    h+='<div class="sec"><h3>Official syllabus</h3><div class="lk"><span class="rt"><b>Anna University – R2021 curricula and syllabi</b><small>Centre for Academic Courses, Anna University</small></span><button data-url="https://cac.annauniv.edu/aidetails/ai_ug_cands_2021ft.html">Open ›</button></div></div>'}
+  return h}
+/* ---------- practice ---------- */
+var P=null;
+function practice(c,sb){var best=(ls('j1_syl_best')||{})[c];
+  if(!sb.mcq.length)return '<div class="empty">Practice MCQs for this subject are being prepared. Units and important questions are available now.</div>';
+  if(!P||P.code!==c){var h='<div class="sec"><h3>Practice questions</h3><p>'+sb.mcq.length+' multiple-choice questions with answers and explanations.</p>'+(best?'<p class="small">Your best: '+esc(best)+'</p>':'')+'<div class="flab">Choose</div><div class="chips">'+['All units',1,2,3,4,5].map(function(u,i){var n=i?sb.mcq.filter(function(q){return q.u===i}).length:sb.mcq.length;return '<button class="chip" data-start="'+i+'">'+(i?'Unit '+u:u)+' ('+n+')</button>'}).join('')+'</div></div>';
+    return h+'<p class="small">'+esc(D.qnote||'')+'</p>'}
+  if(P.done){var c2=0,w=0;P.qs.forEach(function(q,i){if(P.sub[i]){if(P.ans[i]===q.a)c2++;else w++}});var n=P.qs.length;
+    var r='<div class="qcard score"><div class="small">Your score</div><div class="big">'+c2+' / '+n+'</div><div class="sgrid"><div><b>'+c2+'</b>Correct</div><div><b>'+w+'</b>Incorrect</div><div><b>'+(n-c2-w)+'</b>Skipped</div></div></div>';
+    return r+'<div class="btns"><button class="btn" data-a="restart">↻ Restart practice</button><button class="btn sec" data-a="pexit">Choose units</button></div>'}
+  var q=P.qs[P.i],a=P.ans[P.i],sd=P.sub[P.i],n2=P.qs.length;
+  var h2='<div class="meta"><span>Question '+(P.i+1)+' of '+n2+' · Unit '+q.u+(q.d&&{E:1,M:1,H:1}[q.d]?' · '+({E:'Easy',M:'Medium',H:'Hard'})[q.d]:'')+'</span><span>'+P.sub.filter(Boolean).length+' submitted</span></div><div class="prog"><i style="width:'+((P.i+1)/n2*100)+'%"></i></div>';
+  h2+='<div class="qcard">'+(q.t?'<div class="small" style="margin:0 0 4px">Topic: '+esc(q.t)+'</div>':'')+'<div class="qt">'+(P.i+1)+'. '+esc(q.q)+'</div>'+q.o.map(function(o,k){var cl=sd?(k===q.a?' ok':(k===a?' bad':'')):(a===k?' on':'');return '<button class="opt'+cl+'" data-ans="'+k+'"'+(sd?' disabled':'')+'><i>'+'ABCD'.charAt(k)+'</i><span>'+esc(o)+'</span></button>'}).join('');
+  if(sd)h2+='<div class="fb '+(a===q.a?'good':'badf')+'">'+(a===q.a?'✓ Correct':'✗ Incorrect – answer '+'ABCD'.charAt(q.a))+'</div>'+(P.ex[P.i]?'<div class="fb ex">'+esc(q.e)+'</div>':'');
+  h2+='</div>';
+  h2+=sd?'<button class="btn sec" data-a="explain" style="width:100%"'+(P.ex[P.i]?' disabled':'')+'>Show explanation</button>':'<button class="btn teal" data-a="submitq" style="width:100%"'+(a<0?' disabled':'')+'>Submit answer</button>';
+  h2+='<div class="btns"><button class="btn sec" data-a="pprev"'+(P.i===0?' disabled':'')+'>‹ Previous</button>'+(P.i<n2-1?'<button class="btn" data-a="pnext">Next question ›</button>':'<button class="btn" data-a="pfinish">See score</button>')+'</div>';
+  return h2+'<button class="btn sec" data-a="restart" style="width:100%">↻ Restart practice</button>'}
+function startP(c,u){var sb=SB[c],qs=sb.mcq.filter(function(q){return !u||q.u===u}).slice();for(var i=qs.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=qs[i];qs[i]=qs[j];qs[j]=t}
+  P={code:c,unit:u,qs:qs,i:0,ans:qs.map(function(){return -1}),sub:qs.map(function(){return false}),ex:qs.map(function(){return false}),done:false};render()}
+function finishP(){P.done=true;var c=0;P.qs.forEach(function(q,i){if(P.sub[i]&&P.ans[i]===q.a)c++});var b=ls('j1_syl_best')||{},pct=Math.round(c/P.qs.length*100),old=b[P.code]?parseInt(b[P.code].split('%')[0],10):-1;
+  if(pct>old){b[P.code]=pct+'% ('+c+'/'+P.qs.length+')';ls('j1_syl_best',b)}render();window.scrollTo(0,0)}
+/* ---------- render ---------- */
+function render(){var s=top(),h;try{h=s.v==='home'?home():s.v==='res'?resView():subject(s)}catch(e){h=bar('Something went wrong')+'<div class="empty">Please go back and try again.</div>';if(window.console)console.error(e)}app.innerHTML=h;bind()}
+function on(sel,fn){[].forEach.call(document.querySelectorAll(sel),function(b){b.onclick=function(){fn(b)}})}
+var qT=null;
+function bind(){var d=document.getElementById('dept'),sm=document.getElementById('sem'),q=document.getElementById('q');
+  var rg=document.getElementById('reg');if(rg)rg.onchange=function(){REG=rg.value;C=curOf(REG);DEPTS=Object.keys(C);if(DEPTS.indexOf(S.dept)<0)S.dept=DEPTS[0];var ks=Object.keys(C[S.dept]||{});if(ks.indexOf(S.sem)<0)S.sem=ks[0];saveU();render()};
+  if(d)d.onchange=function(){S.dept=d.value;var ks=Object.keys(C[S.dept]||{});if(ks.indexOf(S.sem)<0)S.sem=ks[0];saveU();render()};
+  if(sm)sm.onchange=function(){S.sem=sm.value;saveU();render()};
+  if(q)q.addEventListener('input',function(){S.q=q.value;clearTimeout(qT);qT=setTimeout(function(){document.getElementById('lst').innerHTML=listHtml();if(sm)sm.disabled=!!S.q;on('#lst [data-sub]',openSub)},150)});
+  on('[data-a]',function(b){act(b.getAttribute('data-a'))});
+  on('[data-sub]',openSub);
+  on('[data-sec]',function(b){top().sec=b.getAttribute('data-sec');render()});
+  on('[data-unit]',function(b){var i=+b.getAttribute('data-unit'),t=top();t.open=t.open===i?-1:i;render()});
+  on('[data-uf]',function(b){top().uf=+b.getAttribute('data-uf');render()});
+  on('[data-start]',function(b){startP(top().code,+b.getAttribute('data-start'))});
+  on('[data-ans]',function(b){if(!P||P.sub[P.i])return;P.ans[P.i]=+b.getAttribute('data-ans');render()});
+  on('[data-url]',function(b){openUrl(b.getAttribute('data-url'))})}
+function openSub(b){P=null;go('sub',{code:b.getAttribute('data-sub'),sem:b.getAttribute('data-sem'),sec:'ov'})}
+function act(a){
+  if(a==='back')back();
+  else if(a==='clearq'){S.q='';render()}
+  else if(a==='semres')go('res')
+  else if(!P)return;
+  else if(a==='submitq'){if(P.ans[P.i]>=0){P.sub[P.i]=true;render()}}
+  else if(a==='explain'){P.ex[P.i]=true;render()}
+  else if(a==='pnext'){if(P.i<P.qs.length-1){P.i++;render()}}
+  else if(a==='pprev'){if(P.i>0){P.i--;render()}}
+  else if(a==='pfinish')finishP();
+  else if(a==='restart')startP(P.code,P.unit);
+  else if(a==='pexit'){P=null;render()}}
+/* ---------- 2.4: new and corrected subject content online (j1_content.js) ---------- */
+function okSub(x){if(x&&x.type==='lab')return typeof x.name==='string'&&Array.isArray(x.ex)&&x.ex.length>0&&x.ex.every(function(g){return g&&Array.isArray(g.x)});return x&&typeof x.name==='string'&&Array.isArray(x.units)&&x.units.length&&Array.isArray(x.iq)&&Array.isArray(x.mcq)&&Array.isArray(x.books)&&(!x.pr||Array.isArray(x.pr))}
+function okRes(r){if(r&&KMAP[r.k])r.k=KMAP[r.k];if(r&&!r.p&&r.s)r.p=r.s;return r&&typeof r.t==='string'&&/^https:\/\/\S+$/.test(r.u||'')&&RK[r.k]}
+function applySyl(p){if(p.resources&&typeof p.resources==='object'){var R2={};Object.keys(p.resources).forEach(function(c){var l=Array.isArray(p.resources[c])?p.resources[c].filter(okRes):[];if(l.length)R2[c]=l});RES=R2}
+  Object.keys(p.subjects||{}).forEach(function(c){if(okSub(p.subjects[c]))SB[c]=p.subjects[c]});
+  Object.keys(p.byReg||{}).forEach(function(r){if(p.byReg[r]&&p.byReg[r].curriculum){D.byReg=D.byReg||{};D.byReg[r]=p.byReg[r];if(D.regs.indexOf(r)<0)D.regs.push(r);if(REGS.indexOf(r)<0)REGS.push(r)}})}
+if(window.J1Content)J1Content.load('syllabus',D.contentVer||0,applySyl,function(){if(!P){render();toast('Syllabus content updated')}});
+window.__syl={D:D,S:S,act:act,startP:startP,get P(){return P}};
+if(!DEPTS.length)app.innerHTML='<div class="empty">The syllabus could not be loaded.</div>';else render();
+})();
+</script>
+</body>
+</html>
