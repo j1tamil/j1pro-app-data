@@ -143,7 +143,7 @@ function home(){
   var sr=S.q?[]:semRes(),srn=0,sra=[];sr.forEach(function(x){srn+=resOf(x.code).length;sra=sra.concat(resOf(x.code))});var srb=cnt(sra,'book'),srv=cnt(sra,'video')+cnt(sra,'notes');
   if(srn)h+='<button class="rescard" data-a="semres"><span class="ic">📚</span><span><b>Free books &amp; courses for this semester</b><small>'+srb+' free textbook'+(srb===1?'':'s')+' · '+srv+' NPTEL course'+(srv===1?'':'s')+'</small></span><span class="go">›</span></button>';
   h+='<div id="lst">'+listHtml()+'</div>';
-  if(!list().some(function(o){return o.x.code&&SB[o.x.code]}))h+='<p class="small">Full unit-wise content is available now for Mechanical Engineering and Computer Science and Engineering (including Cyber Security and AI &amp; ML) core subjects and laboratories. More subjects and departments are being added – they download automatically when you are online.</p>';
+  if(!list().some(function(o){return o.x.code&&SB[o.x.code]}))h+='<p class="small">Full unit-wise content is available for the core subjects and laboratories of all listed departments. Electives are being added – they download automatically when you are online.</p>';
   return h}
 /* ---------- subject ---------- */
 var SECS=[['ov','Overview'],['units','Units'],['iq','Important questions'],['prac','Practice'],['books','Reference & resources']];
